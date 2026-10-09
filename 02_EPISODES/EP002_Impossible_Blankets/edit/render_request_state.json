@@ -1,0 +1,12 @@
+{
+  "allow_render": true,
+  "reason": "User resumed and requested fast Eevee GTX1650Ti output at 1080p60. Supersedes prior pause and 4K specification.",
+  "requested_resolution": [
+    1080,
+    1920
+  ],
+  "requested_fps": 60,
+  "engine": "BLENDER_EEVEE",
+  "gpu": "NVIDIA GeForce GTX 1650 Ti",
+  "status": "Complete: 1080p60 final video rendered and verified"
+}

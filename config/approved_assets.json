@@ -1,0 +1,138 @@
+{
+  "schema_version": 1,
+  "purpose": "Exact approved reusable library/template bytes; historical episodes are preserved separately.",
+  "assets": {
+    "00_LIBRARY/asset_manifest.json": {
+      "bytes": 1100,
+      "sha256": "7bf74fb460271d2ab9be1c022bd13c1e6ff85ae481da5adda5ada2bcc867c46b"
+    },
+    "00_LIBRARY/blender_assets.cats.txt": {
+      "bytes": 433,
+      "sha256": "d18f806eeac0c7ef8e390e24ab35e744a9e14e18e8adfbb13bf6cd619df5d196"
+    },
+    "00_LIBRARY/Cameras/BRIX_VerticalCamera.blend": {
+      "bytes": 61856,
+      "sha256": "687bbf0da67625ddc8bfc439fcbe3a20f26c2fe31daed6fae6e24560c59ab384"
+    },
+    "00_LIBRARY/Caption_Layouts/Instagram_Header_Reference.jpg": {
+      "bytes": 101549,
+      "sha256": "9601d58a96c566ecbc439ef4d1635beba88b35e348f9b7363456cbc9406c61ca"
+    },
+    "00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v001.json": {
+      "bytes": 1800,
+      "sha256": "48cf2cfd086efdd89a0c797d0dec9c56e241811df70f77470d665c0c8242897e"
+    },
+    "00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v002.json": {
+      "bytes": 2360,
+      "sha256": "65067565c8283e592b1140fcf3656dca41660d3faa5b8a2fc3a9e5344635bd20"
+    },
+    "00_LIBRARY/Caption_Layouts/Template_Placement_Verification_v001.json": {
+      "bytes": 2502,
+      "sha256": "c99c0fe3b71b9a66a91a42d5a63a8f364086ec4970aa95a407375ef837c23cba"
+    },
+    "00_LIBRARY/Caption_Layouts/Template_Placement_Verification_v002.json": {
+      "bytes": 2856,
+      "sha256": "7988438162f93b23a971b2d25771ffe007e930d85089bfbffb76c25bd3cc4e79"
+    },
+    "00_LIBRARY/Caption_Layouts/YouTube_Header_Reference.jpg": {
+      "bytes": 119197,
+      "sha256": "cd0a0f90b493ca06a2be9426284fe9f6ecd09ecb5f90b323a5860c146aeb5a97"
+    },
+    "00_LIBRARY/Characters/BRIX/BRIX_Master.blend": {
+      "bytes": 709151,
+      "sha256": "a7d97dfbaa33d04f5163ed65371b760a9bc2c2b8b1652b2134575163003b232f"
+    },
+    "00_LIBRARY/Characters/School_Guy_2D/Approved_Character_Reference.png": {
+      "bytes": 19819,
+      "sha256": "3a9f1d3de90f206b7f6ef61508dd97bf6f5617e1b3f1a9ca64ac7666a4afd7f1"
+    },
+    "00_LIBRARY/Characters/School_Guy_2D/character_manifest.json": {
+      "bytes": 1580,
+      "sha256": "0b8ae50af4dc116a39ab5bbc739e494e4494b80cfd604bc4de98c7799f1ef1af"
+    },
+    "00_LIBRARY/Characters/School_Guy_2D/School_Guy_2D_v001.blend": {
+      "bytes": 100508,
+      "sha256": "26b051edda6bb9904056eebe5c8c53e7a4ddb06dcdc652936e19b8d118984094"
+    },
+    "00_LIBRARY/Environments/BRIX_Lab_Master.blend": {
+      "bytes": 664014,
+      "sha256": "8e6949a262e747b358f5cb5aa3e9c23908cb7c44f081f2efac64e4035bd2fe54"
+    },
+    "00_LIBRARY/Environments/BRIX_TestStage.blend": {
+      "bytes": 735556,
+      "sha256": "325042648c55b178dc49bdb2bb7376bceecfcc1e8d2ae5ed58103bd0bd5f307b"
+    },
+    "00_LIBRARY/Lighting/BRIX_StudioLighting.blend": {
+      "bytes": 63664,
+      "sha256": "4135903ef9049942883982f1cfe7526a351e0debd6337c364c9fe0f12bc2f44d"
+    },
+    "00_LIBRARY/Materials/BRIX_EEVEE_Clarity_v001.blend": {
+      "bytes": 65997,
+      "sha256": "e1f90b7067bd60f9c85b51dc0c89b6fb02b62ec8b937e8078488748ab468f515"
+    },
+    "00_LIBRARY/Materials/BRIX_Materials.blend": {
+      "bytes": 104502,
+      "sha256": "385ab976cc29782db68cf8d013899ee5aca990829fed8b0014c2bc2adc833be8"
+    },
+    "00_LIBRARY/Props/BRIX_ExperimentStation.blend": {
+      "bytes": 643926,
+      "sha256": "2cb5b99c7f45338ddb99befd2e3bb29a24ec454d0d1af5fcb13ae2c9e71c02dc"
+    },
+    "00_LIBRARY/UI/BRIX_UI.blend": {
+      "bytes": 612309,
+      "sha256": "4e8d05390a3bf8d2ebed9b79d252cd5dc915bcbf91a256d44190432b1ad82ae6"
+    },
+    "01_TEMPLATES/BRIX_Shorts_Master.blend": {
+      "bytes": 825941,
+      "sha256": "88249341126c45d5de41079dd39a2a5b5eb4d13e4313ce26228ffefb82753d3d"
+    },
+    "01_TEMPLATES/BRIX_Shorts_Master_v002.blend": {
+      "bytes": 1351867,
+      "sha256": "a23df6f1b5b6d366184d9649b864438729a845b9ef9f652efcc5ff1bd8313f3f"
+    },
+    "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v002.blend": {
+      "bytes": 288395,
+      "sha256": "ec60b00331bcdbccd6f66a9bb1b8345d4cfdb15757196485f62ffeb1e27e01f6"
+    },
+    "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v003.blend": {
+      "bytes": 279343,
+      "sha256": "291899d8e46b73fb4930e63f9caca98219e6e854ff12bc40b2fd06bbbd3a0c8c"
+    },
+    "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v004.blend": {
+      "bytes": 279661,
+      "sha256": "4da38c7ab99da13ad59afb669772a7cb85bcdef25dfb1be668bc84d38db2ea00"
+    },
+    "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v005.blend": {
+      "bytes": 280153,
+      "sha256": "06b4d7dae3965a033bb63006fa6cda59d83e52c94422d09a984d4ae7e363aef1"
+    },
+    "01_TEMPLATES/GreasePencil_Shorts_720p24_Master_v001.blend": {
+      "bytes": 126174,
+      "sha256": "f84fee05adcbbc385edb775bbc235bd0f83e2d8c80c4d724159b778282c2df34"
+    },
+    "01_TEMPLATES/Versions/BRIX_Foundation_v001.blend": {
+      "bytes": 831760,
+      "sha256": "524f16252c8fa3f89d6366531c75c6fddf3ae295f4f9ceb64532a268fdd8197f"
+    },
+    "01_TEMPLATES/Versions/BRIX_Foundation_v002.blend": {
+      "bytes": 831004,
+      "sha256": "377281c874ce2d35867756d69ef078d553f293fe4716d9e563534fa3d6fbf797"
+    },
+    "01_TEMPLATES/Versions/BRIX_Foundation_v003.blend": {
+      "bytes": 814735,
+      "sha256": "e4c40aa83af8fecf0469e637620f628c79f28e4dd5a7d5d898135a4511c3a172"
+    },
+    "01_TEMPLATES/Versions/BRIX_Foundation_v004.blend": {
+      "bytes": 814718,
+      "sha256": "bcb9dc6d2817a0b90d8e881d63079ac199c1eb2ee3a591cc1258bf8958d08bab"
+    },
+    "01_TEMPLATES/Versions/BRIX_Foundation_v005.blend": {
+      "bytes": 821216,
+      "sha256": "378ff2e61642c34beae8de527cfab5ae2685da78ed0f324115c8c08d6c2c985c"
+    },
+    "01_TEMPLATES/Versions/BRIX_Foundation_v006.blend": {
+      "bytes": 818923,
+      "sha256": "565d2b470afe6eaeaba0064f652897b7df88e1087caaae1e3ec37c7cdd72ef78"
+    }
+  }
+}

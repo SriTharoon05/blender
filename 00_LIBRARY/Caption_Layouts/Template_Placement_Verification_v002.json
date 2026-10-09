@@ -1,0 +1,72 @@
+{
+  "bounds_px": {
+    "CAPTION_Template_GP": [
+      311.1433205008507,
+      299.99997943639755,
+      714.8566880822182,
+      422.1143737435341
+    ]
+  },
+  "previous_master_unchanged": true,
+  "template": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\01_TEMPLATES\\GreasePencil_Shorts_1080p24_Master_v005.blend",
+  "policy": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "coordinate_system": "Export pixels, top-left origin; applies to complete lettering and outline bounds",
+    "placement": "Higher upper-screen caption, approximately 2\u20133 cm from the top on the reference phone; clear only notification/status/cutout area; never bottom",
+    "safe_band_px": [
+      108,
+      300,
+      918,
+      548
+    ],
+    "safe_band_percent": [
+      10,
+      15.625,
+      85,
+      28.5416666667
+    ],
+    "slots": {
+      "main": [
+        108,
+        300,
+        918,
+        480
+      ],
+      "tag": [
+        108,
+        500,
+        918,
+        548
+      ]
+    },
+    "reserved_artwork_clearance": "Keep important faces/heads below y=600px when needed for main caption and optional tag; do not leave the previous large empty upper area",
+    "font": "Arial Black or equally bold; white with thick black outline",
+    "fit": "Wrap main text to 2\u00e2\u20ac\u201c3 lines, fit measured full glyph and outline bounds, shorten wrapping or recompose rather than use bottom placement; captions remain fixed during shake",
+    "verification": "Inspect phone-scale preview for notification/status-area clearance; retain the higher requested caption placement rather than reserving space for every app header/filter row",
+    "reference_measurement": {
+      "reference_screen_size_px": [
+        738,
+        1600
+      ],
+      "youtube_header_and_chips_end_y_approx": 284,
+      "instagram_header_end_y_approx": 195,
+      "youtube_observed_header_percent_screen": 17.75,
+      "mapping": "Use notification/status/cutout area only as the exclusion zone; prioritize the user-requested 2\u20133cm visual top gap.",
+      "references": [
+        "YouTube_Header_Reference.jpg",
+        "Instagram_Header_Reference.jpg"
+      ],
+      "limitation": "Measured from the user's screenshots, not a guarantee for every future app UI, expanded overlay or device crop"
+    },
+    "supersedes": [
+      "v001 480px top margin / 25\u201339% band",
+      "clearance for full app header and filter chips",
+      "bottom captions"
+    ],
+    "scope": "All future videos unless user explicitly changes the rule",
+    "physical_gap_note": "Target main text top y=300px on a 1080x1920 export, approximately 2.5cm on a typical phone matching the reference. Physical centimeters vary with device and player scaling. User requested 2\u20133cm from top, not 25% down."
+  }
+}

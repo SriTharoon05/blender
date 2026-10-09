@@ -1,0 +1,50 @@
+# Local machine paths, credentials, and installed/downloaded dependencies
+/config/local.json
+/config/*.local.json
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+/tools/vendor/
+/tools/physics_deps/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+
+# Generated renders, simulation bakes, and review images remain on the render PC
+/03_FINAL_OUTPUT/
+**/renders/
+**/cache/
+**/caches/
+**/blendcache_*/
+**/cache_*/
+**/previews/
+**/Previews/
+**/render_progress.json
+**/render_*_progress.json
+*.log
+*.crash.txt
+*.blend[0-9]
+*.tmp
+*.temp
+.DS_Store
+Thumbs.db
+
+# Compatibility-worker intermediates: retain polished native 3D project/plates
+**/plates/*Uncompressed_Worker.blend
+**/plates/*Worker_4_2*.blend
+**/plates/*Polished_5_2.blend
+
+# Queue state is per-PC; queued plans themselves are committed
+/queue/.runs/
+/queue/.production_lock
+/queue/.mcp_status/
+/02_EPISODES/EP_DEMO_Portable/
+
+# Avoid uploading standalone OS fonts; the approved masters retain packed fonts
+*.ttf
+*.otf
+*.woff
+*.woff2

@@ -1,0 +1,74 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP007_Alarm_Expectation_Reality_1080p24_v001.mp4",
+  "project": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP007_Alarm_Expectation_Reality\\blend\\EP007_Alarm_GP_v003.blend",
+  "duration_seconds": 18,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "frames": 432,
+  "renderer_gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "render_seconds": 213.80340269999942,
+  "encode_seconds": 4.602025999998659,
+  "render_and_encode_seconds": 218.40542869999808,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "encoder": "h264_nvenc / NVIDIA GTX 1650 Ti",
+  "audio": "Original morning birds and chimes, foghorn alarm, spring launch, zombie groan, and pillow thud",
+  "audio_source": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_width": 2,
+    "duration_seconds": 18.0
+  },
+  "caption_bounds": {
+    "native_GP_drawings": 432,
+    "packed_audio": true,
+    "main_caption_bounds_px": [
+      199.83725398778915,
+      299.99997943639755,
+      826.162740290165,
+      436.49936825037
+    ],
+    "expectation_bounds_px": [
+      377.6004061102867,
+      499.9999889731407,
+      648.3995953202248,
+      537.4976268410683
+    ],
+    "reality_bounds_px": [
+      428.33381742239,
+      499.9999889731407,
+      597.6661804318428,
+      536.6807475686073
+    ],
+    "safe_caption_policy": "Higher top, 300px; labels500px",
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 24,
+    "duration": 18,
+    "blackout_frames": [
+      145,
+      146,
+      147
+    ],
+    "spring_launch_frame": 174,
+    "clock_change_frame": 421,
+    "launch_legs_occluded_by_duvet": true,
+    "clock_smack_wide_insert": [
+      13.75,
+      14.25
+    ],
+    "clear_downward_thumb": true,
+    "protected_files_unchanged": 109,
+    "final_project": "EP007_Alarm_GP_v003.blend"
+  },
+  "full_decode_passed": true,
+  "protected_files_unchanged": 109,
+  "file_size_bytes": 4278798,
+  "video_sha256": "68e096c76b319d8df9fa71360a7dd6f1cac57437298903826e2d7829bbc2a5cd"
+}

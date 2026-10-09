@@ -1,0 +1,10 @@
+{
+  "cache": "//..\\cache\\fluid\\physical_lava_60fps_v022",
+  "resolution": 72,
+  "frames": 191,
+  "viscosity": 0.02,
+  "wall_thickness_m": 0.19,
+  "base_thickness_m": 0.2125,
+  "collider": "single watertight trough, grid-resolved, exact interior contact plane",
+  "elapsed": 1950.5185450999998
+}

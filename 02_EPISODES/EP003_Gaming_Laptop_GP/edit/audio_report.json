@@ -1,0 +1,31 @@
+{
+  "original_synthesized": true,
+  "sample_rate": 48000,
+  "channels": 2,
+  "duration_seconds": 11,
+  "peak_dbfs": -1.0121998671017443,
+  "quiet_3_to_5_rms": 0.0006208385339634678,
+  "engine_7_to_10_rms": 0.24267420725463826,
+  "cues": [
+    {
+      "time": 0.14,
+      "cue": "metal hinge"
+    },
+    {
+      "time": 2.16,
+      "cue": "reaction whine"
+    },
+    {
+      "time": 3,
+      "cue": "quiet beat"
+    },
+    {
+      "time": 5,
+      "cue": "engine pull-start"
+    },
+    {
+      "time": 6.65,
+      "cue": "roaring engine idle"
+    }
+  ]
+}

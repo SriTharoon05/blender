@@ -1,0 +1,9 @@
+{
+  "render_seconds": 443.5958138999995,
+  "frames": 576,
+  "video_seconds": 24,
+  "renderer": "Eevee + GPU compositor",
+  "gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "average_seconds_per_frame": 0.7701316213541658,
+  "finished_utc": "2026-10-08T17:47:53.874897+00:00"
+}

@@ -1,0 +1,134 @@
+{
+  "source": "Entirely original deterministic synthesis; no downloaded samples.",
+  "file": "EP007_Original_Alarm_Expectation_Reality_v001.wav",
+  "sample_rate_hz": 48000,
+  "channels": 2,
+  "pcm_bits": 16,
+  "duration_seconds": 18,
+  "sample_count": 864000,
+  "frames": 432,
+  "peak_dbfs": -0.9999999999999997,
+  "sha256": "4ed9980b0f3d944762fc7b946741dc38571219f0db4b56f1d736491155f755d1",
+  "cue_events": [
+    {
+      "seconds": 0,
+      "frame": 1,
+      "sample": 0,
+      "event": "Quiet airy morning and bird chirps begin"
+    },
+    {
+      "seconds": 3,
+      "frame": 73,
+      "sample": 144000,
+      "event": "Dreamy wake-up sparkle chime"
+    },
+    {
+      "seconds": 4.5,
+      "frame": 109,
+      "sample": 216000,
+      "event": "Happy expectation sparkle chime"
+    },
+    {
+      "seconds": 6,
+      "frame": 145,
+      "sample": 288000,
+      "event": "Morning stops hard; silence until first horn"
+    },
+    {
+      "seconds": 7,
+      "frame": 169,
+      "sample": 336000,
+      "event": "Comedic foghorn burst and clock rattle"
+    },
+    {
+      "seconds": 8.75,
+      "frame": 211,
+      "sample": 420000,
+      "event": "Comedic foghorn burst and clock rattle"
+    },
+    {
+      "seconds": 10.25,
+      "frame": 247,
+      "sample": 492000,
+      "event": "Comedic foghorn burst and clock rattle"
+    },
+    {
+      "seconds": 11.75,
+      "frame": 283,
+      "sample": 564000,
+      "event": "Comedic foghorn burst and clock rattle"
+    },
+    {
+      "seconds": 13.25,
+      "frame": 319,
+      "sample": 636000,
+      "event": "Comedic foghorn burst and clock rattle"
+    },
+    {
+      "seconds": 7.208333333333333,
+      "frame": 174,
+      "sample": 346000,
+      "event": "Cartoon spring launch"
+    },
+    {
+      "seconds": 13,
+      "frame": 313,
+      "sample": 624000,
+      "event": "Low original zombie groan",
+      "end_seconds": 14.65
+    },
+    {
+      "seconds": 14,
+      "frame": 337,
+      "sample": 672000,
+      "event": "All alarm and rattles stop abruptly"
+    },
+    {
+      "seconds": 15,
+      "frame": 361,
+      "sample": 720000,
+      "event": "Dead silence holds"
+    },
+    {
+      "seconds": 16.75,
+      "frame": 403,
+      "sample": 804000,
+      "event": "Soft pillow landing thud"
+    },
+    {
+      "seconds": 17.1,
+      "frame": 411,
+      "sample": 820800,
+      "event": "Final digital silence"
+    }
+  ],
+  "verified_silent_intervals_seconds": [
+    [
+      6,
+      7
+    ],
+    [
+      15,
+      16.75
+    ],
+    [
+      17.1,
+      18
+    ]
+  ],
+  "bird_chirp_times_seconds": [
+    0.15,
+    0.41,
+    1.12,
+    1.41,
+    2.18,
+    2.43,
+    3.67,
+    3.98,
+    5.05,
+    5.29,
+    5.59
+  ],
+  "intro_rms_dbfs": -39.44422706053181,
+  "punchline_rms_dbfs": -10.066740276840687
+}

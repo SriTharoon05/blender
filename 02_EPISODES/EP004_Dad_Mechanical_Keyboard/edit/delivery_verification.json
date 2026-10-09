@@ -1,0 +1,19 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP004_Dad_Mechanical_Keyboard_1080p24_v001.mp4",
+  "project": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP004_Dad_Mechanical_Keyboard\\blend\\EP004_Dad_Keyboard_GP_v004.blend",
+  "duration_seconds": 10,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "frames": 240,
+  "renderer": "Eevee NVIDIA GTX 1650 Ti",
+  "encoding": "NVIDIA NVENC H.264",
+  "audio": "Original stereo 48kHz synthesized comic blasts, anvil clang and mug rattle",
+  "caption": "Exact requested words, Arial Black white fill with rounded thick black contour; verified inside top 20%",
+  "packed_audio": true,
+  "full_decode_passed": true,
+  "protected_blend_files_unchanged": 62
+}

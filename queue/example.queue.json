@@ -1,0 +1,23 @@
+{
+  "version": 1,
+  "defaults": {
+    "resolution": [1080, 1920],
+    "fps": 24,
+    "engine": "BLENDER_EEVEE",
+    "gpu_name": "GTX 1650 Ti"
+  },
+  "episodes": [
+    {
+      "id": "EP008_Example_Copy",
+      "build_steps": [],
+      "blend": "02_EPISODES/EP008_Research_Then_Now/blend/EP008_Research_GP_v004.blend",
+      "scene": "EP008_Research_Then_Now",
+      "duration_seconds": 24,
+      "frame_start": 1,
+      "frames_dir": "02_EPISODES/EP008_Research_Then_Now/renders/queue_example",
+      "frame_prefix": "EP008_Example",
+      "video": "03_FINAL_OUTPUT/Queue/EP008_Example_Copy_1080p24_v001.mp4",
+      "audio": "02_EPISODES/EP008_Research_Then_Now/audio/EP008_Original_Research_48k.wav"
+    }
+  ]
+}

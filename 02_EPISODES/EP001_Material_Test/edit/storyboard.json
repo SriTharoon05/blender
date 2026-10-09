@@ -1,0 +1,69 @@
+{
+  "duration": 43,
+  "tests": [
+    [
+      "SLIME",
+      91,
+      240,
+      150,
+      "SOFTNESS: HIGH"
+    ],
+    [
+      "GLASS",
+      241,
+      390,
+      302,
+      "THICKNESS: 0.5 cm"
+    ],
+    [
+      "CLOTH",
+      391,
+      540,
+      450,
+      "SOFTNESS: 80%"
+    ],
+    [
+      "WATER",
+      541,
+      690,
+      586,
+      "VISCOSITY: LOW"
+    ],
+    [
+      "HONEY",
+      691,
+      840,
+      765,
+      "VISCOSITY: HIGH"
+    ],
+    [
+      "SAND",
+      841,
+      990,
+      909,
+      "GRAIN SIZE: SMALL"
+    ],
+    [
+      "LAVA",
+      991,
+      1170,
+      1100,
+      "TEMPERATURE: EXTREME"
+    ]
+  ],
+  "markers": {
+    "BUTTON_CLICK": 63,
+    "MACHINE_MOVE": 82,
+    "SLIME_SQUISH": 150,
+    "GLASS_CRACK": 302,
+    "CLOTH_FLAP": 450,
+    "WATER_SPLASH": 586,
+    "HONEY_STRETCH": 765,
+    "SAND_POUR": 909,
+    "LAVA_SIZZLE": 1100,
+    "BRIX_REACTION": 158,
+    "FINAL_COMEDY_BEAT": 1230,
+    "SHIELD_LOCK": 1084
+  },
+  "simulation_limits": "Soft-body: ~300 vertices; glass:14 cells; cloth:625 verts; water/honey:32 div; sand:96 instances; lava:animated proxy"
+}

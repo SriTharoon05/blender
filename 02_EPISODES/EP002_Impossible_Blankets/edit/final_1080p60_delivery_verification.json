@@ -1,0 +1,20 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP002_Impossible_Blankets_1080p60_v001.mp4",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 60,
+  "frames": 2250,
+  "duration_seconds": 37.5,
+  "video_codec": "H.264 NVIDIA NVENC",
+  "audio": "AAC stereo 48kHz 256kbps",
+  "renderer": "Eevee NVIDIA GTX 1650 Ti",
+  "samples": 16,
+  "full_decode_passed": true,
+  "protected_files_unchanged": 1394,
+  "limitations": [
+    "Fast Eevee raster transparency approximates optics; physical caches retain their simulations."
+  ]
+}

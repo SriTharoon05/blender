@@ -1,0 +1,56 @@
+{
+  "native_GP_drawings": 576,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "duration_seconds": 24,
+  "film_transparent": true,
+  "RGBA": true,
+  "packed_audio": true,
+  "main_caption_bounds_px": [
+    138.4286865592003,
+    299.99997943639755,
+    887.5713077187538,
+    430.3343787789345
+  ],
+  "then_bounds_px": [
+    271.33656442165375,
+    499.9999898672104,
+    754.6634441614151,
+    529.9695879220963
+  ],
+  "now_bounds_px": [
+    277.0078271627426,
+    499.9999898672104,
+    748.9921814203262,
+    529.9695879220963
+  ],
+  "question_bounds_px": [
+    259.1342443227768,
+    499.9999898672104,
+    766.8657499551773,
+    529.9695879220963
+  ],
+  "safe_caption_policy": "Upper y300..480, tag500..548; never bottom",
+  "exact_caption": "POV: Researching a project \u2014 Then vs Now",
+  "exact_physical_question": "Which source is the actual source?",
+  "collapse_impact_frame": 571,
+  "silence_frames": [
+    529,
+    552
+  ],
+  "previous_assets_protected": 112,
+  "packed_cycles_plates": 2,
+  "compositor": "Two packed Image plates \u2192 timed cut \u2192 1\u20133px BG shake \u2192 faint glow \u2192 Alpha Over transparent GP \u2192 RGB Curves \u2192 Group Image output",
+  "compositor_device": "GPU",
+  "camera_locked": true,
+  "hard_cut_frame": 217,
+  "packed_plate_sha256": {
+    "Plate_A_Library_1080p.png": "9dbb820c959c537edcba2fa1ddd3fbd8a1b0e7af8a7002e8b72d980b77e9cfe1",
+    "Plate_B_Workstation_1080p.png": "33157db7fa26b40ae86b9c5fed3fd0db593a7177b4b2566e6d39e4e8cdb916f8"
+  },
+  "collapse_polish": "Forward torso compression, hidden upright neck, angular head/ear resting on crossed sleeve; exact desk-impact frame571",
+  "final_project_version": 4
+}

@@ -1,0 +1,69 @@
+{
+  "file": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP001_Material_Test\\blend\\EP001_v009.blend",
+  "master_files_unchanged": true,
+  "frames": {
+    "EP001_Slime": {
+      "frame": 155,
+      "vertices": 98,
+      "world_z": [
+        0.4951910078525543,
+        1.1738523244857788
+      ]
+    },
+    "EP001_GlassShard_01": {
+      "frame": 321,
+      "vertices": 62,
+      "world_z": [
+        0.5554240942001343,
+        0.8473559617996216
+      ]
+    },
+    "EP001_Cloth": {
+      "frame": 470,
+      "vertices": 1250,
+      "world_z": [
+        0.5729807615280151,
+        1.4862773418426514
+      ]
+    },
+    "EP001_Water_Domain": {
+      "frame": 599,
+      "vertices": 3730,
+      "world_z": [
+        0.6093133687973022,
+        1.88082754611969
+      ]
+    },
+    "EP001_Honey_Domain": {
+      "frame": 745,
+      "vertices": 350,
+      "world_z": [
+        1.1175346374511719,
+        2.22184419631958
+      ]
+    },
+    "EP001_Sand_GranularProxy": {
+      "frame": 934,
+      "vertices": 266,
+      "world_z": [
+        0.5838459730148315,
+        1.1121264696121216
+      ]
+    },
+    "EP001_Lava_ViscousProxy": {
+      "frame": 1115,
+      "vertices": 266,
+      "world_z": [
+        0.574207067489624,
+        1.135419249534607
+      ]
+    }
+  },
+  "invalid_drivers": [],
+  "cache_paths": [
+    "//..\\cache\\softbody\\EP001_Slime.mdd",
+    "//..\\cache\\cloth\\EP001_Cloth_Drape_v002.mdd",
+    "//..\\cache\\fluid\\water",
+    "//..\\cache\\fluid\\honey"
+  ]
+}

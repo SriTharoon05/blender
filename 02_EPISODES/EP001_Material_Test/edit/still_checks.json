@@ -1,0 +1,640 @@
+{
+  "01_Establishing": {
+    "frame": 24,
+    "assets": [
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "02_ButtonClick": {
+    "frame": 63,
+    "assets": [
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "03_Slime": {
+    "frame": 155,
+    "assets": [
+      {
+        "object": "EP001_Slime",
+        "vertices": 98
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "04_Glass": {
+    "frame": 321,
+    "assets": [
+      {
+        "object": "EP001_GlassShard_01",
+        "vertices": 62
+      },
+      {
+        "object": "EP001_GlassShard_02",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_GlassShard_03",
+        "vertices": 104
+      },
+      {
+        "object": "EP001_GlassShard_04",
+        "vertices": 116
+      },
+      {
+        "object": "EP001_GlassShard_05",
+        "vertices": 62
+      },
+      {
+        "object": "EP001_GlassShard_06",
+        "vertices": 90
+      },
+      {
+        "object": "EP001_GlassShard_07",
+        "vertices": 90
+      },
+      {
+        "object": "EP001_GlassShard_08",
+        "vertices": 70
+      },
+      {
+        "object": "EP001_GlassShard_09",
+        "vertices": 98
+      },
+      {
+        "object": "EP001_GlassShard_10",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_GlassShard_11",
+        "vertices": 90
+      },
+      {
+        "object": "EP001_GlassShard_12",
+        "vertices": 104
+      },
+      {
+        "object": "EP001_GlassShard_13",
+        "vertices": 76
+      },
+      {
+        "object": "EP001_GlassShard_14",
+        "vertices": 84
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "05_Cloth": {
+    "frame": 497,
+    "assets": [
+      {
+        "object": "EP001_Cloth",
+        "vertices": 1250
+      },
+      {
+        "object": "EP001_ClothSupport",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "06_Water": {
+    "frame": 608,
+    "assets": [
+      {
+        "object": "EP001_Water_Domain",
+        "vertices": 2298
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "07_Honey": {
+    "frame": 792,
+    "assets": [
+      {
+        "object": "EP001_Honey_Domain",
+        "vertices": 308
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "08_Sand": {
+    "frame": 934,
+    "assets": [
+      {
+        "object": "EP001_Sand_Block",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_SandGrain_001",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_002",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_003",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_004",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_005",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_006",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_007",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_008",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_009",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_010",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_011",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_012",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_013",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_014",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_015",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_016",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_017",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_018",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_019",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_020",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_021",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_022",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_023",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_024",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_025",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_026",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_027",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_028",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_029",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_030",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_031",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_032",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_033",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_034",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_035",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_036",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_037",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_038",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_039",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_040",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_041",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_042",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_043",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_044",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_045",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_046",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_047",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_048",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_049",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_050",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_051",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_052",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_053",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_054",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_055",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_056",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_057",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_058",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_059",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_060",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_061",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_062",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_063",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_064",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_065",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_066",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_067",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_068",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_069",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_070",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_071",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_072",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_073",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_074",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_075",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_076",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_077",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_078",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_079",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_080",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_081",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_082",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_083",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_084",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_085",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_086",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_087",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_088",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_089",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_090",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_091",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_092",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_093",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_094",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_095",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_SandGrain_096",
+        "vertices": 12
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "09_LavaClimax": {
+    "frame": 1115,
+    "assets": [
+      {
+        "object": "EP001_Lava_ViscousProxy",
+        "vertices": 266
+      },
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  },
+  "10_FinalComedy": {
+    "frame": 1230,
+    "assets": [
+      {
+        "object": "EP001_Containment_Front",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Back",
+        "vertices": 96
+      },
+      {
+        "object": "EP001_Containment_Left",
+        "vertices": 96
+      }
+    ]
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "frames": 240,
+  "fps": 24,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "duration_seconds": 10,
+  "native_grease_pencil": true,
+  "audio_packed": true,
+  "captions": {
+    "CAPTION_EP004_Main_GP": {
+      "minimum_xy": [
+        -2.546121835708618,
+        6.4943647384643555
+      ],
+      "maximum_xy": [
+        2.583726167678833,
+        7.477565765380859
+      ],
+      "inside_top_20_percent": true
+    },
+    "CAPTION_EP004_Tag_GP": {
+      "minimum_xy": [
+        -1.2965787649154663,
+        5.291556358337402
+      ],
+      "maximum_xy": [
+        1.2966912984848022,
+        5.504776954650879
+      ],
+      "inside_top_20_percent": true
+    }
+  },
+  "protected_blend_files_unchanged": 62
+}

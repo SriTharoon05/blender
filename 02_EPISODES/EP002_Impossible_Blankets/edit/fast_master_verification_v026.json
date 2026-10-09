@@ -1,0 +1,69 @@
+{
+  "status": "Validated for native 1080p60 Eevee render",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 60,
+  "frame_count": 2250,
+  "duration_seconds": 37.5,
+  "png_bits": 8,
+  "renderer": "Eevee NVIDIA GTX 1650 Ti, 16 samples",
+  "simulations": {
+    "FX_EP002_Slime_Blanket": {
+      "cache": "blend\\..\\cache\\softbody\\EP002_Slime_Volume60_v020.mdd",
+      "frames": 189,
+      "vertices": 1650,
+      "world_z_range": [
+        -1.9433090686798096,
+        0.09000000357627869
+      ],
+      "fps": 60
+    },
+    "FX_EP002_Cloth_Blanket": {
+      "cache": "blend\\..\\cache\\cloth\\EP002_Cloth_Physical60_v011.mdd",
+      "frames": 219,
+      "vertices": 2475,
+      "world_z_range": [
+        -2.0107059478759766,
+        0.00790380034595728
+      ],
+      "fps": 60
+    },
+    "FX_EP002_Sand_GranularBody": {
+      "cache": "blend\\..\\cache\\particles\\EP002_FineGranular_Physical60_v023.mdd",
+      "frames": 175,
+      "vertices": 237600,
+      "world_z_range": [
+        -4.999500379199162e-05,
+        3.2284929752349854
+      ],
+      "fps": 60,
+      "individual_grains": 59400,
+      "minimum_floor_gap_m": -5.0457194447517395e-05
+    },
+    "HONEY": {
+      "frames": 181,
+      "resolution": 64,
+      "mesh_scale": 2,
+      "cache": "blend\\..\\cache\\fluid\\physical_honey_60fps_v013"
+    },
+    "WATER": {
+      "frames": 213,
+      "resolution": 72,
+      "mesh_scale": 2,
+      "cache": "blend\\..\\cache\\fluid\\physical_water_60fps_v013"
+    },
+    "LAVA": {
+      "frames": 191,
+      "resolution": 72,
+      "mesh_scale": 2,
+      "cache": "blend\\..\\cache\\fluid\\physical_lava_60fps_v022"
+    }
+  },
+  "limitations": [
+    "Eevee transparency uses fast raster approximations.",
+    "Numerical physics approximates materials; granular contacts use spherical grains and moving oriented body volumes."
+  ],
+  "protected_files_unchanged": 1394
+}

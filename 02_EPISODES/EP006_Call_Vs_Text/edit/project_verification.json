@@ -1,0 +1,23 @@
+{
+  "native_GP_drawings": 432,
+  "packed_audio": true,
+  "main_caption_bounds_px": [
+    212.35577434301376,
+    480.00000804662704,
+    813.6442199349403,
+    626.1346927285194
+  ],
+  "tag_caption_bounds_px": [
+    238.76024186611176,
+    699.9999994039536,
+    787.2397810220718,
+    739.1539388895035
+  ],
+  "safe_caption_policy": "Upper band only",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "duration": 18
+}

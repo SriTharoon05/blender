@@ -1,0 +1,38 @@
+{
+  "original_synthesis": true,
+  "duration": 18,
+  "rate": 48000,
+  "silent_start": [
+    0,
+    1
+  ],
+  "ringtone_starts": [
+    3,
+    3.96,
+    4.92,
+    5.88,
+    6.53,
+    7.18
+  ],
+  "ringtone_cuts_at": 8,
+  "cushion_thud": 6,
+  "typing": [
+    4.0,
+    4.24,
+    4.51,
+    4.94,
+    5.18,
+    5.45,
+    5.98,
+    6.22,
+    6.53,
+    6.83
+  ],
+  "message_sent": 9,
+  "lofi_fade_out": [
+    15,
+    18
+  ],
+  "final_silence_samples": 2048,
+  "stereo": "Call left / relaxed text and lo-fi right"
+}

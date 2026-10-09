@@ -1,0 +1,8 @@
+{
+  "caption_boundary_edges": {
+    "CAPTION_EP004_Main_GP": 6295,
+    "CAPTION_EP004_Tag_GP": 2183
+  },
+  "glasses_material": "Visible grey metal",
+  "caption_outline": "Rounded native GP contour strokes; removes font-offset spikes"
+}

@@ -1,0 +1,14 @@
+{
+  "status": "Complete: 1080p60 final video rendered and verified.",
+  "latest_complete_project": "blend/EP002_v026.blend",
+  "render_authorized": true,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 60,
+  "renderer": "Eevee NVIDIA GTX 1650 Ti",
+  "final_video_rendered": true,
+  "final_video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP002_Impossible_Blankets_1080p60_v001.mp4",
+  "verification": "edit/final_1080p60_delivery_verification.json"
+}

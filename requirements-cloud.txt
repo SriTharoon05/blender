@@ -1,0 +1,5 @@
+# Authoring, original sound synthesis, image QA, and legacy physics scripts.
+# Blender's bpy is supplied by Blender when scripts run locally; do not pip-install it.
+numpy>=1.26,<3
+Pillow>=10,<12
+scipy>=1.11,<2

@@ -1,0 +1,11 @@
+{
+  "resolution": 32,
+  "frames": [
+    744,
+    850
+  ],
+  "mesh_frames": 107,
+  "largest_mesh_bytes": 105353,
+  "cache": "//..\\cache\\fluid\\water",
+  "baked": true
+}

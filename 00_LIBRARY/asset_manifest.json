@@ -1,0 +1,41 @@
+{
+  "foundation_version": "1.0",
+  "blender_version": "5.2.2 LTS",
+  "libraries": [
+    {
+      "path": "00_LIBRARY/Characters/BRIX/BRIX_Master.blend",
+      "bytes": 709151
+    },
+    {
+      "path": "00_LIBRARY/Environments/BRIX_Lab_Master.blend",
+      "bytes": 664014
+    },
+    {
+      "path": "00_LIBRARY/Props/BRIX_ExperimentStation.blend",
+      "bytes": 643926
+    },
+    {
+      "path": "00_LIBRARY/Materials/BRIX_Materials.blend",
+      "bytes": 104502
+    },
+    {
+      "path": "00_LIBRARY/UI/BRIX_UI.blend",
+      "bytes": 612309
+    },
+    {
+      "path": "00_LIBRARY/Lighting/BRIX_StudioLighting.blend",
+      "bytes": 63664
+    },
+    {
+      "path": "00_LIBRARY/Cameras/BRIX_VerticalCamera.blend",
+      "bytes": 61856
+    },
+    {
+      "path": "01_TEMPLATES/BRIX_Shorts_Master.blend",
+      "bytes": 825941
+    }
+  ],
+  "preview": "01_TEMPLATES/Previews/BRIX_Foundation_Preview.png",
+  "asset_reuse": "Append canonical collections. Animate only within saved episode copies.",
+  "validation": "01_TEMPLATES/Previews/validation_report.json"
+}

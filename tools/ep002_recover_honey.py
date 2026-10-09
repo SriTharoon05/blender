@@ -1,0 +1,8 @@
+import bpy,json
+from pathlib import Path
+EP=Path(r'C:\Users\assri\OneDrive\Documents\ChatGPT\Blender\02_EPISODES\EP002_Impossible_Blankets');s=bpy.data.scenes['EP002_Impossible_Blankets'];sim=bpy.data.scenes['SIM_EP002_Physical_HONEY'];o=bpy.data.objects['FX_EP002_Honey_Domain'];d=next(m for m in o.modifiers if m.type=='FLUID').domain_settings;d.viscosity_value=.007;d.use_speed_vectors=True;d.cache_directory='//../cache/fluid/physical_honey_60fps_v013';sim.frame_end=1164;sim.frame_start=984
+for obj in bpy.data.objects:
+    if obj.name=='COLL_EP002_Floor' or (obj.name.startswith('COLL_EP002_') and obj.name.endswith('COLL_EP002_Floor')):obj.location.z+=.025
+files=list((Path(bpy.path.abspath(d.cache_directory))/'mesh').glob('*.bobj.gz'));assert len(files)==181
+bpy.context.window.scene=s;s.frame_set(1100);bpy.context.view_layer.update();e=o.evaluated_get(bpy.context.evaluated_depsgraph_get());m=e.to_mesh();N=len(m.vertices);z=[(e.matrix_world@v.co).z for v in m.vertices];e.to_mesh_clear();print('RECOVERED_HONEY_MESH',N,flush=True);assert N>100,'Existing completed liquid mesh was not loaded'
+s.frame_set(48);bpy.ops.wm.save_as_mainfile(filepath=str(EP/'blend/EP002_v013.blend'),compress=True);report={'material':'HONEY','fps':60,'resolution':64,'mesh_scale':2,'viscosity_enabled':True,'viscosity':.007,'mesh_frames':181,'largest_mesh_bytes':max(p.stat().st_size for p in files),'cache':d.cache_directory,'recovered_complete_cache':True,'evaluated_frame_1100_vertices':N,'evaluated_z_range':[min(z),max(z)]};(EP/'edit/physical_honey_report.json').write_text(json.dumps(report,indent=2));print('COMPLETE_HONEY_CACHE_RECOVERED')

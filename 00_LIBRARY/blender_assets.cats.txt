@@ -1,0 +1,10 @@
+# BRIX production asset catalogs
+VERSION 1
+
+38626984-8330-4d28-aab6-490f3e947a49:Characters:Characters
+8b250e3b-c597-4db8-a0a5-a667a21b0b8f:Materials:Materials
+5744815d-e8fb-4eea-86e9-d45fc4fdda2c:Props:Props
+1295957b-fb8c-4c30-8668-a97cda184f13:Environments:Environments
+ac739f5e-21a8-4a35-a6ae-8e339d9f8d96:UI:UI
+29b53f13-2099-4867-bb69-e788409fdafc:Lighting:Lighting
+f26fcb03-3eba-4d98-995d-eca9974ccb9a:Cameras:Cameras

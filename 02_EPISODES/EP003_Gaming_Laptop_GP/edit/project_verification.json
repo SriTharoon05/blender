@@ -1,0 +1,13 @@
+{
+  "grease_pencil_drawings": 660,
+  "caption_exact": "Pov: You bring a gaming laptop to school instead of the normal mac book",
+  "sound_packed": true,
+  "fps": 60,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "renderer": "Eevee",
+  "duration_seconds": 11,
+  "editable_source": "blend/EP003_Gaming_Laptop_GP_v006.blend"
+}

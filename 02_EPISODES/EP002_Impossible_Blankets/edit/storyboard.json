@@ -1,0 +1,79 @@
+{
+  "title": "BRIX'S IMPOSSIBLE BLANKETS",
+  "duration": 37.5,
+  "tests": [
+    [
+      "SLIME",
+      46,
+      180,
+      100
+    ],
+    [
+      "GLASS",
+      181,
+      315,
+      240
+    ],
+    [
+      "CLOTH",
+      316,
+      450,
+      365
+    ],
+    [
+      "HONEY",
+      451,
+      585,
+      526
+    ],
+    [
+      "SAND",
+      586,
+      720,
+      642
+    ],
+    [
+      "WATER",
+      721,
+      855,
+      776
+    ],
+    [
+      "LAVA",
+      856,
+      1035,
+      970
+    ]
+  ],
+  "markers": {
+    "INTRO": 1,
+    "SELECT_SLIME": 46,
+    "SLIME_DROP": 84,
+    "SLIME_SQUISH": 100,
+    "BRIX_SLIME_REACTION": 106,
+    "SELECT_GLASS": 181,
+    "GLASS_DROP": 221,
+    "GLASS_SHATTER": 240,
+    "BRIX_GLASS_REACTION": 255,
+    "SELECT_CLOTH": 316,
+    "CLOTH_DROP": 337,
+    "CLOTH_SETTLE": 397,
+    "SELECT_HONEY": 451,
+    "HONEY_DROP": 492,
+    "HONEY_STRETCH": 512,
+    "SELECT_SAND": 586,
+    "SAND_RELEASE": 628,
+    "SAND_IMPACT": 642,
+    "SELECT_WATER": 721,
+    "WATER_RELEASE": 744,
+    "WATER_SPLASH": 776,
+    "SELECT_LAVA": 856,
+    "LAVA_WARNING": 884,
+    "LAVA_DROP": 938,
+    "SAFETY_SHIELD": 963,
+    "LAVA_IMPACT": 970,
+    "BRIX_FINAL_LOOK": 1031,
+    "OUTRO": 1066
+  },
+  "methods": "Slime keyed wrap; glass small rigid-body scatter; cloth actual cached simulation; honey viscous deformation proxy; sand 160 instances+mound; water actual 32 div Mantaflow; lava shielded viscous proxy"
+}

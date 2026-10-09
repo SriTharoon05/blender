@@ -1,0 +1,29 @@
+{
+  "original_synthesis": true,
+  "sample_rate": 48000,
+  "duration_seconds": 10,
+  "peak_dbfs": -1.0121998671017431,
+  "hits": [
+    {
+      "seconds": 4,
+      "frame": 97,
+      "type": "shotgun-like comic blast"
+    },
+    {
+      "seconds": 5.5,
+      "frame": 133,
+      "type": "anvil clang"
+    },
+    {
+      "seconds": 6.5,
+      "frame": 157,
+      "type": "louder comic blast"
+    },
+    {
+      "seconds": 7.5,
+      "frame": 181,
+      "type": "combined boom-clang"
+    }
+  ],
+  "abrupt_quiet_seconds": 8.15
+}

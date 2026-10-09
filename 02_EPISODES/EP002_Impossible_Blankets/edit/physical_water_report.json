@@ -1,0 +1,11 @@
+{
+  "material": "WATER",
+  "fps": 60,
+  "resolution": 72,
+  "mesh_scale": 2,
+  "viscosity_enabled": false,
+  "viscosity": 9.999999974752427e-07,
+  "mesh_frames": 213,
+  "largest_mesh_bytes": 1397408,
+  "cache": "//..\\cache\\fluid\\physical_water_60fps_v013"
+}

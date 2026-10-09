@@ -1,0 +1,17 @@
+{
+  "material": "HONEY",
+  "fps": 60,
+  "resolution": 64,
+  "mesh_scale": 2,
+  "viscosity_enabled": true,
+  "viscosity": 0.007,
+  "mesh_frames": 181,
+  "largest_mesh_bytes": 1251231,
+  "cache": "//../cache/fluid/physical_honey_60fps_v013",
+  "recovered_complete_cache": true,
+  "evaluated_frame_1100_vertices": 48174,
+  "evaluated_z_range": [
+    -0.0062296390533447266,
+    2.0672895908355713
+  ]
+}

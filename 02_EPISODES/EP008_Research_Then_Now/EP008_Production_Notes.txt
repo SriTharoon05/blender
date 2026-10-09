@@ -1,0 +1,55 @@
+EP008 — Researching a project: Then vs Now
+
+Delivery: 1080 x 1920 portrait, 24 fps, 24 seconds / 576 frames.
+Final video: ../../03_FINAL_OUTPUT/YouTube/EP008_Research_Then_Now_1080p24_v001.mp4
+Editable animation: blend/EP008_Research_GP_v004.blend
+Active scene: EP008_Research_Then_Now
+
+The recurring approved School Guy is native editable Grease Pencil, with
+research glasses/cardigan, per-frame acting, hands, props and browser graphics.
+Font source objects are preserved; rendered letters use rounded GP contours.
+The exact main caption begins at y300px; top tags begin at y500px. There are
+no bottom-screen overlay captions. Captions remain still during impact shake.
+
+The master compositor contains both packed 1080x1920 background PNGs. They
+are reused as still plates, switching at frame217 (9 seconds). The camera
+stays locked. Only tiny compositor transforms shake the background.
+
+Editable native 3D background source:
+plates/EP008_Background_Plates_Polished_5_2_v002.blend
+Rendered images:
+plates/Plate_A_Library_1080p.png
+plates/Plate_B_Workstation_1080p.png
+
+Eevee renders the character in Blender 5.2 with Film Transparent and RGBA.
+To inspect/export just the character pass, disable Render > Compositing.
+Example transparent frame: previews/EP008_Transparent_GP_0529.png
+The final animation is composited with GPU compositor and encoded using
+GTX 1650 Ti NVENC H.264 plus the packed original stereo soundtrack.
+
+Cycles stills used the portable Blender 4.2 OptiX worker because the installed
+NVIDIA driver555.97 cannot run Blender5.2 Cycles CUDA/OptiX successfully.
+No driver or installed Blender changes were made; CPU rendering was disabled.
+The compatibility worker is in ../../tools/vendor/blender42/.
+
+Audio: audio/EP008_Original_Research_48k.wav (original 48kHz stereo, 24s).
+The sound is packed in the editable project's sequencer. Image renders skip
+the sequencer; the delivery script combines the soundtrack with the frames.
+Important sync: scratch/cut9s, popup10s, typing13–17s, rabbit-hole bass18s,
+silence22–23s, overload23s, desk landing23.75s/frame571, final error beep.
+
+Verification and exact measured render/encoding times:
+edit/delivery_verification.json
+edit/render_time.json
+edit/plate_render_time.json (includes monitor-correction still passes)
+edit/project_verification.json (includes packed plate hashes and caption bounds)
+
+Production scripts in ../../tools/:
+ep008_research_plates.py — procedural native 3D stills and compatible GPU worker
+ep008_research_gp.py — native GP animation, compositor, full-frame rendering
+ep008_final_polish.py — contact-aware torso/head desk collapse and source checks
+ep008_research_audio.py — original score/foley/SFX and cue sheet
+ep008_finish_video.py — NVENC delivery, decode/format checks, protected-file hashes
+
+Previously approved episodes, templates, and character library files are
+preserved; their hashes are checked again before marking delivery complete.

@@ -1,0 +1,736 @@
+{
+  "source": "Entirely original deterministic synthesis. No copyrighted or downloaded samples.",
+  "file": "EP008_Original_Research_48k.wav",
+  "sample_rate_hz": 48000,
+  "channels": 2,
+  "pcm_bits": 16,
+  "duration_seconds": 24,
+  "sample_count": 1152000,
+  "fps": 24,
+  "video_frames": 576,
+  "peak_dbfs": -0.9998868274589773,
+  "setup_rms_dbfs": -37.50807767309928,
+  "reality_rms_dbfs": -26.219217327680326,
+  "frame_convention": "Frame 1 is t=0. Event frame is nearest rendered frame: round(seconds*24)+1.",
+  "cue_events": [
+    {
+      "seconds": 0.0,
+      "frame": 1,
+      "sample": 0,
+      "event": "Faint library air and original felt-piano phrase begin",
+      "end_seconds": 9
+    },
+    {
+      "seconds": 1.0,
+      "frame": 25,
+      "sample": 48000,
+      "event": "Book page flip",
+      "end_seconds": 1.38
+    },
+    {
+      "seconds": 2.6,
+      "frame": 63,
+      "sample": 124800,
+      "event": "Book page flip",
+      "end_seconds": 2.98
+    },
+    {
+      "seconds": 3.0,
+      "frame": 73,
+      "sample": 144000,
+      "event": "Pencil scribbles on paper",
+      "end_seconds": 4.28
+    },
+    {
+      "seconds": 5.0,
+      "frame": 121,
+      "sample": 240000,
+      "event": "Quiet clock tick accent"
+    },
+    {
+      "seconds": 7.0,
+      "frame": 169,
+      "sample": 336000,
+      "event": "Quiet clock tick accent"
+    },
+    {
+      "seconds": 8.0,
+      "frame": 193,
+      "sample": 384000,
+      "event": "Subtle three-note success chime"
+    },
+    {
+      "seconds": 9.0,
+      "frame": 217,
+      "sample": 432000,
+      "event": "Exact record scratch and abrupt modern-workstation cut",
+      "end_seconds": 9.43
+    },
+    {
+      "seconds": 10.0,
+      "frame": 241,
+      "sample": 480000,
+      "event": "Notification ping",
+      "sequence": 1,
+      "intensity": 0.35
+    },
+    {
+      "seconds": 10.0,
+      "frame": 241,
+      "sample": 480000,
+      "event": "Phone vibration under notifications"
+    },
+    {
+      "seconds": 10.875,
+      "frame": 262,
+      "sample": 522000,
+      "event": "Notification ping",
+      "sequence": 2,
+      "intensity": 0.397
+    },
+    {
+      "seconds": 11.625,
+      "frame": 280,
+      "sample": 558000,
+      "event": "Notification ping",
+      "sequence": 3,
+      "intensity": 0.438
+    },
+    {
+      "seconds": 12.0,
+      "frame": 289,
+      "sample": 576000,
+      "event": "Original rising electronic tension sting",
+      "end_seconds": 21.7
+    },
+    {
+      "seconds": 12.291667,
+      "frame": 296,
+      "sample": 590000,
+      "event": "Notification ping",
+      "sequence": 4,
+      "intensity": 0.474
+    },
+    {
+      "seconds": 12.5,
+      "frame": 301,
+      "sample": 600000,
+      "event": "Phone vibration under notifications"
+    },
+    {
+      "seconds": 12.875,
+      "frame": 310,
+      "sample": 618000,
+      "event": "Notification ping",
+      "sequence": 5,
+      "intensity": 0.506
+    },
+    {
+      "seconds": 13.0,
+      "frame": 313,
+      "sample": 624000,
+      "event": "Frantic keyboard clatter starts and accelerates",
+      "end_seconds": 17,
+      "keystroke_times_seconds": [
+        13.0,
+        13.111288,
+        13.271741,
+        13.393245,
+        13.526584,
+        13.614134,
+        13.749238,
+        13.858504,
+        13.93865,
+        14.027334,
+        14.142531,
+        14.228642,
+        14.323164,
+        14.401545,
+        14.492269,
+        14.593732,
+        14.673869,
+        14.74914,
+        14.835209,
+        14.910017,
+        14.993064,
+        15.07636,
+        15.161419,
+        15.23309,
+        15.313918,
+        15.371277,
+        15.441141,
+        15.523991,
+        15.59474,
+        15.645386,
+        15.71887,
+        15.768648,
+        15.830664,
+        15.907605,
+        15.961596,
+        16.009362,
+        16.059157,
+        16.124991,
+        16.185983,
+        16.231972,
+        16.280279,
+        16.340307,
+        16.407883,
+        16.473091,
+        16.541796,
+        16.594643,
+        16.635961,
+        16.676243,
+        16.737772,
+        16.800852,
+        16.866003,
+        16.915537,
+        16.979203
+      ]
+    },
+    {
+      "seconds": 13.375,
+      "frame": 322,
+      "sample": 642000,
+      "event": "Notification ping",
+      "sequence": 6,
+      "intensity": 0.533
+    },
+    {
+      "seconds": 13.833333,
+      "frame": 333,
+      "sample": 664000,
+      "event": "Notification ping",
+      "sequence": 7,
+      "intensity": 0.558
+    },
+    {
+      "seconds": 14.25,
+      "frame": 343,
+      "sample": 684000,
+      "event": "Notification ping",
+      "sequence": 8,
+      "intensity": 0.58
+    },
+    {
+      "seconds": 14.625,
+      "frame": 352,
+      "sample": 702000,
+      "event": "Notification ping",
+      "sequence": 9,
+      "intensity": 0.601
+    },
+    {
+      "seconds": 15.0,
+      "frame": 361,
+      "sample": 720000,
+      "event": "Notification ping",
+      "sequence": 10,
+      "intensity": 0.621
+    },
+    {
+      "seconds": 15.333333,
+      "frame": 369,
+      "sample": 736000,
+      "event": "Notification ping",
+      "sequence": 11,
+      "intensity": 0.639
+    },
+    {
+      "seconds": 15.5,
+      "frame": 373,
+      "sample": 744000,
+      "event": "Phone vibration under notifications"
+    },
+    {
+      "seconds": 15.666667,
+      "frame": 377,
+      "sample": 752000,
+      "event": "Notification ping",
+      "sequence": 12,
+      "intensity": 0.657
+    },
+    {
+      "seconds": 15.958333,
+      "frame": 384,
+      "sample": 766000,
+      "event": "Notification ping",
+      "sequence": 13,
+      "intensity": 0.673
+    },
+    {
+      "seconds": 16.25,
+      "frame": 391,
+      "sample": 780000,
+      "event": "Notification ping",
+      "sequence": 14,
+      "intensity": 0.689
+    },
+    {
+      "seconds": 16.5,
+      "frame": 397,
+      "sample": 792000,
+      "event": "Notification ping",
+      "sequence": 15,
+      "intensity": 0.702
+    },
+    {
+      "seconds": 16.75,
+      "frame": 403,
+      "sample": 804000,
+      "event": "Notification ping",
+      "sequence": 16,
+      "intensity": 0.716
+    },
+    {
+      "seconds": 17.0,
+      "frame": 409,
+      "sample": 816000,
+      "event": "Notification ping",
+      "sequence": 17,
+      "intensity": 0.729
+    },
+    {
+      "seconds": 17.25,
+      "frame": 415,
+      "sample": 828000,
+      "event": "Notification ping",
+      "sequence": 18,
+      "intensity": 0.743
+    },
+    {
+      "seconds": 17.458333,
+      "frame": 420,
+      "sample": 838000,
+      "event": "Notification ping",
+      "sequence": 19,
+      "intensity": 0.754
+    },
+    {
+      "seconds": 17.666667,
+      "frame": 425,
+      "sample": 848000,
+      "event": "Notification ping",
+      "sequence": 20,
+      "intensity": 0.765
+    },
+    {
+      "seconds": 17.875,
+      "frame": 430,
+      "sample": 858000,
+      "event": "Notification ping",
+      "sequence": 21,
+      "intensity": 0.777
+    },
+    {
+      "seconds": 18.0,
+      "frame": 433,
+      "sample": 864000,
+      "event": "Rabbit-hole impact bass hit"
+    },
+    {
+      "seconds": 18.0,
+      "frame": 433,
+      "sample": 864000,
+      "event": "Rapid mouse clicks build under overlapping notifications",
+      "end_seconds": 22,
+      "click_times_seconds": [
+        18.0,
+        18.108899,
+        18.193307,
+        18.272502,
+        18.363997,
+        18.459975,
+        18.525672,
+        18.631401,
+        18.730393,
+        18.807342,
+        18.878697,
+        18.96758,
+        19.0465,
+        19.105853,
+        19.193789,
+        19.261059,
+        19.33141,
+        19.418049,
+        19.499701,
+        19.556136,
+        19.640424,
+        19.705121,
+        19.765898,
+        19.830089,
+        19.884478,
+        19.948233,
+        20.015118,
+        20.083022,
+        20.156101,
+        20.223949,
+        20.279704,
+        20.345162,
+        20.391679,
+        20.44513,
+        20.495841,
+        20.547668,
+        20.606322,
+        20.67565,
+        20.732627,
+        20.775534,
+        20.836448,
+        20.887999,
+        20.950101,
+        21.00835,
+        21.053685,
+        21.11249,
+        21.160508,
+        21.221677,
+        21.279068,
+        21.32369,
+        21.387111,
+        21.426919,
+        21.476798,
+        21.539055,
+        21.596491,
+        21.650417,
+        21.690571,
+        21.748494,
+        21.787208,
+        21.830446,
+        21.887398
+      ]
+    },
+    {
+      "seconds": 18.083333,
+      "frame": 435,
+      "sample": 868000,
+      "event": "Notification ping",
+      "sequence": 22,
+      "intensity": 0.788
+    },
+    {
+      "seconds": 18.291667,
+      "frame": 440,
+      "sample": 878000,
+      "event": "Notification ping",
+      "sequence": 23,
+      "intensity": 0.799
+    },
+    {
+      "seconds": 18.458333,
+      "frame": 444,
+      "sample": 886000,
+      "event": "Notification ping",
+      "sequence": 24,
+      "intensity": 0.808
+    },
+    {
+      "seconds": 18.625,
+      "frame": 448,
+      "sample": 894000,
+      "event": "Notification ping",
+      "sequence": 25,
+      "intensity": 0.817
+    },
+    {
+      "seconds": 18.75,
+      "frame": 451,
+      "sample": 900000,
+      "event": "Phone vibration under notifications"
+    },
+    {
+      "seconds": 18.791667,
+      "frame": 452,
+      "sample": 902000,
+      "event": "Notification ping",
+      "sequence": 26,
+      "intensity": 0.826
+    },
+    {
+      "seconds": 18.958333,
+      "frame": 456,
+      "sample": 910000,
+      "event": "Notification ping",
+      "sequence": 27,
+      "intensity": 0.835
+    },
+    {
+      "seconds": 19.125,
+      "frame": 460,
+      "sample": 918000,
+      "event": "Notification ping",
+      "sequence": 28,
+      "intensity": 0.844
+    },
+    {
+      "seconds": 19.291667,
+      "frame": 464,
+      "sample": 926000,
+      "event": "Notification ping",
+      "sequence": 29,
+      "intensity": 0.853
+    },
+    {
+      "seconds": 19.458333,
+      "frame": 468,
+      "sample": 934000,
+      "event": "Notification ping",
+      "sequence": 30,
+      "intensity": 0.862
+    },
+    {
+      "seconds": 19.625,
+      "frame": 472,
+      "sample": 942000,
+      "event": "Notification ping",
+      "sequence": 31,
+      "intensity": 0.871
+    },
+    {
+      "seconds": 19.791667,
+      "frame": 476,
+      "sample": 950000,
+      "event": "Notification ping",
+      "sequence": 32,
+      "intensity": 0.88
+    },
+    {
+      "seconds": 19.958333,
+      "frame": 480,
+      "sample": 958000,
+      "event": "Notification ping",
+      "sequence": 33,
+      "intensity": 0.889
+    },
+    {
+      "seconds": 20.125,
+      "frame": 484,
+      "sample": 966000,
+      "event": "Notification ping",
+      "sequence": 34,
+      "intensity": 0.898
+    },
+    {
+      "seconds": 20.291667,
+      "frame": 488,
+      "sample": 974000,
+      "event": "Notification ping",
+      "sequence": 35,
+      "intensity": 0.907
+    },
+    {
+      "seconds": 20.458333,
+      "frame": 492,
+      "sample": 982000,
+      "event": "Notification ping",
+      "sequence": 36,
+      "intensity": 0.916
+    },
+    {
+      "seconds": 20.5,
+      "frame": 493,
+      "sample": 984000,
+      "event": "Phone vibration under notifications"
+    },
+    {
+      "seconds": 20.625,
+      "frame": 496,
+      "sample": 990000,
+      "event": "Notification ping",
+      "sequence": 37,
+      "intensity": 0.926
+    },
+    {
+      "seconds": 20.791667,
+      "frame": 500,
+      "sample": 998000,
+      "event": "Notification ping",
+      "sequence": 38,
+      "intensity": 0.935
+    },
+    {
+      "seconds": 20.958333,
+      "frame": 504,
+      "sample": 1006000,
+      "event": "Notification ping",
+      "sequence": 39,
+      "intensity": 0.944
+    },
+    {
+      "seconds": 21.125,
+      "frame": 508,
+      "sample": 1014000,
+      "event": "Notification ping",
+      "sequence": 40,
+      "intensity": 0.953
+    },
+    {
+      "seconds": 21.291667,
+      "frame": 512,
+      "sample": 1022000,
+      "event": "Notification ping",
+      "sequence": 41,
+      "intensity": 0.962
+    },
+    {
+      "seconds": 21.458333,
+      "frame": 516,
+      "sample": 1030000,
+      "event": "Notification ping",
+      "sequence": 42,
+      "intensity": 0.971
+    },
+    {
+      "seconds": 21.625,
+      "frame": 520,
+      "sample": 1038000,
+      "event": "Notification ping",
+      "sequence": 43,
+      "intensity": 0.98
+    },
+    {
+      "seconds": 21.791667,
+      "frame": 524,
+      "sample": 1046000,
+      "event": "Notification ping",
+      "sequence": 44,
+      "intensity": 0.989
+    },
+    {
+      "seconds": 22.0,
+      "frame": 529,
+      "sample": 1056000,
+      "event": "Complete digital silence for camera-facing source question",
+      "end_seconds": 23
+    },
+    {
+      "seconds": 23.0,
+      "frame": 553,
+      "sample": 1104000,
+      "event": "Final information-overload bass hit"
+    },
+    {
+      "seconds": 23.13,
+      "frame": 556,
+      "sample": 1110240,
+      "event": "Information-overload paper rattle",
+      "end_seconds": 23.66
+    },
+    {
+      "seconds": 23.75,
+      "frame": 571,
+      "sample": 1140000,
+      "event": "Character collapse and rounded desk thump",
+      "end_seconds": 23.95
+    },
+    {
+      "seconds": 23.87,
+      "frame": 574,
+      "sample": 1145760,
+      "event": "Tiny sad descending keyboard error",
+      "end_seconds": 23.98
+    }
+  ],
+  "notification_times_seconds": [
+    10.0,
+    10.875,
+    11.625,
+    12.291666666666666,
+    12.875,
+    13.375,
+    13.833333333333334,
+    14.25,
+    14.625,
+    15.0,
+    15.333333333333334,
+    15.666666666666666,
+    15.958333333333334,
+    16.25,
+    16.5,
+    16.75,
+    17.0,
+    17.25,
+    17.458333333333332,
+    17.666666666666668,
+    17.875,
+    18.083333333333332,
+    18.291666666666668,
+    18.458333333333332,
+    18.625,
+    18.791666666666668,
+    18.958333333333332,
+    19.125,
+    19.291666666666668,
+    19.458333333333332,
+    19.625,
+    19.791666666666668,
+    19.958333333333332,
+    20.125,
+    20.291666666666668,
+    20.458333333333332,
+    20.625,
+    20.791666666666668,
+    20.958333333333332,
+    21.125,
+    21.291666666666668,
+    21.458333333333332,
+    21.625,
+    21.791666666666668
+  ],
+  "notification_frames": [
+    241,
+    262,
+    280,
+    296,
+    310,
+    322,
+    333,
+    343,
+    352,
+    361,
+    369,
+    377,
+    384,
+    391,
+    397,
+    403,
+    409,
+    415,
+    420,
+    425,
+    430,
+    435,
+    440,
+    444,
+    448,
+    452,
+    456,
+    460,
+    464,
+    468,
+    472,
+    476,
+    480,
+    484,
+    488,
+    492,
+    496,
+    500,
+    504,
+    508,
+    512,
+    516,
+    520,
+    524
+  ],
+  "verified_silent_intervals_seconds": [
+    [
+      22,
+      23
+    ],
+    [
+      23.98,
+      24
+    ]
+  ],
+  "collapse_time_seconds": 23.75,
+  "collapse_frame": 571,
+  "sha256": "7c2c52830c995ce10e0a941d5677df36b033d9396848eaa37444a592bcc76839"
+}

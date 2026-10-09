@@ -1,0 +1,24 @@
+{
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 60,
+  "frames": 660,
+  "duration_seconds": 11,
+  "medium": "Native Grease Pencil",
+  "drawings": 660,
+  "caption": "Pov: You bring a gaming laptop to school instead of the normal mac book",
+  "cut_frames": [
+    1,
+    121,
+    181,
+    301,
+    409,
+    502,
+    568,
+    604
+  ],
+  "audio": "Original synthesized hinge, whine, engine sputter and roar",
+  "protected_files": 75
+}

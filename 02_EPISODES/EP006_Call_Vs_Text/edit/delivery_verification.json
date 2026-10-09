@@ -1,0 +1,42 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP006_Call_Vs_Text_1080p24_v001.mp4",
+  "project": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP006_Call_Vs_Text\\blend\\EP006_Call_Text_GP_v003.blend",
+  "duration_seconds": 18,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "frames": 432,
+  "renderer_gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "render_seconds": 226.8373219999994,
+  "encode_seconds": 4.878361199998835,
+  "render_and_encode_seconds": 231.71568319999824,
+  "audio": "Original ringtone / cushion thud left, original lo-fi / typing / message whoosh right",
+  "caption_bounds": {
+    "native_GP_drawings": 432,
+    "packed_audio": true,
+    "main_caption_bounds_px": [
+      212.35577434301376,
+      480.00000804662704,
+      813.6442199349403,
+      626.1346927285194
+    ],
+    "tag_caption_bounds_px": [
+      238.76024186611176,
+      699.9999994039536,
+      787.2397810220718,
+      739.1539388895035
+    ],
+    "safe_caption_policy": "Upper band only",
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 24,
+    "duration": 18
+  },
+  "full_decode_passed": true,
+  "protected_files_unchanged": 101
+}

@@ -1,0 +1,45 @@
+{
+  "gpu": "NVIDIA GeForce GTX 1650 Ti",
+  "engine": "Cycles",
+  "compute_backend": "OPTIX",
+  "blender_render_version": "4.2.0",
+  "native_project_version": "5.2.2",
+  "cpu_render_enabled": false,
+  "samples": 40,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "plate_a_seconds": 18.892692299999908,
+  "plate_b_seconds": 42.32965559999866,
+  "render_seconds": 61.22234789999857,
+  "plates": [
+    {
+      "name": "Plate_A_Library_1080p.png",
+      "path": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP008_Research_Then_Now\\plates\\Plate_A_Library_1080p.png",
+      "render_seconds": 18.892692299999908
+    },
+    {
+      "name": "Plate_B_Workstation_1080p.png",
+      "path": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP008_Research_Then_Now\\plates\\Plate_B_Workstation_1080p.png",
+      "render_seconds": 42.32965559999866
+    }
+  ],
+  "finished_utc": "2026-10-08T17:34:36.150617+00:00",
+  "plate_b_initial_render_seconds": 13.698383699998885,
+  "plate_b_final_render_seconds": 14.446473199999673,
+  "monitor_overlap_corrected": true,
+  "plate_b_previous_render_seconds": 27.883182399998987,
+  "final_successful_plate_render_seconds": 33.33916549999958,
+  "polished_native_project": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP008_Research_Then_Now\\plates\\EP008_Background_Plates_Polished_5_2_v002.blend",
+  "png_dimensions": {
+    "Plate_A_Library_1080p.png": [
+      1080,
+      1920
+    ],
+    "Plate_B_Workstation_1080p.png": [
+      1080,
+      1920
+    ]
+  }
+}

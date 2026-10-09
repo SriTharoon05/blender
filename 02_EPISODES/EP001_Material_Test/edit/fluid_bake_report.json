@@ -1,0 +1,26 @@
+[
+  {
+    "test": "Water",
+    "resolution": 32,
+    "frames": [
+      566,
+      675
+    ],
+    "mesh_frames": 110,
+    "largest_mesh_bytes": 93146,
+    "data_baked": true,
+    "mesh_baked": true
+  },
+  {
+    "test": "Honey",
+    "resolution": 32,
+    "frames": [
+      716,
+      825
+    ],
+    "mesh_frames": 110,
+    "largest_mesh_bytes": 9409,
+    "data_baked": true,
+    "mesh_baked": true
+  }
+]

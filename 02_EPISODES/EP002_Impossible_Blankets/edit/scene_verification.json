@@ -1,0 +1,54 @@
+{
+  "file": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP002_Impossible_Blankets\\blend\\EP002_v009.blend",
+  "frame_range": [
+    1,
+    1125
+  ],
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "preview_percentage": 35,
+  "markers": 28,
+  "cloth_cache_exists": true,
+  "water_mesh_frames": 107,
+  "glass_fragments": 12,
+  "fonts_packed": true,
+  "libraries": {
+    "BRIX_TestStage.blend": {
+      "scenes": [
+        "BRIX_TestStage"
+      ],
+      "collections": [
+        "EP002_UI",
+        "EP002_LIGHTS",
+        "EP002_ENVIRONMENT",
+        "EP002_CAMERAS",
+        "EP002_BED"
+      ],
+      "character_present": false
+    },
+    "BRIX_Shorts_Master_v002.blend": {
+      "scenes": [
+        "EP002_Impossible_Blankets"
+      ],
+      "collections": [
+        "EP002_WATER",
+        "EP002_UI",
+        "EP002_SLIME",
+        "EP002_SAND",
+        "EP002_LIGHTS",
+        "EP002_LAVA",
+        "EP002_HONEY",
+        "EP002_GLASS",
+        "EP002_ENVIRONMENT",
+        "EP002_CLOTH",
+        "EP002_CHARACTER",
+        "EP002_CAMERAS",
+        "EP002_BED"
+      ],
+      "character_present": true
+    }
+  }
+}

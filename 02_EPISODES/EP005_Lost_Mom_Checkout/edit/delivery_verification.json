@@ -1,0 +1,19 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP005_Lost_Mom_Checkout_1080p24_v001.mp4",
+  "project": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP005_Lost_Mom_Checkout\\blend\\EP005_Checkout_GP_v003.blend",
+  "duration_seconds": 22,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "frames": 528,
+  "renderer": "Eevee NVIDIA GTX 1650 Ti",
+  "encoding": "NVIDIA NVENC H.264",
+  "audio": "Original stereo 48kHz scanner beeps, accelerating monitor, AWOOGA klaxon, boing; digital silence 14\u201316s",
+  "caption": "Exact requested words, native GP Arial Black white fill with thick black contour; top 30%",
+  "packed_audio": true,
+  "full_decode_passed": true,
+  "protected_files_unchanged": 91
+}

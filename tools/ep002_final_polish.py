@@ -1,0 +1,10 @@
+import bpy,bmesh,json
+from pathlib import Path
+EP=Path(r'C:\Users\assri\OneDrive\Documents\ChatGPT\Blender\02_EPISODES\EP002_Impossible_Blankets');s=bpy.data.scenes['EP002_Impossible_Blankets'];bpy.context.window.scene=s;o=bpy.data.objects['FX_EP002_Slime_Blanket'];old=o.data;old.use_fake_user=True;clean=old.copy();clean.name='EP002_Slime_RenderSkin';bm=bmesh.new();bm.from_mesh(clean);loose=[e for e in bm.edges if not e.link_faces];bmesh.ops.delete(bm,geom=loose,context='EDGES');bm.to_mesh(clean);bm.free();assert len(clean.vertices)==len(old.vertices);o.data=clean;o['solver_source_mesh']=old.name;o['render_skin_note']='Internal volume springs retained in solver source mesh; omitted from rendered surface subdivision.'
+for p in clean.polygons:p.use_smooth=True
+sub=next(m for m in o.modifiers if m.type=='SUBSURF');sub.show_viewport=False;volumes={}
+for f in [168,208,238,288,348]:
+    s.frame_set(f);bpy.context.view_layer.update();e=o.evaluated_get(bpy.context.evaluated_depsgraph_get());me=e.to_mesh();bm=bmesh.new();bm.from_mesh(me);volumes[f]=abs(bm.calc_volume());bm.free();e.to_mesh_clear()
+sub.show_viewport=True
+s.eevee.taa_render_samples=64;s.eevee.shadow_ray_count=2;s.eevee.fast_gi_ray_count=1;s.eevee.ray_tracing_options.resolution_scale='4';s.render.resolution_percentage=100;s.render.image_settings.color_depth='16';s.render.image_settings.file_format='PNG';s.render.image_settings.color_mode='RGB';s.render.image_settings.compression=30;s.render.fps=60;s.render.fps_base=1;s.frame_start=1;s.frame_end=2250;s.frame_step=1;s['master_image_spec']='Native 2160x3840 16-bit PNG frames, 60fps. Continuous procedural material detail; 10-bit ProRes master and high-quality H.264 delivery.'
+s.frame_set(48);bpy.ops.wm.save_as_mainfile(filepath=str(EP/'blend/EP002_v019.blend'),compress=True);(EP/'edit/final_polish_report.json').write_text(json.dumps({'removed_render_only_internal_edges':len(loose),'slime_source_volumes':volumes,'primary_resolution':[2160,3840],'fps':60,'png_bits':16,'render_samples':64,'ray_resolution_scale':4},indent=2));print('FINAL_4K60_MASTER_PREPARED')

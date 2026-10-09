@@ -1,0 +1,11 @@
+{
+  "name": "WATER",
+  "resolution": 32,
+  "frames": [
+    250,
+    675
+  ],
+  "data_baked": true,
+  "mesh_baked": true,
+  "cache": "//..\\cache\\fluid\\water"
+}

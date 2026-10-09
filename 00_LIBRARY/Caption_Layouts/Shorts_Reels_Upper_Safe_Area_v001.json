@@ -1,0 +1,28 @@
+{
+  "resolution": [1080, 1920],
+  "coordinate_system": "Export pixels, top-left origin; applies to complete lettering and outline bounds",
+  "placement": "Upper screen below platform headers, all captions and taglines; never bottom",
+  "safe_band_px": [108, 480, 918, 748],
+  "safe_band_percent": [10, 25, 85, 38.9583333333],
+  "slots": {
+    "main": [108, 480, 918, 680],
+    "tag": [108, 700, 918, 748]
+  },
+  "reserved_artwork_clearance": "Keep important faces, heads, signs and camera pushes below export y=800px; plain background in caption band",
+  "font": "Arial Black or equally bold; white with thick black outline",
+  "fit": "Wrap main text to 2–3 lines, fit measured full glyph and outline bounds, shorten wrapping or recompose rather than use bottom placement; captions remain fixed during shake",
+  "verification": "Check title, subtitle, tag and all animated caption bounds against both reference header masks before rendering; inspect final phone-scale previews",
+  "reference_measurement": {
+    "reference_screen_size_px": [738, 1600],
+    "youtube_header_and_chips_end_y_approx": 284,
+    "instagram_header_end_y_approx": 195,
+    "youtube_observed_header_percent_screen": 17.75,
+    "conservative_export_header_limit_px": 420,
+    "caption_extra_clearance_px": 60,
+    "mapping": "Account conservatively for phone viewport scaling/cropping; measure rendered-video bounds, not the phone status bar alone",
+    "references": ["YouTube_Header_Reference.jpg", "Instagram_Header_Reference.jpg"],
+    "limitation": "Measured from the user's screenshots, not a guarantee for every future app UI, expanded overlay or device crop"
+  },
+  "supersedes": ["top 20%", "top 30%", "bottom-screen punchline stamps"],
+  "scope": "All future videos, unless the user explicitly changes the rule"
+}

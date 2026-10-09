@@ -1,0 +1,31 @@
+{
+  "softbody": {
+    "source": "actual cached simulation",
+    "frames": [
+      115,
+      225
+    ],
+    "vertices": 98,
+    "coordinate_variation": 0.17669892311096191,
+    "mdd": "cache\\softbody\\EP001_Slime.mdd"
+  },
+  "cloth": {
+    "source": "actual cached simulation",
+    "frames": [
+      417,
+      525
+    ],
+    "vertices": 625,
+    "coordinate_variation": 1.821483618579805,
+    "mdd": "cache\\cloth\\EP001_Cloth.mdd"
+  },
+  "glass": {
+    "source": "actual in-memory rigid body simulation",
+    "shards": 14,
+    "frames": [
+      241,
+      390
+    ],
+    "cache": "cache/rigidbody/EP001_Glass_Transforms.json"
+  }
+}

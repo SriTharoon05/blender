@@ -1,0 +1,16 @@
+{
+  "EP001_Slime": {
+    "baked": true,
+    "frames": [
+      115,
+      225
+    ]
+  },
+  "EP001_Cloth": {
+    "baked": true,
+    "frames": [
+      417,
+      525
+    ]
+  }
+}

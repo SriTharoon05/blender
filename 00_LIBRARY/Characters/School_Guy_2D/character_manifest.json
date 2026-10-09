@@ -1,0 +1,54 @@
+{
+  "character": "School Guy 2D",
+  "approved_reference": "Approved_Character_Reference.png",
+  "asset": "School_Guy_2D_v001.blend",
+  "collection": "CHAR_School_Guy_2D",
+  "source_episode": "EP003_Gaming_Laptop_GP",
+  "source_frame": 75,
+  "reuse_for": "All future 2D content unless user explicitly requests another character",
+  "preserve": [
+    "face silhouette",
+    "dark angular hair",
+    "skin colour",
+    "simple eye and mouth design",
+    "blue hoodie design"
+  ],
+  "future_render_defaults": {
+    "width": 1080,
+    "height": 1920,
+    "fps": 24,
+    "engine": "Eevee",
+    "gpu": "NVIDIA GTX 1650 Ti",
+    "report_actual_render_time_each_delivery": true
+  },
+  "character_strokes": 27,
+  "future_template": "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v005.blend",
+  "caption_defaults": {
+    "placement": "Higher top caption, approximately 2–3 cm from screen top; clear notification/status area only; never bottom",
+    "font": "Arial Black or equally bold readable font",
+    "fill": "white",
+    "outline": "thick black",
+    "camera_shake": "keep captions stable",
+    "safe_band_px": [
+      108,
+      300,
+      918,
+      548
+    ],
+    "main_slot_px": [
+      108,
+      300,
+      918,
+      480
+    ],
+    "tag_slot_px": [
+      108,
+      500,
+      918,
+      548
+    ],
+    "policy": "00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v002.json",
+    "verification": "phone-scale notification/status/cutout-area check; no large app-header gap",
+    "artwork_top_clearance_px": 600
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "native_GP_drawings": 432,
+  "packed_audio": true,
+  "main_caption_bounds_px": [
+    199.83725398778915,
+    299.99997943639755,
+    826.162740290165,
+    436.49936825037
+  ],
+  "expectation_bounds_px": [
+    377.6004061102867,
+    499.9999889731407,
+    648.3995953202248,
+    537.4976268410683
+  ],
+  "reality_bounds_px": [
+    428.33381742239,
+    499.9999889731407,
+    597.6661804318428,
+    536.6807475686073
+  ],
+  "safe_caption_policy": "Higher top, 300px; labels500px",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "duration": 18,
+  "blackout_frames": [
+    145,
+    146,
+    147
+  ],
+  "spring_launch_frame": 174,
+  "clock_change_frame": 421,
+  "launch_legs_occluded_by_duvet": true,
+  "clock_smack_wide_insert": [
+    13.75,
+    14.25
+  ],
+  "clear_downward_thumb": true,
+  "protected_files_unchanged": 109,
+  "final_project": "EP007_Alarm_GP_v003.blend"
+}

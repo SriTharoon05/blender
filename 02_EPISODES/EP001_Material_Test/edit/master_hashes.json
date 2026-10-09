@@ -1,0 +1,10 @@
+{
+  "01_TEMPLATES\\BRIX_Shorts_Master.blend": "88249341126c45d5de41079dd39a2a5b5eb4d13e4313ce26228ffefb82753d3d",
+  "00_LIBRARY\\Cameras\\BRIX_VerticalCamera.blend": "687bbf0da67625ddc8bfc439fcbe3a20f26c2fe31daed6fae6e24560c59ab384",
+  "00_LIBRARY\\Characters\\BRIX\\BRIX_Master.blend": "a7d97dfbaa33d04f5163ed65371b760a9bc2c2b8b1652b2134575163003b232f",
+  "00_LIBRARY\\Environments\\BRIX_Lab_Master.blend": "8e6949a262e747b358f5cb5aa3e9c23908cb7c44f081f2efac64e4035bd2fe54",
+  "00_LIBRARY\\Lighting\\BRIX_StudioLighting.blend": "4135903ef9049942883982f1cfe7526a351e0debd6337c364c9fe0f12bc2f44d",
+  "00_LIBRARY\\Materials\\BRIX_Materials.blend": "385ab976cc29782db68cf8d013899ee5aca990829fed8b0014c2bc2adc833be8",
+  "00_LIBRARY\\Props\\BRIX_ExperimentStation.blend": "2cb5b99c7f45338ddb99befd2e3bb29a24ec454d0d1af5fcb13ae2c9e71c02dc",
+  "00_LIBRARY\\UI\\BRIX_UI.blend": "4e8d05390a3bf8d2ebed9b79d252cd5dc915bcbf91a256d44190432b1ad82ae6"
+}

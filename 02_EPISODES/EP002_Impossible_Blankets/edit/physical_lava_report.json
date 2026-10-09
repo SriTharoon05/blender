@@ -1,0 +1,11 @@
+{
+  "material": "LAVA",
+  "fps": 60,
+  "resolution": 56,
+  "mesh_scale": 2,
+  "viscosity_enabled": true,
+  "viscosity": 0.03999999910593033,
+  "mesh_frames": 191,
+  "largest_mesh_bytes": 790962,
+  "cache": "//..\\cache\\fluid\\physical_lava_60fps_v013"
+}

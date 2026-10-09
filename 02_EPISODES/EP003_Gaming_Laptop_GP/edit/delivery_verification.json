@@ -1,0 +1,19 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP003_Gaming_Laptop_GreasePencil_1080p60_v001.mp4",
+  "blend": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP003_Gaming_Laptop_GP\\blend\\EP003_Gaming_Laptop_GP_v006.blend",
+  "medium": "Native Grease Pencil animation and caption fills",
+  "frames": 660,
+  "fps": 60,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "duration_seconds": 11,
+  "audio": "Original synchronized synthesized metal hinge, whine, silence and engine startup/roar",
+  "renderer": "Eevee GPU",
+  "encoding": "NVIDIA NVENC H.264",
+  "full_decode_passed": true,
+  "protected_files_unchanged": 75,
+  "audio_packed_in_project": true
+}

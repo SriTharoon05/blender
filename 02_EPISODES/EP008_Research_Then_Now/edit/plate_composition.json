@@ -1,0 +1,41 @@
+{
+  "camera_location": [
+    0.0,
+    -7.199999809265137,
+    5.5
+  ],
+  "camera_rotation_euler": [
+    1.2428088188171387,
+    -0.0,
+    0.0
+  ],
+  "lens_mm": 44,
+  "projections": {
+    "desk_back": [
+      540.0,
+      1166.9
+    ],
+    "desk_middle": [
+      540.0,
+      1271.8
+    ],
+    "desk_front": [
+      540.0,
+      1416.6
+    ],
+    "left_monitor_inner": [
+      274.1,
+      1127.0
+    ],
+    "right_monitor_inner": [
+      795.2,
+      1121.8
+    ]
+  },
+  "gpu": [
+    "NVIDIA GeForce GTX 1650 Ti"
+  ],
+  "cpu_enabled": false,
+  "samples": 40,
+  "denoiser": "OptiX GPU"
+}

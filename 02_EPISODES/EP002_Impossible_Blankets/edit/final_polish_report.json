@@ -1,0 +1,18 @@
+{
+  "removed_render_only_internal_edges": 713,
+  "slime_source_volumes": {
+    "168": 0.8013599521923074,
+    "208": 0.49585754966491585,
+    "238": 0.36420099827937047,
+    "288": 0.26004478529825503,
+    "348": 0.23449924474137318
+  },
+  "primary_resolution": [
+    2160,
+    3840
+  ],
+  "fps": 60,
+  "png_bits": 16,
+  "render_samples": 64,
+  "ray_resolution_scale": 4
+}

@@ -1,0 +1,105 @@
+{
+  "status": "Complete and verified",
+  "video": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\03_FINAL_OUTPUT\\YouTube\\EP008_Research_Then_Now_1080p24_v001.mp4",
+  "project": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP008_Research_Then_Now\\blend\\EP008_Research_GP_v004.blend",
+  "duration_seconds": 24,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "frames": 576,
+  "pipeline": "Two static Cycles GPU background plates, transparent native Grease Pencil Eevee animation, compositor alpha-over",
+  "renderer_gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "cycles_plate_timings": [
+    {
+      "name": "Plate_A_Library_1080p.png",
+      "render_seconds": 18.892692299999908,
+      "gpu": "NVIDIA GeForce GTX 1650 Ti",
+      "path": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP008_Research_Then_Now\\plates\\Plate_A_Library_1080p.png",
+      "sha256": "9dbb820c959c537edcba2fa1ddd3fbd8a1b0e7af8a7002e8b72d980b77e9cfe1"
+    },
+    {
+      "name": "Plate_B_Workstation_1080p.png",
+      "render_seconds": 42.32965559999866,
+      "gpu": "NVIDIA GeForce GTX 1650 Ti",
+      "path": "C:\\Users\\assri\\OneDrive\\Documents\\ChatGPT\\Blender\\02_EPISODES\\EP008_Research_Then_Now\\plates\\Plate_B_Workstation_1080p.png",
+      "sha256": "33157db7fa26b40ae86b9c5fed3fd0db593a7177b4b2566e6d39e4e8cdb916f8"
+    }
+  ],
+  "cycles_still_render_seconds": 61.22234789999857,
+  "eevee_animation_render_seconds": 443.5958138999995,
+  "render_seconds": 504.81816179999805,
+  "encode_seconds": 7.3024355999987165,
+  "render_and_encode_seconds": 512.1205973999968,
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "encoder": "h264_nvenc / NVIDIA GTX 1650 Ti",
+  "audio": "Original library ambience/piano, page and pencil foley, record scratch, notification spam, frantic typing, rabbit-hole bass, overload thump, and error beep",
+  "audio_source": {
+    "sample_rate": 48000,
+    "channels": 2,
+    "sample_width": 2,
+    "duration_seconds": 24.0
+  },
+  "project_verification": {
+    "native_GP_drawings": 576,
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 24,
+    "duration_seconds": 24,
+    "film_transparent": true,
+    "RGBA": true,
+    "packed_audio": true,
+    "main_caption_bounds_px": [
+      138.4286865592003,
+      299.99997943639755,
+      887.5713077187538,
+      430.3343787789345
+    ],
+    "then_bounds_px": [
+      271.33656442165375,
+      499.9999898672104,
+      754.6634441614151,
+      529.9695879220963
+    ],
+    "now_bounds_px": [
+      277.0078271627426,
+      499.9999898672104,
+      748.9921814203262,
+      529.9695879220963
+    ],
+    "question_bounds_px": [
+      259.1342443227768,
+      499.9999898672104,
+      766.8657499551773,
+      529.9695879220963
+    ],
+    "safe_caption_policy": "Upper y300..480, tag500..548; never bottom",
+    "exact_caption": "POV: Researching a project \u2014 Then vs Now",
+    "exact_physical_question": "Which source is the actual source?",
+    "collapse_impact_frame": 571,
+    "silence_frames": [
+      529,
+      552
+    ],
+    "previous_assets_protected": 112,
+    "packed_cycles_plates": 2,
+    "compositor": "Two packed Image plates \u2192 timed cut \u2192 1\u20133px BG shake \u2192 faint glow \u2192 Alpha Over transparent GP \u2192 RGB Curves \u2192 Group Image output",
+    "compositor_device": "GPU",
+    "camera_locked": true,
+    "hard_cut_frame": 217,
+    "packed_plate_sha256": {
+      "Plate_A_Library_1080p.png": "9dbb820c959c537edcba2fa1ddd3fbd8a1b0e7af8a7002e8b72d980b77e9cfe1",
+      "Plate_B_Workstation_1080p.png": "33157db7fa26b40ae86b9c5fed3fd0db593a7177b4b2566e6d39e4e8cdb916f8"
+    },
+    "collapse_polish": "Forward torso compression, hidden upright neck, angular head/ear resting on crossed sleeve; exact desk-impact frame571",
+    "final_project_version": 4
+  },
+  "full_decode_passed": true,
+  "protected_files_unchanged": 112,
+  "file_size_bytes": 9697323,
+  "video_sha256": "7e4353a1d67b30bf42901299d9a35deaf06f5259fde454a55ed34dce857219a6"
+}

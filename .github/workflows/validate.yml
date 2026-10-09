@@ -1,0 +1,22 @@
+name: Validate cloud authoring
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
+        with:
+          python-version: '3.12'
+      - name: Check scripts, assets, and production policy
+        run: python tools/validate_repository.py
+      - name: Test portable queue and path helpers
+        run: python -m unittest discover -s tests -v
+      - name: Validate queued episode specifications
+        run: |
+          python tools/production_queue.py validate queue/pending.queue.json
+          python tools/production_queue.py dry-run queue/example.queue.json
