@@ -1,0 +1,130 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "native_source": "02_EPISODES/EP009_Wrong_Screen/plates/EP009_Office_Plates_4_2_v003.blend",
+  "blender_source_version": "4.2.0",
+  "camera_continuity": "Same linked perspective camera and same shared geometry in both plates",
+  "camera": {
+    "location": [
+      0.0,
+      -6.800000190734863,
+      3.4000000953674316
+    ],
+    "rotation_euler": [
+      1.4682164192199707,
+      -0.0,
+      0.0
+    ],
+    "lens_mm": 65,
+    "dof_fstop": 5.6
+  },
+  "screen_quad_px_clockwise_from_top_left": [
+    [
+      241.584,
+      1016.075
+    ],
+    [
+      838.416,
+      1016.075
+    ],
+    [
+      841.882,
+      1352.118
+    ],
+    [
+      238.118,
+      1352.118
+    ]
+  ],
+  "screen_quad_world": [
+    [
+      -1.0084999799728394,
+      -0.2640039920806885,
+      2.536670684814453
+    ],
+    [
+      1.0084999799728394,
+      -0.2640039920806885,
+      2.536670684814453
+    ],
+    [
+      1.0084999799728394,
+      -0.4539957642555237,
+      1.4298591613769531
+    ],
+    [
+      -1.0084999799728394,
+      -0.4539957642555237,
+      1.4298591613769531
+    ]
+  ],
+  "laptop_foreground_occlusion_polygon_px": [
+    [
+      170.456,
+      1463.242
+    ],
+    [
+      215.899,
+      984.356
+    ],
+    [
+      864.101,
+      984.356
+    ],
+    [
+      909.544,
+      1463.242
+    ],
+    [
+      909.138,
+      1483.481
+    ],
+    [
+      170.862,
+      1483.481
+    ]
+  ],
+  "character_face_target_px": [
+    540,
+    780
+  ],
+  "negative_character_space_px": [
+    290,
+    580,
+    715,
+    980
+  ],
+  "composition_landmarks_px": {
+    "desk_back": [
+      540.0,
+      1328.889
+    ],
+    "desk_front": [
+      540.0,
+      1536.185
+    ],
+    "mug_center": [
+      84.622,
+      1394.36
+    ],
+    "mouse_center": [
+      898.959,
+      1413.914
+    ],
+    "character_face_world_proxy": [
+      540.0,
+      767.53
+    ]
+  },
+  "samples": 48,
+  "procedural_original_assets_only": true,
+  "render_in_build": false,
+  "plates": [
+    "Plate_A_Warm_Office_1080p_v003.png",
+    "Plate_B_Cold_Panic_1080p_v003.png"
+  ],
+  "color_management": "AgX - Medium High Contrast baked into display-referred 8-bit sRGB PNG plates"
+}

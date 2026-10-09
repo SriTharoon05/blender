@@ -48,3 +48,4 @@ Thumbs.db
 *.otf
 *.woff
 *.woff2
+!00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf

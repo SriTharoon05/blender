@@ -1,0 +1,15 @@
+{
+  "resolution": [1080, 1920],
+  "coordinate_system": "Export pixels, top-left origin; complete glyph and outline bounds",
+  "placement": "Spoken words in lower safe band above channel/subscribe overlays; POV titles at top",
+  "slots": {
+    "main": [108, 300, 918, 480],
+    "tag": [108, 500, 918, 548],
+    "dialogue": [130, 1340, 870, 1470]
+  },
+  "font": "LuckiestGuy-Regular.ttf; white fill with thick black rounded outline",
+  "dialogue_animation": "One authoritative aligned word at a time; brief 0.90 to 1.00 scale-in pop; fixed during camera shake",
+  "fit": "Measure at maximum pop scale; keep every word inside dialogue band, including outlines",
+  "verification": "Inspect exported phone-scale previews against YouTube and Instagram overlay approximations; platform UI can vary",
+  "supersedes": "The user's 2026-10-09 request changes spoken captions to lower placement and replaces Arial Black with Luckiest Guy. Prior delivered episodes remain unchanged."
+}

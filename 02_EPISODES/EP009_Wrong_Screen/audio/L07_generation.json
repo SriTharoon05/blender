@@ -1,0 +1,6 @@
+{
+  "signature": "dc330835c8ecae15f777f97b2a23280ba64c38b1e4862a60da47fc662abb30f5",
+  "raw_sha256": "36370881c4da328ca7b1ea772a74186d54b46890ab78c10b93098259a404b5bc",
+  "tts_model": "gemini-3.8-flash-tts",
+  "voice": "Kore"
+}

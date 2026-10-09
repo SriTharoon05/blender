@@ -1,0 +1,76 @@
+{
+  "tts_model": "gemini-3.8-flash-tts",
+  "stt_model": "whisper-large-v3",
+  "lines": [
+    {
+      "id": "L01",
+      "speaker": "employee",
+      "voice": "Kore",
+      "trim_start_seconds": 0.2305,
+      "speed_factor": 1.062346,
+      "fitted_duration_seconds": 1.898458
+    },
+    {
+      "id": "L02",
+      "speaker": "host",
+      "voice": "Puck",
+      "trim_start_seconds": 0.36962,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 0.968542
+    },
+    {
+      "id": "L03",
+      "speaker": "employee",
+      "voice": "Kore",
+      "trim_start_seconds": 0.32838,
+      "speed_factor": 1.45119,
+      "fitted_duration_seconds": 1.893917
+    },
+    {
+      "id": "L04",
+      "speaker": "employee",
+      "voice": "Kore",
+      "trim_start_seconds": 0.33771,
+      "speed_factor": 1.059502,
+      "fitted_duration_seconds": 1.891
+    },
+    {
+      "id": "L05",
+      "speaker": "host",
+      "voice": "Puck",
+      "trim_start_seconds": 0.24892,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 1.387458
+    },
+    {
+      "id": "L06",
+      "speaker": "employee",
+      "voice": "Kore",
+      "trim_start_seconds": 0.16871,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 2.208542
+    },
+    {
+      "id": "L07",
+      "speaker": "employee",
+      "voice": "Kore",
+      "trim_start_seconds": 0.0,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 1.82125
+    }
+  ],
+  "sample_rate": 48000,
+  "channels": 2,
+  "duration_seconds": 18,
+  "mix_peak_dbfs": -2.986,
+  "mix_gain": 1,
+  "elapsed_seconds": 53.125,
+  "final_half_second_silent": true,
+  "docs": {
+    "gemini_tts": "https://ai.google.dev/gemini-api/docs/speech-generation",
+    "gemini_free_tier": "https://ai.google.dev/gemini-api/docs/pricing",
+    "groq_whisper": "https://console.groq.com/docs/speech-to-text",
+    "groq_rate_limits": "https://console.groq.com/docs/rate-limits"
+  },
+  "listening_review_performed": false
+}

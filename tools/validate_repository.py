@@ -18,6 +18,8 @@ SECRET_PATTERNS=[
     re.compile(rb'(?:ghp_|github_pat_|gho_)[A-Za-z0-9_]{25,}'),
     re.compile(rb'-----BEGIN (?:RSA |EC |OPENSSH )?PRIVATE KEY-----'),
     re.compile(rb'sk-(?:proj-)?[A-Za-z0-9_-]{40,}'),
+    re.compile(rb'AIza[0-9A-Za-z_-]{35}'),
+    re.compile(rb'gsk_[A-Za-z0-9]{40,}'),
 ]
 
 def candidates(root=ROOT):
@@ -43,12 +45,25 @@ def validate():
     assert policy['render_concurrency']==1 and policy['allow_cpu_cycles_fallback'] is False
     assert policy['caption_main_bounds_px']==[108,300,918,480]
     assert policy['caption_tag_bounds_px']==[108,500,918,548]
+    assert policy['character_frame_by_frame_redraw'] is False, 'Use persistent skeletal puppet parts'
+    assert policy['background_count']==1, 'Use one static background plate'
+    required_parts={'head','torso','upper_arm.L','lower_arm.L','hand.L',
+                    'upper_arm.R','lower_arm.R','hand.R','upper_leg.L',
+                    'lower_leg.L','upper_leg.R','lower_leg.R'}
+    assert required_parts.issubset(policy['character_parts']), 'Missing modular skeletal body parts'
+    if policy.get('caption_mode')=='Audio-aligned one word at a time with brief scale-in pop':
+        assert policy['caption_dialogue_bounds_px']==[130,1340,870,1470]
+        assert (ROOT/policy['caption_font_file']).is_file()
+        assert (ROOT/policy['character_svg']).is_file()
+        assert (ROOT/policy['character_contours']).is_file()
     for key in ['template','character_library','character_reference','caption_layout']:
         assert (ROOT/policy[key]).is_file(), f'Missing {key}: {policy[key]}'
     spec=json.loads((ROOT/policy['caption_layout']).read_text(encoding='utf-8'))
     assert spec['resolution']==policy['resolution']
     assert spec['slots']['main']==policy['caption_main_bounds_px']
     assert spec['slots']['tag']==policy['caption_tag_bounds_px']
+    if 'caption_dialogue_bounds_px' in policy:
+        assert spec['slots']['dialogue']==policy['caption_dialogue_bounds_px']
 
     parsed=0;total=0;files=candidates()
     for rel in files:

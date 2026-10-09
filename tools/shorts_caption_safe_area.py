@@ -1,14 +1,15 @@
 """Native GP caption placement. Coordinates measured in the 1080x1920 export.
 
-Reserve the higher caption band below the phone notification/status
-area. Place all titles and tags here, never at the bottom of a Short.
+POV titles use the upper band. The latest user preference puts spoken
+word captions in a measured lower band above platform channel controls.
 """
 from pathlib import Path
 import json
 
 ROOT=Path(__file__).resolve().parent.parent
 def policy():
-    return json.loads((ROOT/'00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v002.json').read_text())
+    settings=json.loads((ROOT/'config/production_defaults.json').read_text())
+    return json.loads((ROOT/settings['caption_layout']).read_text(encoding='utf-8'))
 
 def place_caption(ob,slot='main',camera_height=16):
     """Fit the complete GP outline bounds; keep all fade animation intact.
@@ -43,8 +44,8 @@ def place_caption(ob,slot='main',camera_height=16):
         p.position=inv@v;p.radius*=factor
     for la in ob.data.layers:
         for fr in la.frames:fr.drawing.tag_positions_changed()
-    ob['caption_safe_slot']=slot;ob['caption_safe_policy']='Shorts_Reels_Upper_Safe_Area_v002'
-    ob['caption_placement']='Upper screen below notification/status area; never bottom; fixed during camera shake.'
+    ob['caption_safe_slot']=slot;ob['caption_safe_policy']=policy().get('placement','Measured safe band')
+    ob['caption_placement']='Lower spoken-caption safe band above UI controls.' if slot=='dialogue' else 'Upper title band below notification/status area.'
     a,b,c,d=bounds()
     result=[a/unit+width/2,height/2-d/unit,b/unit+width/2,height/2-c/unit]
     assert result[0]>=box[0]-.1 and result[1]>=box[1]-.1 and result[2]<=box[2]+.1 and result[3]<=box[3]+.1,result

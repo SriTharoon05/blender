@@ -1,4 +1,17 @@
 {
   "version": 1,
-  "episodes": []
+  "episodes": [
+    {
+      "id": "EP009_Wrong_Screen",
+      "build_steps": [],
+      "blend": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v003.blend",
+      "scene": "EP009_Wrong_Screen_Cutout",
+      "duration_seconds": 18,
+      "frame_start": 1,
+      "frames_dir": "02_EPISODES/EP009_Wrong_Screen/renders/cutout_frames_1080p24",
+      "frame_prefix": "EP009",
+      "video": "03_FINAL_OUTPUT/YouTube/EP009_Wrong_Screen_Peter_1080p24_v001.mp4",
+      "audio": "02_EPISODES/EP009_Wrong_Screen/audio/EP009_Final_Mix_18s_v001.wav"
+    }
+  ]
 }

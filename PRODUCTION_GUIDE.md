@@ -1,32 +1,38 @@
-# BRIX production system
+# Blender production system
 
 ## Approved defaults for future 2D content
 
-The user approved the recurring 2D guy from EP003 on 2026-10-08. Use this same character for all future 2D content unless the user explicitly requests another character. Preserve his face silhouette, dark angular hair, skin palette, simple facial features and blue hoodie design; change poses and expressions as the story requires.
+The latest 2026-10-09 instructions replace the earlier recurring School Guy default with **Peter**, based on the user's supplied portrait. Future videos use his **flat modular SVG puppet**, preserving recognizable hair, facial design and palette while simplifying the supplied illustration to flat fills and bold outlines. Reuse `00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend` and its versioned SVG/path assets; consult `config/production_defaults.json` for exact current paths and collection names. Do not rebuild Peter for each episode. Costumes can change for an explicitly requested role.
 
-The canonical native Grease Pencil collection is `CHAR_School_Guy_2D` in `00_LIBRARY/Characters/School_Guy_2D/School_Guy_2D_v001.blend`. The user's approved image is `00_LIBRARY/Characters/School_Guy_2D/Approved_Character_Reference.png`. Reuse this asset rather than redesigning the character each episode.
+Animate static editable vector body parts with a skeletal rig: head, torso, upper/lower arms, hands and legs have reusable joints. Use bone/object transforms, persistent facial controls and reusable mouth shapes for expressions and lip sync. **Do not use traditional frame-by-frame animation or redraw the body per frame. No gradients or shading.** Native Grease Pencil may represent the editable parts when requested, but its drawings remain persistent while the rig moves them.
 
 For future 2D episodes, start from `01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v005.blend` and immediately save an episode copy before editing. The user's latest defaults supersede the earlier 720p preference: **1080 x 1920 portrait (9:16) at 24 fps**, with fast **Eevee rendering on the GTX 1650 Ti**. Do not use 720p or 60fps for future 2D content unless the user requests it. Completed episodes retain their delivered settings and files.
 
-For **all future videos**, place captions higher, with the user's requested **approximately 2–3cm gap from the top** on the reference phone, avoiding only the **notification/status/cutout area**. This latest correction supersedes the previous conservative 25–39% placement and full app-header/filter-chip clearance. Default main-caption top is **y=300px (15.6%)** on a **1080 x 1920** export. Physical centimeters vary with the device/player, so use the requested visual gap and phone-scale preview rather than claiming an exact device-independent centimeter measurement. Keep **all titles and taglines at the top, never bottom**.
+Use **one static flat background plate** per episode. This latest instruction supersedes EP009's initial realistic two-plate proposal: keep the same backdrop through its setup and reveal. Animate props, characters and UI in foreground layers as needed. Photorealistic Cycles backgrounds are no longer the default; a new explicit hybrid request can authorize a separate plate stage. Final animation uses Eevee on the local GPU, with no automatic CPU Cycles fallback.
 
-Use **x=108–918px**, main caption **y=300–480px**, and optional tagline just beneath it at **y=500–548px**, measured from top-left including the thick outline. Keep important faces below **y=600px** when composing shots; remove the previous unnecessarily large top gap. Use Arial Black or equally bold text, white fill, thick black outline, exact wording and sensible wrapping. Keep captions fixed through camera shake. Apply `tools/shorts_caption_safe_area.py:place_caption` using `00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v002.json` and inspect a phone-scale preview for notification-area overlap.
+**POV titles and nonspoken tags remain at the top:** use **x=108–918px**, title **y=300–480px** and optional tag **y=500–548px**, including outlines. Default title top is y=300px (15.6%). Keep the user's approximate 2–3 cm visual gap on the reference phone; physical centimeters depend on device and playback scale. Use `tools/shorts_caption_safe_area.py:place_caption` and inspect a phone-scale preview for status/cutout overlap.
 
-Dad or other explicitly requested roles may use an age/costume variant of the approved character while retaining the recognizable face and hair design.
+**Spoken captions appear near the bottom, above app overlays:** full glyph, outline and pop-animation bounds **x=130–870px, y=1340–1470px**, measured from top-left on the 1080 x 1920 export. This user's explicit update supersedes the previous top-only rule for dialogue captions. Use `00_LIBRARY/Caption_Layouts/Peter_Dynamic_Captions_v003.json`; keep channel/page names, subscribe controls and right-side buttons clear. Use **LuckiestGuy-Regular**, white fill and a heavy black outline. Show the actual spoken words one at a time with a brief scale-in pop, keeping the largest pop inside the safe band. Titles and subtitles remain fixed while scene elements shake. Review legibility and overlays at phone scale.
 
-All production assets, scripts, previews, versions and episodes live in this folder. BRIX is an original recurring character; no downloaded character or texture assets are used.
+The font asset is `00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf`, supplied by the user and redistributed with its license. Reuse its packed project data or repository copy; do not silently switch to Arial Black or commit proprietary standalone system fonts. Any unavoidable substitute must be recorded and its full layout reviewed again.
+
+Dialogue requires lip sync. Use the clean dialogue track, actual word timestamps and measured audio amplitude to drive reusable mouth states. The EP009 method combines 24 fps RMS envelopes with word-based vowel/consonant visemes; it is **not phoneme forced alignment**. Mark listening, lip-sync and visual review complete only after those reviews actually happen.
+
+For speech generation, read comma-separated `GEMINI_API_KEYS` and `GROQ_API_KEYS` only from ignored `.env` or environment secret facilities. `tools/speech_api.py` calls providers server-side, rotates normal requests, retries transient failures and honors provider-wide 429 cooldowns/`Retry-After`; never rotate accounts to bypass quotas or expose keys in logs/source. EP009 used Gemini `gemini-3.8-flash-tts` with Kore/Puck and Groq `whisper-large-v3` word timestamps. Recheck available models and documented free tiers for future tasks, cache completed lines, and preserve exact dialogue.
+
+All production assets, scripts, previews, versions and episodes live in this folder. The earlier School Guy asset `CHAR_School_Guy_2D` in `00_LIBRARY/Characters/School_Guy_2D/School_Guy_2D_v001.blend` remains preserved for historical episodes. Keep BRIX, old Peter versions and delivered episodes unchanged. The BRIX sections below describe the existing 3D library rather than future Peter animation defaults.
 
 For every future video delivery, measure and report the actual animation render elapsed time. Report video running length separately from render time; also record encoding time in the episode delivery verification.
 
 ## Start an episode
 
-1. Open `01_TEMPLATES/BRIX_Shorts_Master.blend`.
-2. Immediately **Save As** `02_EPISODES/EP_001_Name/EP_001_Name_v001.blend` before editing.
+1. For a new 2D episode, open `01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v005.blend` and append the current Peter puppet. For explicitly requested BRIX 3D work, use `01_TEMPLATES/BRIX_Shorts_Master.blend`.
+2. Immediately **Save As** a new numbered project in its own `02_EPISODES/EP_Number_Name/` directory before editing.
 3. Keep scene changes and animation in that episode copy. Check `00_LIBRARY` before making a new asset.
 4. Before a significant change, save a new numbered version. Never overwrite the character master, template master, or an approved episode.
 5. Episode caches belong in `02_EPISODES/EP_001_Name/cache/`, never in the library. Render approved outputs into the appropriate `03_FINAL_OUTPUT` platform folder.
 
-## BRIX controls
+## Historical BRIX controls
 
 Select `RIG_BRIX`. Pose Mode exposes root, pelvis, spine, head and separate FK upper arm, forearm, hand, thigh, shin and foot bones on each side. Meshes have rigid bone weights and an Armature modifier. This is a lightweight FK rig; there is no automatic IK or cloth simulation.
 
@@ -46,9 +52,9 @@ Canonical collections are stored in separate blend libraries. Use File > Append 
 
 The template uses local editable assets so character drivers, poses and UI can be animated within an episode without editing library files. Library changes are intentionally not pushed into completed episodes. To update a reusable asset, create a versioned library file and review it first. The camera and UI are a matched assembly: append them together or relink the UI parents to the episode camera. Text font data is packed.
 
-## Laptop and transfer settings
+## Historical BRIX laptop and transfer settings
 
-The master uses EEVEE at 1080 x 1920, 30 fps. Resolution percentage 50 is the normal development preview (540 x 960). Set 100 for a full-size still or approved output. Subdivision is capped at 1. Geometry has small bevels; surfaces use lightweight procedural textures, with no image textures or volumetrics. No simulation or animation has been baked.
+The older BRIX master uses EEVEE at 1080 x 1920, 30 fps. Its resolution percentage 50 preview is 540 x 960; set 100 for a full-size still or approved output. **New Peter 2D episodes use 1080 x 1920 at 24 fps and full resolution.** BRIX subdivision is capped at 1. Its geometry has small bevels and lightweight procedural materials, with no image textures or volumetrics. No BRIX simulation or animation has been baked.
 
 Transfer the whole Blender folder to the final machine. Packed font and procedural materials avoid external asset dependencies. Render and library references use relative paths. Validate EEVEE shaders and reflections on the destination machine before rendering. Final Cycles animation and expensive simulations require explicit approval.
 

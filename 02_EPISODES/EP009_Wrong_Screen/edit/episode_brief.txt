@@ -1,0 +1,58 @@
+Genre: Relatable workplace comedy · POV meme · Target runtime: 18 seconds
+Core joke: You think you're sharing your presentation in a professional meeting. Then you realize you're sharing your entire desktop, including 47 open tabs, embarrassing search history, and a suspiciously named folder.
+- Format: Vertical (9:16 ratio for YouTube Shorts and Instagram Reels).
+- Resolution: 1080 × 1920.
+- Frame Rate: 24 FPS.
+- Total Duration: 18 seconds (432 frames).
+- Render Pipeline: Layered Compositing (Cycles 1-Frame Still BG + Eevee/Workbench Transparent 2D Character).
+- Color Management: AgX for the Cycles background; match character colors in the compositor.
+- Camera: Vertical orthographic camera for 2D character placement, with the background rendered using a perspective camera composed for 9:16.
+- Compositing: Alpha Over, subtle vignette, screen glow, motion blur accents, and final contrast adjustment.
+- Output: PNG RGBA character sequence, background plate as EXR or PNG, final H.264 MP4.
+Layer 1 — Static 3D Background Plates
+- Plate A (Setup): A photorealistic modern home office with a laptop on a wooden desk, coffee mug, wireless mouse, soft window light, and a blurred bookshelf. Warm morning lighting, soft shadows, realistic reflections on the laptop screen. Use Cycles with ambient occlusion, glossy reflections, and a shallow depth of field. Leave negative space in the upper half for the animated character.
+- Plate B (Punchline): The same office, but lit by the cold blue glow of the laptop. The room feels darker, the screen is overexposed, and a wall clock casts an exaggerated shadow. Add a subtly ominous red notification glow. Use harsh key lighting, deeper shadows, and increased contrast.
+- Camera continuity: Match camera position between plates so the transition feels like the same scene suddenly turning into a disaster.
+Layer 2 — Dynamic Environmental Overlays
+- Cursor movement and fake screen-share UI rendered as a separate graphic layer.
+- Screen glare that intensifies when the wrong window appears.
+- Three-frame camera shake on the punchline.
+- Subtle film grain, floating dust, and a brief red alert flash.
+- A freeze-frame zoom with a slight RGB split at the reveal.
+Layer 3 — 2D Grease Pencil / SVG Characters & Props
+- Character 1 — The Employee: A simple cartoon office worker with a large head, tiny body, expressive eyebrows, white shirt, loosened tie, and dark trousers. Use thick black outlines, flat colors, and minimal cel shading.
+- Setup pose: Relaxed smile, one hand gesturing toward the laptop, confident upright posture.
+- Panic pose: Wide eyes, tiny pupils, sweat drops, trembling hands, open mouth, and hunched shoulders.
+- Final pose: Frozen smile with dead eyes, followed by a slow collapse behind the laptop.
+- Props: Animated cursor, video-call tiles, screen-share icon, popup notifications, and a comically visible folder labeled “DO_NOT_OPEN.”
+- Animation style: 2D-on-3D composition, stepped animation on reaction poses, smooth eye movements, and deliberately exaggerated mouth shapes.
+TTS Voice Models Needed
+- Voice 1 — Employee: Gemini TTS Kore-style delivery: conversational, upbeat, then rapidly panicked. Treat this as a voice-direction reference and verify the available voice IDs in the current Gemini TTS interface.
+- Voice 2 — Meeting Host: Gemini TTS Puck-style delivery: friendly, professional, and completely unaware of the disaster. Verify availability before production.
+- Delivery: Short sentences, crisp consonants, and a tiny pause before the reveal. Generate each line separately for precise timing.
+Music & Foley
+- Music: Light corporate ukulele or upbeat lo-fi instrumental, approximately 100 BPM.
+- Setup SFX: Keyboard typing, mouse click, soft video-call connection chime.
+- Reveal SFX: Record scratch, notification ping, low cinematic boom.
+- Panic SFX: Rapid heartbeat, mouse clicks, keyboard clatter, cartoon sweat-drop plinks.
+- Ending SFX: Abrupt music cutoff followed by a tiny error beep.
+- Background Plate: Plate A — warm home office.
+- Visual & 2D Action: The employee pops up beside the laptop, straightens their tie, and clicks the screen-share button. A clean presentation window appears. Their smile is confident.
+- Dialogue & Lip Sync:
+  - (0:00–0:02) Employee: “Okay, everyone. Let me share my screen.” Lip sync: gentle smile, small jaw movements.
+  - (0:02–0:04) Meeting Host: “Yep, we can see it!” Lip sync: optional off-screen voice with a small speaker indicator.
+  - (0:04–0:06) Employee: “Perfect. Very professional.” Lip sync: confident smile, single nod.
+- Audio Sync: Soft music begins at 0:00. Mouse click at 0:04. Video-call confirmation chime at 0:05.
+- Background Plate: Plate B — cold blue-lit office.
+- Visual & 2D Action: The wrong window fills the screen. The employee's smile freezes. Their eyes slide toward the audience. A fake desktop reveals dozens of tabs and the “DO_NOT_OPEN” folder. Zoom rapidly into the employee's pupils.
+- Dialogue & Lip Sync:
+  - (0:06–0:08) Employee: “Wait. That's not the presentation.” Lip sync: mouth drops open, then trembles.
+  - (0:08–0:10) Meeting Host: “Interesting search history.” Lip sync: off-screen voice; add a tiny pause after “Interesting.”
+  - (0:10–0:13) Employee: “WHY IS THE WHOLE DESKTOP SHARING?!” Lip sync: wide-open shout, vibrating jaw, rapidly moving eyebrows.
+- Audio Sync: Record scratch at 0:06. Low boom at 0:07. Heartbeat starts at 0:08. Camera shake and notification pings peak at 0:10.
+- Background Plate: Plate B with a slight vignette.
+- Visual & 2D Action: The employee slowly lowers the laptop lid, looks directly at the viewer, and collapses out of frame. Hold the final frame with bold caption text: “POV: YOU SHARED THE WRONG SCREEN.”
+- Dialogue & Lip Sync:
+  - (0:13–0:15) Employee, whispering: “I'm changing careers.”
+  - (0:15–0:18) No dialogue. Freeze on the employee's hand still hovering over the mouse.
+- Audio Sync: Music cuts at 0:13. One tiny error beep at 0:15. End with 0.5 seconds of silence to make the freeze-frame funnier.

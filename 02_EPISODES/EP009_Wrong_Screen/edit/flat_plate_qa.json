@@ -1,0 +1,22 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "final_version": "v002",
+  "final_background_count": 1,
+  "latest_user_style_applied": "Bright flat 2D SVG puppet animation, solid colors and crisp black outlines, no shading, gradients, texture or cast shadows.",
+  "svg_parsed_as_xml": true,
+  "svg_forbidden_elements_absent": ["linearGradient", "radialGradient", "filter", "image"],
+  "native_editable_vector_shapes": 100,
+  "native_fill_shader": "Solid unlit emission with Standard display transform",
+  "source_build_rendered": false,
+  "actual_eevee_gpu_render_completed": true,
+  "gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "resolution": [1080, 1920],
+  "actual_final_png_visually_inspected": true,
+  "final_static_plate_render_seconds": 0.938907,
+  "development_v001_still_render_seconds": 1.160997,
+  "flat_background_development_and_final_render_seconds": 2.099904,
+  "previous_cycles_backgrounds_used_in_final": false,
+  "mouse_center_px": [899, 1414],
+  "screen_quad_unchanged": true,
+  "limitations": "Background-only verification. Animated puppet acting, exact word timing, lipsync, screen overlays, caption safety and final audiovisual delivery remain separate checks. Native flat source uses painter-ordered Z spacing; use the PNG plate or preserve object stacking when appending its collection."
+}

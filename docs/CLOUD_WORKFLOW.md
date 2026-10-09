@@ -35,16 +35,26 @@ Cloud tasks have separate workspaces. Commit completed episode sources or open a
 Paste a brief after this prompt, replacing the ID and duration:
 
 ```text
-Prepare EP009_My_Title for local batch rendering. Read AGENTS.md,
+Prepare EP010_My_Title for local batch rendering. Read AGENTS.md,
 PRODUCTION_GUIDE.md, config/production_defaults.json and docs/CLOUD_WORKFLOW.md.
-Reuse the approved School Guy character and current v005 Grease Pencil master.
+Reuse Peter's current flat modular SVG puppet and the v005 master; save a new
+episode copy before editing. Use static editable vector parts driven by the
+skeletal rig's head/torso, arm/hand and leg joints. No traditional frame-by-frame
+redraw, gradients or shading. Use one static flat background plate.
 Create a portable .py builder that imports bpy, and a build-only entrypoint
-using tools/production_paths.py and tools/grease_pencil_toolkit.py.
+using the existing production path, vector/rig and caption helpers.
 
 Use 1080 x 1920 at 24 fps, [DURATION] seconds, fast Eevee GPU animation.
-Keep all captions at the top using the current v002 bounds. Preserve all
-existing delivered episodes and canonical library/template files.
+Use LuckiestGuy-Regular, white fill and a heavy black outline. Keep POV titles
+at the top within x=108..918,y=300..480. Put one-word-at-a-time spoken captions
+inside x=130..870,y=1340..1470, including their brief scale-in pop and outline.
+Check the phone-scale layout above channel/subscribe UI; captions stay fixed
+during camera shake. Preserve historical delivered episodes and library assets.
 Prepare original/supplied audio, a frame-aligned cue sheet and relative assets.
+Dialogue needs lip sync: measured word timings plus amplitude-driven reusable
+visemes. Distinguish that from phoneme forced alignment. If authorized secrets
+are available, use tools/speech_api.py for server-side Gemini TTS and Groq STT;
+never expose keys or bypass quota cooldowns. Cache generated lines/transcripts.
 Add this episode to queue/pending.queue.json, using the reference queue schema.
 Support BLENDER_QUEUE_BUILD_ONLY=1; do not start a final render in this task.
 
@@ -57,22 +67,34 @@ Episode brief:
 [PASTE STORY, EXACT TEXT, SHOTS, ACTION, AUDIO AND TIMINGS HERE]
 ```
 
-Create an episode folder under `02_EPISODES/EP009_My_Title/` containing the required input assets, builder output paths, audio and edit metadata. Do not fill the queue with blank placeholders for unrequested stories. `queue/pending.queue.json` starts empty; add the 10–20 episodes you actually prepare. Refer to `queue/example.queue.json` for the precise schema.
+Create an episode folder under `02_EPISODES/EP010_My_Title/` containing the required input assets, builder output paths, audio and edit metadata. Do not fill the queue with blank placeholders for unrequested stories; add the 10–20 episodes you actually prepare. Refer to `queue/example.queue.json` for the precise schema.
 
 ## What makes an episode portable
 
 - Derive the repository root from `Path(__file__)` or `RuntimePaths.discover()`; store asset and output references relative to it. Do not use the original author's drive or user directory.
 - Use `tools/production_paths.py` for runtime and font discovery. Run scene code with Blender's Python. Declare any extra ordinary-Python dependencies rather than checking copied site-packages into Git.
 - Keep source assets available to the cloud task and laptop. Pack allowed external assets into the `.blend` or use relative file paths. Retrieve any Git LFS assets before validation/build.
-- Reuse the approved character, master and caption geometry. Maintain a cue sheet with frame numbers for precise audio timing. Duration at 24 fps must give the expected frame count.
+- Reuse the Peter flat puppet, master, rig joints and current caption layout. Keep vector drawings/parts static while animating transforms and facial controls, and use one static flat backdrop. Maintain real measured word/audio cues with frame numbers. Duration at 24 fps must give the expected frame count.
 - Split building, rendering and video encoding. A builder must not render as a side effect; the queue enforces preparation-only build stages. Refactor a legacy helper before queueing it if it launches previews during a build.
 - Give each episode unique project, frame and output paths. Save a numbered version before significant changes and protect completed files.
 
 Declare additional repository-relative dependencies with optional `inputs` lists on an episode or individual build step: include external plate images, imported episode helpers and other source assets used by that stage. This lets content changes invalidate cached work instead of reusing a result from old inputs. Inputs produced by an earlier build step must also appear in that step's declared `outputs`.
 
-Arial Black is generally an installed Windows font rather than a portable source dependency. Existing `.blend` font data is packed. For new captions, reuse that packed font when possible, or configure an installed local font via `font_file`. Cloud authoring can use a suitable available bold substitute, but must record it and measure the full glyph/outline bounds again. Review the phone-scale layout before final rendering. Do not commit a standalone Windows system font file.
+The current font is the user-supplied **LuckiestGuy-Regular** at `00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf`, distributed with its license. Load that repository-relative asset and pack it into the new `.blend`. Preserve historical packed Arial Black data in older episodes; it no longer defines future captions. If the requested font is unavailable, record the substitution and review the full glyph/outline/pop bounds again. Do not upload proprietary standalone system fonts. Spoken captions occupy x=130–870,y=1340–1470, above channel/subscribe UI; POV titles remain x=108–918,y=300–480. Use the current `Peter_Dynamic_Captions_v003.json` layout and review at phone scale.
 
 Historical scripts are preserved as episode references and may need path/font/runtime adaptation. New code should use the portable toolkit; do not assume every older episode script runs unchanged on Linux.
+
+## Server-side speech, word timing and lip sync
+
+Read comma-separated `GEMINI_API_KEYS` and `GROQ_API_KEYS` through `tools/speech_api.py`. Local values live in ignored `.env`; a cloud task needs its own authorized environment secrets because the local `.env` is deliberately absent from Git. Never print values, embed them in a URL/client bundle or copy them into source/audio metadata. A cloud authoring task without those secrets can prepare dialogue/audio scripts, but must report that actual provider generation/alignment was unavailable.
+
+The current implemented Gemini TTS interface uses REST server-side calls. EP009 successfully used **`gemini-3.8-flash-tts`**, employee voice **Kore** and meeting-host voice **Puck**. Its official pricing documents a free tier; availability, quota and account eligibility still need to be checked before future generation. [Gemini TTS documentation](https://ai.google.dev/gemini-api/docs/speech-generation), [Gemini pricing](https://ai.google.dev/gemini-api/docs/pricing).
+
+Generate dialogue lines separately, retain original audio, and fit only as needed with pitch-preserving timing. Transcribe the actual fitted clean speech through **Groq `whisper-large-v3`**, `response_format=verbose_json` and word timestamp granularity. Validate exact scripted words, preserve measured word times and clamp any ASR boundary padding to the real audio boundary with a recorded flag. Use the same cue sheet for word-caption onsets and mouth animation. [Groq STT documentation](https://console.groq.com/docs/speech-to-text).
+
+The pool rotates starting keys for normal requests, retries transient failures and temporarily skips failed keys. A 429 applies a provider-wide cooldown honoring `Retry-After`; long/daily account quota exhaustion stops rather than cycling accounts to evade quotas. Groq limits are organization-wide. [Groq rate-limit documentation](https://console.groq.com/docs/rate-limits).
+
+EP009's lip-sync cues combine measured 24 fps RMS amplitude with word-based vowel/consonant viseme estimates and reusable mouth states. This is not phoneme forced alignment. API transcription success and objective sample/peak checks do not establish listening quality or rendered lip-sync quality; report those reviews separately and inspect actual output before claiming completion.
 
 ## Pull and render at home
 
@@ -121,9 +143,11 @@ This backend applies to the render stage and uses the local bridge at `127.0.0.1
 
 MCP is useful for scene inspection and interactive fixes; ordinary Blender subprocess rendering can execute the batch independently. The bridge on a powered-off home PC cannot service cloud requests. Local MCP servers and transports are not automatically available in cloud; connectivity and authentication must be checked separately. [Official MCP guidance](https://learn.chatgpt.com/docs/extend/mcp?surface=cli)
 
-## Hybrid backgrounds and runtime compatibility
+## Flat backgrounds and optional hybrid compatibility
 
-Use the ordinary Eevee pipeline unless the brief explicitly requests hybrid realistic backgrounds. For a hybrid episode, keep three stages separate: build the native plate scene without rendering; explicitly render its static Cycles GPU plates locally once; then build the transparent GP/Eevee animation and composition using those images. Plate rendering must finish before the animation's composition/build step needs the files. It is a separate explicit render stage, not an automatic queue `build_steps` operation: the build-only guard prohibits both preview and plate rendering. Finish the plate stage before starting the animation batch.
+Current Peter videos use one static flat background and Eevee puppet animation, without gradients or shading. The user's latest EP009 correction supersedes that brief's initial photorealistic two-plate proposal. Keep its backdrop static and put animated characters/props/UI in foreground layers. Do not launch Cycles plate rendering for ordinary flat episodes.
+
+Only a later explicit hybrid request can authorize realistic backgrounds. For that request, keep three stages separate: build the native plate scene without rendering; explicitly render its static Cycles GPU plate locally once; then build the transparent GP/Eevee animation and composition using that image. Plate rendering must finish before the animation's composition/build step needs the file. It is a separate explicit render stage, not an automatic queue `build_steps` operation: the build-only guard prohibits both preview and plate rendering. Finish the plate stage before starting the animation batch.
 
 EP008's local plates used Blender 4.2 with OptiX because the existing driver 555.97 was incompatible with the installed Blender 5.2 Cycles backend. Keep the plate runtime separate from the **5.2.2 native Grease Pencil animation**. `blender_profile: "cycles42"` selects an alternate configured executable through `config/local.json`'s `blenders` map for an individual build or render step. Selecting a profile does not turn a build step into a render. A Cycles render job must specify `engine: "CYCLES"` and the appropriate `cycles_backend: "OPTIX"` or `"CUDA"`; the default remains Eevee. Never open a 5.2 GP project in the older runtime, render a full Cycles animation for this shortcut, or silently fall back to CPU. A new driver or hardware setup requires a fresh compatibility check.
 

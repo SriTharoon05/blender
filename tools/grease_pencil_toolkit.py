@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import ast
 from functools import lru_cache
+import json
 import math
 from pathlib import Path
 from typing import Mapping
@@ -139,8 +140,11 @@ def configure_scene(scene, *, duration_seconds: float, transparent: bool = False
     scene.camera.location = (0, 0, 30)
     scene.camera.rotation_euler = (0, 0, 0)
     scene["production_defaults"] = "1080x1920; 24fps; fast Eevee; local NVIDIA GPU render verification required"
-    scene["approved_character_library"] = APPROVED_CHARACTER
-    scene["caption_policy"] = "Shorts_Reels_Upper_Safe_Area_v002; main y300-480; tags y500-548; never bottom"
+    defaults = json.loads((repo_root() / "config/production_defaults.json").read_text(encoding="utf-8"))
+    scene["approved_character_library"] = defaults["character_library"]
+    scene["caption_policy"] = defaults["caption_layout"]
+    scene["visual_style"] = defaults["visual_style"]
+    scene["animation_technique"] = defaults["animation_technique"]
     return scene.camera
 
 
@@ -191,9 +195,15 @@ def commit_drawing(obj, frame: int, drawing: DrawingBuilder, *, layer_name="Anim
 
 
 def select_caption_font(paths: RuntimePaths | None = None):
-    """Return the packed approved font first; disclose a bold fallback in metadata."""
+    """Use the latest user-approved portable font; preserve packed legacy fonts."""
     bpy = _bpy()
     paths = paths or RuntimePaths.discover()
+    preferred = paths.root / '00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf'
+    if preferred.is_file():
+        font = bpy.data.fonts.load(str(preferred), check_existing=True)
+        font.pack()
+        return font, {'font_name': font.name, 'font_fallback': False,
+                      'font_source': 'User-approved portable Luckiest Guy', 'font_filename': preferred.name}
     for font in bpy.data.fonts:
         identity = (font.name + " " + font.filepath).lower().replace(" ", "")
         if ("arialblack" in identity or "ariblk" in identity) and font.packed_file:
@@ -220,8 +230,8 @@ def create_caption(scene, body: str, name: str, *, slot="main", size=.53,
     bpy = _bpy()
     if not body.strip():
         raise ValueError("Caption cannot be empty.")
-    if slot not in {"main", "tag"}:
-        raise ValueError("Captions must use the approved main or tag upper slot.")
+    if slot not in {"main", "tag", "dialogue"}:
+        raise ValueError("Unknown approved caption slot.")
     try:
         from .shorts_caption_safe_area import place_caption
     except ImportError:

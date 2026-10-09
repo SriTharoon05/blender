@@ -13,6 +13,7 @@
 *.wav binary
 *.mp3 binary
 *.mp4 binary
+*.ttf binary
 # Preserve approved library/master bytes, including original text line endings.
-00_LIBRARY/** -text
-01_TEMPLATES/** -text
+00_LIBRARY/** -text whitespace=cr-at-eol
+01_TEMPLATES/** -text whitespace=cr-at-eol

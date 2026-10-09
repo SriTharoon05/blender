@@ -1,0 +1,75 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "14d58f71d5118acb40fbb6822c4a173413024facc2f5d651c77b831658f9bf07",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 2.2085626879999998,
+    "text": " WHY IS THE WHOLE DESKTOP SHARING?!",
+    "words": [
+      {
+        "word": "WHY",
+        "start": 0,
+        "end": 0.28
+      },
+      {
+        "word": "IS",
+        "start": 0.28,
+        "end": 0.5
+      },
+      {
+        "word": "THE",
+        "start": 0.5,
+        "end": 0.66
+      },
+      {
+        "word": "WHOLE",
+        "start": 0.66,
+        "end": 0.86
+      },
+      {
+        "word": "DESKTOP",
+        "start": 0.86,
+        "end": 1.46
+      },
+      {
+        "word": "SHARING?!",
+        "start": 1.46,
+        "end": 2.04
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 2.2,
+        "text": " WHY IS THE WHOLE DESKTOP SHARING?!",
+        "tokens": [
+          50365,
+          32720,
+          6205,
+          5663,
+          23256,
+          2634,
+          27083,
+          42,
+          51,
+          12059,
+          7405,
+          1899,
+          3017,
+          3529,
+          50475
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.16658483,
+        "compression_ratio": 0.81395346,
+        "no_speech_prob": 0.010864258
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4ggb9mbep1tesrphrf5d189"
+    }
+  }
+}

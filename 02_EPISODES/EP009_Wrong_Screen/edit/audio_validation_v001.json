@@ -1,0 +1,39 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "duration_seconds": 18,
+  "frame_count": 432,
+  "word_count": 32,
+  "line_count": 7,
+  "mouth_frame_count": 432,
+  "audio": {
+    "EP009_Dialogue_18s_v001.wav": {
+      "sample_rate": 48000,
+      "channels": 2,
+      "samples_per_channel": 864000,
+      "seconds": 18.0,
+      "peak_dbfs": -3.224,
+      "final_half_second_digital_silence": true
+    },
+    "EP009_Final_Mix_18s_v001.wav": {
+      "sample_rate": 48000,
+      "channels": 2,
+      "samples_per_channel": 864000,
+      "seconds": 18.0,
+      "peak_dbfs": -2.987,
+      "final_half_second_digital_silence": true
+    },
+    "EP009_Original_Music_SFX_18s_v001.wav": {
+      "sample_rate": 48000,
+      "channels": 2,
+      "samples_per_channel": 864000,
+      "seconds": 18.0,
+      "peak_dbfs": -19.12,
+      "final_half_second_digital_silence": true
+    }
+  },
+  "objective_validation_performed": true,
+  "listening_review_performed": false,
+  "lip_sync_limitation": "RMS envelope and word-based heuristic visemes, not phoneme forced alignment",
+  "exact_script_transcripts_verified": true,
+  "all_words_within_scene_slots": true
+}

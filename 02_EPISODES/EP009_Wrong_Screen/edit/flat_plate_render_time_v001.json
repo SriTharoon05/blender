@@ -1,0 +1,17 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "background_count": 1,
+  "renderer": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "engine": "Eevee GPU",
+  "cpu_cycles_fallback": false,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "actual_static_plate_render_seconds": 1.160997,
+  "plate_png": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v001.png",
+  "sha256": "7785e4162787500ee5a550723e4b068e49aff4ad21319f8dc37b951d5c7976f8",
+  "finished_utc": "2026-10-09T14:24:21.394587+00:00",
+  "blender_version": "5.2.2 LTS",
+  "validation": "Actual GPU still rendered; visual inspection recorded separately"
+}

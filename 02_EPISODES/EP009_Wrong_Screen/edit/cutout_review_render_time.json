@@ -1,0 +1,33 @@
+{
+  "frames": [
+    385,
+    432
+  ],
+  "gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "review_render_seconds": 2.312085699999443,
+  "rendered_images_exist": true,
+  "visual_reviewed": false,
+  "attempts": [
+    {
+      "frames": [
+        5,
+        27,
+        85,
+        150,
+        241,
+        340,
+        385,
+        432
+      ],
+      "seconds": 13.581583300000148
+    },
+    {
+      "frames": [
+        385,
+        432
+      ],
+      "seconds": 2.312085699999443
+    }
+  ],
+  "all_review_render_seconds": 15.89366899999959
+}

@@ -1,0 +1,80 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "final_plate_version": "v003",
+  "actual_rendered_images_inspected": true,
+  "image_dimensions_px": [
+    1080,
+    1920
+  ],
+  "actual_render_engine": "Cycles OptiX GPU",
+  "gpu": "NVIDIA GeForce GTX 1650 Ti",
+  "cpu_render_device_enabled": false,
+  "native_scene_build_only_verified": true,
+  "source_syntax_parsed": true,
+  "camera_continuity": "The exact same linked perspective camera and all static shared geometry are used in both scenes.",
+  "foreground_occlusion_guidance": "Laptop top bezel starts around y987. Keep the character torso behind the laptop silhouette; layer independently gesturing hands in front when desired. The laptop screen quad is recorded in plate_composition.json.",
+  "character_face_center_px": [
+    540,
+    780
+  ],
+  "laptop_screen_quad_px": [
+    [
+      241.584,
+      1016.075
+    ],
+    [
+      838.416,
+      1016.075
+    ],
+    [
+      841.882,
+      1352.118
+    ],
+    [
+      238.118,
+      1352.118
+    ]
+  ],
+  "spoken_caption_suggested_band_px": [
+    108,
+    1340,
+    900,
+    1470
+  ],
+  "final_static_plate_render_seconds": 22.74986,
+  "previous_v001_static_plate_render_seconds": 20.142867,
+  "measured_successful_static_plate_render_total_seconds": 65.688129,
+  "initial_failed_attempt": "First v001 and first v003 OptiX subprocesses each exited with a GPU misaligned-address error before producing plates. A clean subprocess retry succeeded with the same settings and no CPU fallback each time. Failed-attempt render elapsed was not instrumented.",
+  "limitations": "This records background-only visual inspection. Character placement, lipsync, screen overlays, captions, audio and the final animated composite must be inspected separately. The static plate images include the display transform; avoid applying AgX a second time in compositing.",
+  "previous_v002_static_plate_render_seconds": 22.795402,
+  "mouse_center_px": [
+    898.959,
+    1413.914
+  ],
+  "laptop_foreground_occlusion_polygon_px": [
+    [
+      170.456,
+      1463.242
+    ],
+    [
+      215.899,
+      984.356
+    ],
+    [
+      864.101,
+      984.356
+    ],
+    [
+      909.544,
+      1463.242
+    ],
+    [
+      909.138,
+      1483.481
+    ],
+    [
+      170.862,
+      1483.481
+    ]
+  ]
+}

@@ -1,0 +1,382 @@
+{
+  "scene": "EP009_Wrong_Screen_Cutout",
+  "frames": 432,
+  "video_seconds": 18,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "engine": "BLENDER_EEVEE",
+  "character_library": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend",
+  "static_character_parts": 25,
+  "skeletal_bones": 17,
+  "character_geometry_redraws_per_frame": 0,
+  "character_mesh_animation": false,
+  "background_count": 1,
+  "background_plate": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.png",
+  "caption_font": "LuckiestGuy-Regular.ttf",
+  "spoken_caption_records": [
+    {
+      "word": "Okay,",
+      "start_frame": 2,
+      "end_frame": 6,
+      "max_bounds_px": [
+        382.27669447660446,
+        1339.9999925494194,
+        617.7233031392097,
+        1417.4596479535103
+      ]
+    },
+    {
+      "word": "everyone.",
+      "start_frame": 7,
+      "end_frame": 12,
+      "max_bounds_px": [
+        282.939130961895,
+        1339.9999925494194,
+        717.0608595013618,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "Let",
+      "start_frame": 13,
+      "end_frame": 22,
+      "max_bounds_px": [
+        429.46477621793747,
+        1339.9999925494194,
+        570.5352231860161,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "me",
+      "start_frame": 23,
+      "end_frame": 26,
+      "max_bounds_px": [
+        433.18256109952927,
+        1339.9999925494194,
+        566.817441880703,
+        1411.7399480938911
+      ]
+    },
+    {
+      "word": "share",
+      "start_frame": 27,
+      "end_frame": 33,
+      "max_bounds_px": [
+        371.00161761045456,
+        1339.9999925494194,
+        628.9983800053596,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "my",
+      "start_frame": 34,
+      "end_frame": 36,
+      "max_bounds_px": [
+        430.7925197482109,
+        1339.9999925494194,
+        569.2074796557426,
+        1409.942367374897
+      ]
+    },
+    {
+      "word": "screen.",
+      "start_frame": 37,
+      "end_frame": 46,
+      "max_bounds_px": [
+        341.3001796603203,
+        1339.9999925494194,
+        658.6998251080513,
+        1412.4753168225288
+      ]
+    },
+    {
+      "word": "Yep,",
+      "start_frame": 49,
+      "end_frame": 52,
+      "max_bounds_px": [
+        411.0996839404106,
+        1339.9999925494194,
+        588.9003172516823,
+        1418.1132772564888
+      ]
+    },
+    {
+      "word": "we",
+      "start_frame": 53,
+      "end_frame": 59,
+      "max_bounds_px": [
+        432.48806208372116,
+        1339.9999925494194,
+        567.5119408965111,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "can",
+      "start_frame": 60,
+      "end_frame": 63,
+      "max_bounds_px": [
+        420.5175778269768,
+        1339.9999925494194,
+        579.4824197888374,
+        1412.2301557660103
+      ]
+    },
+    {
+      "word": "see",
+      "start_frame": 64,
+      "end_frame": 66,
+      "max_bounds_px": [
+        424.60303992033005,
+        1339.9999925494194,
+        575.3969630599022,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "it!",
+      "start_frame": 67,
+      "end_frame": 71,
+      "max_bounds_px": [
+        448.91162127256393,
+        1339.9999925494194,
+        551.0883794724941,
+        1415.6619241833687
+      ]
+    },
+    {
+      "word": "Perfect.",
+      "start_frame": 103,
+      "end_frame": 120,
+      "max_bounds_px": [
+        323.2219335436821,
+        1339.9999925494194,
+        676.7780569195747,
+        1412.4753168225288
+      ]
+    },
+    {
+      "word": "Very",
+      "start_frame": 121,
+      "end_frame": 129,
+      "max_bounds_px": [
+        392.1235343813896,
+        1339.9999925494194,
+        607.8764632344246,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "professional.",
+      "start_frame": 130,
+      "end_frame": 142,
+      "max_bounds_px": [
+        209.05335634946823,
+        1339.9999925494194,
+        790.9466627240181,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "Wait.",
+      "start_frame": 146,
+      "end_frame": 149,
+      "max_bounds_px": [
+        386.11790388822556,
+        1339.9999925494194,
+        613.882100880146,
+        1410.432689487934
+      ]
+    },
+    {
+      "word": "That's",
+      "start_frame": 150,
+      "end_frame": 170,
+      "max_bounds_px": [
+        364.7712108492851,
+        1339.9999925494194,
+        635.2287867665291,
+        1418.1132772564888
+      ]
+    },
+    {
+      "word": "not",
+      "start_frame": 171,
+      "end_frame": 172,
+      "max_bounds_px": [
+        418.1888625025749,
+        1339.9999925494194,
+        581.811138689518,
+        1410.187385380268
+      ]
+    },
+    {
+      "word": "the",
+      "start_frame": 173,
+      "end_frame": 174,
+      "max_bounds_px": [
+        421.5798184275627,
+        1339.9999925494194,
+        578.4201791882515,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "presentation.",
+      "start_frame": 175,
+      "end_frame": 190,
+      "max_bounds_px": [
+        200.2695295214653,
+        1339.9999925494194,
+        799.730489552021,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "Interesting",
+      "start_frame": 193,
+      "end_frame": 201,
+      "max_bounds_px": [
+        248.96846026182175,
+        1339.9999925494194,
+        751.0315302014351,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "search",
+      "start_frame": 202,
+      "end_frame": 212,
+      "max_bounds_px": [
+        350.1656600832939,
+        1339.9999925494194,
+        649.8343446850777,
+        1412.4753168225288
+      ]
+    },
+    {
+      "word": "history.",
+      "start_frame": 213,
+      "end_frame": 221,
+      "max_bounds_px": [
+        325.2442333102226,
+        1339.9999925494194,
+        674.7557571530342,
+        1411.9849947094917
+      ]
+    },
+    {
+      "word": "WHY",
+      "start_frame": 241,
+      "end_frame": 247,
+      "max_bounds_px": [
+        402.8887340426445,
+        1339.9999925494194,
+        597.111259996891,
+        1411.903283894062
+      ]
+    },
+    {
+      "word": "IS",
+      "start_frame": 248,
+      "end_frame": 252,
+      "max_bounds_px": [
+        461.0454770922661,
+        1339.9999925494194,
+        538.9545218646526,
+        1412.6386526226997
+      ]
+    },
+    {
+      "word": "THE",
+      "start_frame": 253,
+      "end_frame": 256,
+      "max_bounds_px": [
+        425.07289856672287,
+        1339.9999925494194,
+        574.9271008372307,
+        1411.413076221943
+      ]
+    },
+    {
+      "word": "WHOLE",
+      "start_frame": 257,
+      "end_frame": 261,
+      "max_bounds_px": [
+        364.1992351412773,
+        1339.9999925494194,
+        635.8007624745369,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "DESKTOP",
+      "start_frame": 262,
+      "end_frame": 275,
+      "max_bounds_px": [
+        328.5943338274956,
+        1339.9999925494194,
+        671.4056566357613,
+        1414.517972767353
+      ]
+    },
+    {
+      "word": "SHARING?!",
+      "start_frame": 276,
+      "end_frame": 289,
+      "max_bounds_px": [
+        292.5400373339653,
+        1339.9999925494194,
+        707.4599674344063,
+        1415.6619241833687
+      ]
+    },
+    {
+      "word": "I'm",
+      "start_frame": 323,
+      "end_frame": 327,
+      "max_bounds_px": [
+        436.5326616168022,
+        1339.9999925494194,
+        563.46734136343,
+        1416.5608289837837
+      ]
+    },
+    {
+      "word": "changing",
+      "start_frame": 328,
+      "end_frame": 336,
+      "max_bounds_px": [
+        301.87538355588913,
+        1339.9999925494194,
+        698.1246212124825,
+        1412.2301557660103
+      ]
+    },
+    {
+      "word": "careers.",
+      "start_frame": 337,
+      "end_frame": 348,
+      "max_bounds_px": [
+        316.76689356565475,
+        1339.9999925494194,
+        683.2330968976021,
+        1412.4753168225288
+      ]
+    }
+  ],
+  "final_title_bounds_px": [
+    244.7708496451378,
+    299.99997943639755,
+    781.2291589379311,
+    447.9549613595009
+  ],
+  "lip_sync_method": "Measured 24fps RMS envelope plus word-based heuristic vowel/consonant visemes; not phoneme forced alignment",
+  "built_project": "02_EPISODES\\EP009_Wrong_Screen\\blend\\EP009_Wrong_Screen_Cutout_v003.blend",
+  "visual_reviewed": false
+}

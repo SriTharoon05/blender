@@ -1,0 +1,85 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "background_count": 1,
+  "svg": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.svg",
+  "native": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.blend",
+  "plate_png": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.png",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "screen_quad_px_clockwise_from_top_left": [
+    [
+      241.584,
+      1016.075
+    ],
+    [
+      838.416,
+      1016.075
+    ],
+    [
+      841.882,
+      1352.118
+    ],
+    [
+      238.118,
+      1352.118
+    ]
+  ],
+  "laptop_foreground_occlusion_polygon_px": [
+    [
+      215.899,
+      984.356
+    ],
+    [
+      864.101,
+      984.356
+    ],
+    [
+      870,
+      1375
+    ],
+    [
+      909.138,
+      1483.481
+    ],
+    [
+      170.862,
+      1483.481
+    ],
+    [
+      210,
+      1375
+    ]
+  ],
+  "character_face_target_px": [
+    540,
+    740
+  ],
+  "composition_landmarks_px": {
+    "mouse_center": [
+      899,
+      1414
+    ],
+    "mug_center": [
+      91,
+      1414
+    ]
+  },
+  "spoken_caption_bounds_px": [
+    108,
+    1340,
+    900,
+    1470
+  ],
+  "svg_shape_count": 100,
+  "solid_colors_only": true,
+  "shadows": false,
+  "gradients": false,
+  "textures": false,
+  "color_management": "Standard display transform over linearized solid sRGB emission colors",
+  "source_runtime": "5.2.2 LTS",
+  "build_rendered": false,
+  "supersedes": "Earlier unused Cycles background WIP; this single flat office is the final background"
+}

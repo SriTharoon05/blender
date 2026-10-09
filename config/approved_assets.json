@@ -133,6 +133,66 @@
     "01_TEMPLATES/Versions/BRIX_Foundation_v006.blend": {
       "bytes": 818923,
       "sha256": "565d2b470afe6eaeaba0064f652897b7df88e1087caaae1e3ec37c7cdd72ef78"
+    },
+    "00_LIBRARY/Caption_Layouts/Peter_Dynamic_Captions_v003.json": {
+      "bytes": 973,
+      "sha256": "c062391767283ebb4d663b4e212b0f9620e1a90130c1cf683e98c7f1b52c19fd"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Approved_Peter_Reference.png": {
+      "bytes": 1415476,
+      "sha256": "1fd48e0a014d8102996f5b5ad39ab9e75f4248de81d7a23e5073939fd465614a"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_Paths_v002.json": {
+      "bytes": 124227,
+      "sha256": "0c95097c958eb2e679b97e699bdeaf15befd873886a4fc3cbe96ddc874144b10"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend": {
+      "bytes": 395255,
+      "sha256": "b77bbd6851a5f9a1dba53dfdf023196c4ebe93f7e5e89a600ef89837f75ced0a"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.svg": {
+      "bytes": 10964,
+      "sha256": "2ce421610aae4c8f9b98afd55c5b8690733c04d0142f9ef8d657400c92cf9174"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_Paths_v001.json": {
+      "bytes": 140888,
+      "sha256": "ec542cf8f6faf4f6d76d4f3b547c174b4929b59185c6960cfa317c116b73e199"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_Preview_v001.png": {
+      "bytes": 244941,
+      "sha256": "1c3827c82a6a4709fe60ebd195cafff785638dbe00bd8adebb5c1414f36769da"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_Rest_v001.svg": {
+      "bytes": 18116,
+      "sha256": "1759b8ffadc1d5e912534a8aac174c6b3d3a3405a8c34c0806738ab9a8768430"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_v001.blend": {
+      "bytes": 141590,
+      "sha256": "5b0b09a9ae801d058bea7a55d9c68bf0df79d2409ce2d928d9746a1c865b476d"
+    },
+    "00_LIBRARY/Characters/Peter_2D/Peter_2D_v001.svg": {
+      "bytes": 18424,
+      "sha256": "bd0e89e343a7317b0dcdf944f065d58a9b46129a13508c58c7563c71eb7702d4"
+    },
+    "00_LIBRARY/Characters/Peter_2D/README.md": {
+      "bytes": 4401,
+      "sha256": "7a4f3b5b84175aa83f7fa8848f0beb58ba75b75fa52eb42d6396751bb09c73ec"
+    },
+    "00_LIBRARY/Characters/Peter_2D/build_peter_flat_puppet.py": {
+      "bytes": 8476,
+      "sha256": "1791c91695c34e0396dea4fd6483511096cbb73fec15890dc58e3c02ee59bdae"
+    },
+    "00_LIBRARY/Characters/Peter_2D/build_peter_vector.py": {
+      "bytes": 18900,
+      "sha256": "b459c1f352981bba7614ef2f107c9787fe1b8ccc03a6b7ebac32b33825f6e2c8"
+    },
+    "00_LIBRARY/Fonts/Luckiest_Guy/LICENSE.txt": {
+      "bytes": 11358,
+      "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+    },
+    "00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf": {
+      "bytes": 73320,
+      "sha256": "cfbdd68a039f92df51cf3721506af6242e64594c6325fe0bedbeff3fe385d980"
     }
   }
 }

@@ -1,0 +1,6 @@
+{
+  "signature": "d18ca8988a737e61baba0a001049dcc251009be2e5e515acd15c54258a1def42",
+  "raw_sha256": "59e1c276bc225c9e0b13ce42080ea7114d5c122e69a6096b8a07eb65f92c5e2c",
+  "tts_model": "gemini-3.8-flash-tts",
+  "voice": "Puck"
+}

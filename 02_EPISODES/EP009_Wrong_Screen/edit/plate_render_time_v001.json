@@ -1,0 +1,35 @@
+{
+  "episode": "EP009_Wrong_Screen",
+  "engine": "Cycles",
+  "backend": "OptiX",
+  "gpu": [
+    "NVIDIA GeForce GTX 1650 Ti"
+  ],
+  "cpu_render_enabled": false,
+  "blender_version": "4.2.0",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "samples": 48,
+  "denoiser": "OptiX GPU",
+  "plates": [
+    {
+      "scene": "Plate_A_Warm_Office",
+      "file": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_A_Warm_Office_1080p_v001.png",
+      "render_seconds": 9.693971,
+      "bytes": 1686655,
+      "sha256": "6391a337f0a476512c31c1003fc72670e196d159de1f21f5072fcd0e9407198c"
+    },
+    {
+      "scene": "Plate_B_Cold_Panic",
+      "file": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_B_Cold_Panic_1080p_v001.png",
+      "render_seconds": 10.448896,
+      "bytes": 1622869,
+      "sha256": "fcece573dd5926c03f00d14a88715d3ca62415c26249ae078828a16f7fed8fca"
+    }
+  ],
+  "static_plate_render_seconds": 20.142867,
+  "finished_utc": "2026-10-09T14:14:31.079554+00:00",
+  "validation": "Actual static GPU render completed; animation/audio validation is a separate stage"
+}

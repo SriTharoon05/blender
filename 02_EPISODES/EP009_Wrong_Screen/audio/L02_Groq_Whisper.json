@@ -1,0 +1,64 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "eb7f61bfb5d3aad5e8791e1e896cf26f2d0e9ab9aab2ae9cb3ee0b655c7f0554",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 0.968562496,
+    "text": " Yep, we can see it!",
+    "words": [
+      {
+        "word": "Yep,",
+        "start": 0,
+        "end": 0.16
+      },
+      {
+        "word": "we",
+        "start": 0.16,
+        "end": 0.46
+      },
+      {
+        "word": "can",
+        "start": 0.46,
+        "end": 0.62
+      },
+      {
+        "word": "see",
+        "start": 0.62,
+        "end": 0.76
+      },
+      {
+        "word": "it!",
+        "start": 0.76,
+        "end": 0.92
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 0.96,
+        "text": " Yep, we can see it!",
+        "tokens": [
+          50365,
+          7010,
+          11,
+          321,
+          393,
+          536,
+          309,
+          0,
+          50413
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.26809463,
+        "compression_ratio": 0.71428573,
+        "no_speech_prob": 0
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4gga58eewxvp8xd0bmamj9x"
+    }
+  }
+}
