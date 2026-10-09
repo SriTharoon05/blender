@@ -1,0 +1,13 @@
+{
+  "voice": "Charon",
+  "catalog_id": "charon",
+  "display_name": "Charon",
+  "gender": "male",
+  "type": "prebuilt",
+  "language_code": "en-US",
+  "pitch": "low",
+  "verified_live_catalog": true,
+  "source": "https://ai.google.dev/api/voices",
+  "voice_gender_documentation": "https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options",
+  "credentials_stored": false
+}

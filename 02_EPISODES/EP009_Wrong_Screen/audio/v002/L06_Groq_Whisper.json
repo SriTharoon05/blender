@@ -1,0 +1,69 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "be7a7e41144bbd1c054e1456f0e49349bd88749839c4c636f55820840028ad20",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 2.14237504,
+    "text": " Why is the whole desktop sharing?!",
+    "words": [
+      {
+        "word": "Why",
+        "start": 0,
+        "end": 0.22
+      },
+      {
+        "word": "is",
+        "start": 0.22,
+        "end": 0.42
+      },
+      {
+        "word": "the",
+        "start": 0.42,
+        "end": 0.58
+      },
+      {
+        "word": "whole",
+        "start": 0.58,
+        "end": 0.8
+      },
+      {
+        "word": "desktop",
+        "start": 0.8,
+        "end": 1.42
+      },
+      {
+        "word": "sharing?!",
+        "start": 1.42,
+        "end": 2.08
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 2.1399999,
+        "text": " Why is the whole desktop sharing?!",
+        "tokens": [
+          50365,
+          1545,
+          307,
+          264,
+          1379,
+          14502,
+          5414,
+          3529,
+          50472
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.22238192,
+        "compression_ratio": 0.81395346,
+        "no_speech_prob": 0.009376526
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4gjsxnpegwbw011ssq01bps"
+    }
+  }
+}

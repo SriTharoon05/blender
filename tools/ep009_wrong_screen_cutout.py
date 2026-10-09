@@ -7,6 +7,7 @@ from __future__ import annotations
 import argparse
 import json
 import math
+import os
 from pathlib import Path
 import sys
 
@@ -42,11 +43,25 @@ def main():
     import bpy
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--output',default='02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v001.blend')
+    parser.add_argument('--cues',default='02_EPISODES/EP009_Wrong_Screen/edit/speech_cues_v001.json')
+    parser.add_argument('--report',default='02_EPISODES/EP009_Wrong_Screen/edit/project_verification.json')
     args=parser.parse_args(sys.argv[sys.argv.index('--')+1:] if '--' in sys.argv else sys.argv[1:])
     target=(ROOT/args.output).resolve()
     asset_path=ROOT/'00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_Paths_v002.json'
     asset=json.loads(asset_path.read_text(encoding='utf-8'))
-    cues=json.loads((EP/'edit/speech_cues_v001.json').read_text(encoding='utf-8'))
+    cue_path=(ROOT/args.cues).resolve()
+    cues=json.loads(cue_path.read_text(encoding='utf-8'))
+    policy=json.loads((ROOT/'config/production_defaults.json').read_text(encoding='utf-8'))
+    approved_voice=policy['tts_character_voices']['Peter']['voice']
+    peter_voices={item['voice'] for item in cues['lines'] if item['speaker']=='employee'}
+    if peter_voices!={approved_voice}:
+        raise ValueError('Peter dialogue must use his permanently configured male voice')
+    report_path=(ROOT/args.report).resolve()
+    for input_path in (target,cue_path,report_path):
+        if not input_path.is_relative_to(ROOT):
+            raise ValueError('Episode paths must remain inside the repository')
+    if report_path.exists():
+        raise FileExistsError('Choose a new versioned scene report; delivered reports are protected')
     plate=json.loads((EP/'edit/flat_plate_composition.json').read_text(encoding='utf-8'))
     start_episode_from_master(target)
     scene=bpy.data.scenes.new(SCENE)
@@ -54,7 +69,7 @@ def main():
     configure_scene(scene,duration_seconds=18,transparent=False)
     scene.eevee.taa_render_samples=16
     scene.render.use_compositing=False
-    scene.render.filepath='//../renders/cutout_frames_1080p24/EP009_######'
+    scene.render.filepath='//../renders/'+target.stem+'/EP009_######'
     scene.world=bpy.data.worlds.new('EP009_Unlit_Flat_World')
     scene.world.color=(1,1,1)
     collection=bpy.data.collections.new('CHAR_Peter_Office_Cutout')
@@ -257,10 +272,10 @@ def main():
     title,bounds=create_caption(scene,'POV: YOU SHARED\nTHE WRONG SCREEN.','CAPTION_EP009_Final_POV',slot='main',size=.65)
     title.location.z=5;show_intervals(title,[(361,432)])
     # Pack source audio for editing; production queue performs the final mux.
-    audio=EP/'audio/EP009_Final_Mix_18s_v001.wav'
+    audio=(ROOT/cues['mix_file']).resolve()
     editor=scene.sequence_editor_create()
     strip=editor.strips.new_sound('EP009 synchronized Gemini dialogue and original score',str(audio),channel=1,frame_start=1)
-    strip.sound.pack();strip.sound.filepath='//../audio/'+audio.name
+    strip.sound.pack();strip.sound.filepath='//'+os.path.relpath(audio,target.parent).replace('\\','/')
     scene.render.use_sequencer=False
     for item in cues['lines']:
         scene.timeline_markers.new(item['speaker']+': '+item['text'],frame=math.floor(item['start']*24)+1)
@@ -270,6 +285,7 @@ def main():
     scene['background_count']=1
     scene['caption_policy']='Luckiest Guy aligned word pops; lower [130,1340,870,1470], top ending POV'
     scene['lip_sync_method']=cues['lip_sync_method']
+    scene['peter_voice']=';'.join(sorted(peter_voices))
     scene.frame_set(85)
     bpy.ops.file.pack_all()
     bpy.ops.wm.save_as_mainfile(filepath=str(target),compress=True)
@@ -280,8 +296,11 @@ def main():
         'skeletal_bones':len(rig.data.bones),'character_geometry_redraws_per_frame':0,'character_mesh_animation':False,
         'background_count':1,'background_plate':plate['plate_png'],'caption_font':'LuckiestGuy-Regular.ttf',
         'spoken_caption_records':records,'final_title_bounds_px':bounds,'lip_sync_method':cues['lip_sync_method'],
+        'peter_voice':scene['peter_voice'],'speech_cues':cue_path.relative_to(ROOT).as_posix(),
+        'packed_audio':True,'audio':audio.relative_to(ROOT).as_posix(),
         'built_project':str(target.relative_to(ROOT)),'visual_reviewed':False}
-    (EP/'edit/project_verification.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
+    report_path.parent.mkdir(parents=True,exist_ok=True)
+    report_path.write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8')
     print('EP009_CUTOUT_BUILD_COMPLETE',json.dumps(report),flush=True)
 
 if __name__=='__main__':

@@ -23,6 +23,7 @@ from production_paths import RuntimePaths
 
 ROOT = Path(__file__).resolve().parents[1]
 EPISODE = "02_EPISODES/EP009_Wrong_Screen"
+AUTHORIZED_EPISODE_SOURCE_UPDATES = {f"{EPISODE}/README.md"}
 
 
 def sha256(path):
@@ -95,6 +96,109 @@ def verify_caption_metadata(project, cues):
             "geometry_tolerance_px": tolerance, "errors": errors}
 
 
+def verify_peter_voice(project, cues, defaults, generation=None, hash_source=None):
+    """Check explicit voice identity and generation evidence without API calls.
+
+    Voice catalog labels and recorded TTS request IDs establish the configured
+    identity. Acoustic listening is a separate check, never inferred here.
+    ``hash_source`` is optional for ordinary-Python focused policy tests.
+    """
+    errors = []
+    expected = {"provider": "Gemini", "voice": "Charon", "gender": "male",
+                "locked": True, "allow_voice_fallback": False}
+    configured = defaults.get("tts_character_voices", {}).get("Peter", {})
+    for name, value in expected.items():
+        if configured.get(name) != value:
+            errors.append(f"Permanent Peter voice configuration must set {name}={value}")
+    selected = project.get("peter_voice")
+    project_voice = selected.get("voice") if isinstance(selected, dict) else selected
+    if project_voice != expected["voice"]:
+        errors.append("Actual puppet project reports a different Peter voice")
+    cue_identity = cues.get("character_voices", {}).get("Peter", {})
+    for name, value in expected.items():
+        if cue_identity.get(name) != value:
+            errors.append(f"Speech cue Peter identity differs for {name}")
+    if cues.get("tts_provider") != "Gemini":
+        errors.append("Peter speech cues must identify the Gemini TTS provider")
+    employee_lines = [line for line in cues.get("lines", []) if line.get("speaker") == "employee"]
+    if not employee_lines:
+        errors.append("No Peter employee dialogue exists in the selected cues")
+    voice_rows = []
+    for line in employee_lines:
+        valid = line.get("voice") == expected["voice"] and line.get("character") == "Peter"
+        voice_rows.append({"line_id": line.get("id"), "voice": line.get("voice"),
+                           "character": line.get("character"), "matches_permanent_identity": valid})
+        if not valid:
+            errors.append(f"Peter dialogue line {line.get('id')} uses a different voice or character")
+    catalog = cues.get("peter_voice_catalog_evidence", {})
+    catalog_ok = catalog.get("voice") == "Charon" and catalog.get("gender") == "male" \
+        and catalog.get("verified_live_catalog") is True
+    if not catalog_ok:
+        errors.append("Speech cues lack a live-catalog verification of male Charon")
+    generation_rows = []
+    if generation is not None:
+        summaries = {row.get("id"): row for row in generation.get("lines", [])}
+        evidence_rows = generation.get("speech_audio_evidence") or generation.get("lines", [])
+        generated = {row.get("id"): row for row in evidence_rows}
+        for line in employee_lines:
+            row = generated.get(line.get("id"), {})
+            summary = summaries.get(line.get("id"), {})
+            valid = row.get("voice") == "Charon" and row.get("speaker") == "employee" \
+                and row.get("tts_model") == cues.get("tts_model") \
+                and row.get("fitted_audio") == line.get("audio") \
+                and summary.get("voice") == "Charon" and summary.get("speaker") == "employee"
+            if not valid:
+                errors.append(f"Actual TTS generation metadata differs for Peter line {line.get('id')}")
+            hashes = {}
+            for label in ("raw", "fitted"):
+                source, expected_hash = row.get(f"{label}_audio"), row.get(f"{label}_audio_sha256")
+                matched = None
+                if not source or not expected_hash:
+                    errors.append(f"Missing {label} audio provenance for Peter line {line.get('id')}")
+                elif hash_source is not None:
+                    try:
+                        matched = hash_source(source) == expected_hash
+                    except (OSError, ValueError):
+                        matched = False
+                    if not matched:
+                        errors.append(f"Actual {label} audio hash differs for Peter line {line.get('id')}")
+                hashes[label] = {"source": source, "sha256": expected_hash, "actual_hash_matches": matched}
+            generation_rows.append({"line_id": line.get("id"), "voice": row.get("voice"),
+                                    "tts_model": row.get("tts_model"), "metadata_matches": valid,
+                                    "audio_provenance": hashes})
+    return {"configured_identity": configured, "project_peter_voice": project_voice,
+            "cue_character_identity": cue_identity, "employee_line_count": len(employee_lines),
+            "employee_lines": voice_rows, "male_voice_catalog_evidence": catalog,
+            "live_catalog_matches_locked_male_voice": catalog_ok,
+            "actual_generation_evidence_available": generation is not None,
+            "actual_generation_lines": generation_rows,
+            "evidence_scope": "Configured Gemini voice ID, live catalog gender label, actual generation metadata and audio hashes; acoustic timbre/listening is separate",
+            "all_voice_checks_passed": not errors, "errors": errors}
+
+
+def protect_report_output(output):
+    """A delivery audit may not replace an already committed historical report."""
+    name = relative(output)
+    if command(["git", "ls-tree", "-r", "--name-only", "HEAD", "--", name]).strip():
+        raise FileExistsError("The selected verification report is already committed; use a new versioned output path")
+
+
+def committed_source_matches(name, original, path):
+    """Match Git's declared text line-ending normalization; binaries stay exact.
+
+    Existing Windows JSON/SVG files may contain CRLF even though committed Git
+    blobs contain LF. Only that declared normalization is permitted here: words,
+    numeric timings, spacing, encodings and all binary bytes remain protected.
+    """
+    if not path.is_file():
+        return False
+    current = path.read_bytes()
+    if Path(name).suffix.lower() in {".json", ".svg", ".md", ".txt", ".py", ".yml", ".yaml", ".ps1", ".sh"}:
+        current = current.replace(b"\r\n", b"\n")
+        original = original.replace(b"\r\n", b"\n")
+    return hashlib.sha256(current).digest() == hashlib.sha256(original).digest()
+
+
 def protected_assets():
     baseline_raw = command(["git", "show", "HEAD:config/approved_assets.json"])
     baseline = json.loads(baseline_raw)["assets"]
@@ -114,13 +218,30 @@ def protected_assets():
     for name in previous_projects:
         original = command(["git", "show", f"HEAD:{name}"], binary=True)
         path = ROOT / name
-        valid = path.is_file() and sha256(path) == hashlib.sha256(original).hexdigest()
+        valid = committed_source_matches(name, original, path)
         project_checks.append({"path": name, "unchanged": valid})
         if not valid:
             errors.append(f"Previously committed episode project changed: {name}")
+    # Current-episode delivered versions are protected as complete sources too:
+    # old audio, cue sheets, native projects, plates and verification JSON must
+    # retain their committed bytes. New versioned files are not baseline inputs.
+    episode_names = [name for name in names if name.startswith(EPISODE + "/")]
+    episode_checks = []
+    for name in episode_names:
+        if name in AUTHORIZED_EPISODE_SOURCE_UPDATES:
+            continue
+        original = command(["git", "show", f"HEAD:{name}"], binary=True)
+        path = ROOT / name
+        valid = committed_source_matches(name, original, path)
+        episode_checks.append({"path": name, "unchanged": valid})
+        if not valid:
+            errors.append(f"Previously committed EP009 source changed: {name}")
     return {"baseline_git_revision": command(["git", "rev-parse", "HEAD"]).strip(),
             "approved_asset_count": len(checks), "approved_assets": checks,
             "historical_episode_project_count": len(project_checks), "historical_episode_projects": project_checks,
+            "previously_committed_ep009_source_count": len(episode_checks), "previously_committed_ep009_sources": episode_checks,
+            "authorized_source_update_exceptions": sorted(AUTHORIZED_EPISODE_SOURCE_UPDATES),
+            "comparison_policy": "Binary bytes exact; text content exact after the repository's declared CRLF/LF normalization only",
             "inventory_refreshed": False, "all_unchanged": not errors, "errors": errors}
 
 
@@ -141,7 +262,11 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--video", required=True, help="Repository-relative final MP4")
     parser.add_argument("--queue-state", required=True, help="Repository-relative completed queue state.json")
-    parser.add_argument("--output", default=f"{EPISODE}/edit/delivery_verification.json")
+    parser.add_argument("--project-report", default=f"{EPISODE}/edit/project_verification.json", help="Selected version's repository-relative actual build report")
+    parser.add_argument("--cues", default=f"{EPISODE}/edit/speech_cues_v001.json", help="Selected version's repository-relative measured speech cue sheet")
+    parser.add_argument("--audio-generation", default=None, help="Optional repository-relative actual speech generation evidence; otherwise discover beside the selected mix")
+    parser.add_argument("--output", default=None, help="New versioned verification output; defaults beside the selected project report")
+    parser.add_argument("--background-reused", action="store_true", help="This correction reused the existing completed flat plate without rendering a new background")
     parser.add_argument("--visual-review-note", default="", help="Only supply after actual rendered frames were inspected")
     parser.add_argument("--encoded-review-frames", nargs="+", type=int, default=[], help="Actual decoded final MP4 frames visually inspected")
     parser.add_argument("--phone-preview-width", type=int, default=None, help="Actual preview width in pixels, if reviewed")
@@ -150,14 +275,20 @@ def main():
     args = parser.parse_args()
     runtime = RuntimePaths.discover()
     video, state_path = runtime.repo_path(args.video, must_exist=True), runtime.repo_path(args.queue_state, must_exist=True)
-    output = runtime.repo_path(args.output)
+    project_path = runtime.repo_path(args.project_report, must_exist=True)
+    cues_path = runtime.repo_path(args.cues, must_exist=True)
+    output = runtime.repo_path(args.output) if args.output else project_path.parent / "delivery_verification.json"
+    if output in (project_path, cues_path):
+        raise ValueError("The output report must not replace selected project/cue inputs")
+    protect_report_output(output)
     if any(frame < 1 or frame > 432 for frame in args.encoded_review_frames):
         raise ValueError("Encoded review frame numbers must be inside 1..432")
     if args.encoded_review_artifact:
         runtime.repo_path(args.encoded_review_artifact, must_exist=True)
     edit = ROOT / EPISODE / "edit"
     ffprobe, ffmpeg = runtime.resolve_tool("ffprobe"), runtime.resolve_tool("ffmpeg")
-    project, cues = read_json(edit / "project_verification.json"), read_json(edit / "speech_cues_v001.json")
+    project, cues = read_json(project_path), read_json(cues_path)
+    defaults = read_json(ROOT / "config/production_defaults.json")
     state, delivery = read_json(state_path), read_json(state_path.parent / "delivery.json")
     started = time.monotonic()
     probe = json.loads(command([ffprobe, "-v", "error", "-count_frames", "-show_streams", "-show_format",
@@ -239,6 +370,22 @@ def main():
         errors.append("Decoded AAC differs excessively from the source mix at zero delay")
     captions = verify_caption_metadata(project, cues)
     errors.extend(captions["errors"])
+    generation_path = None
+    if args.audio_generation:
+        generation_path = runtime.repo_path(args.audio_generation, must_exist=True)
+    elif cues.get("audio_version"):
+        candidate = runtime.repo_path(cues["mix_file"]).parent / f"speech_generation_{cues['audio_version']}.json"
+        if candidate.is_file():
+            generation_path = candidate
+    generation = read_json(generation_path) if generation_path else None
+    voices = verify_peter_voice(project, cues, defaults, generation,
+                                lambda name: sha256(runtime.repo_path(name, must_exist=True)))
+    voices["generation_evidence_source"] = relative(generation_path) if generation_path else None
+    errors.extend(voices["errors"])
+    if project.get("speech_cues") != relative(cues_path):
+        errors.append("Puppet project report references a different speech cue sheet")
+    if project.get("audio") != cues.get("mix_file"):
+        errors.append("Puppet project report references a different source audio mix")
     puppet_required = {"frames": 432, "video_seconds": 18, "resolution": [1080, 1920], "fps": 24,
                        "engine": "BLENDER_EEVEE", "static_character_parts": 25, "skeletal_bones": 17,
                        "character_geometry_redraws_per_frame": 0, "character_mesh_animation": False,
@@ -263,22 +410,35 @@ def main():
     protected = protected_assets()
     errors.extend(protected["errors"])
     animation_seconds = float(delivery["render_seconds"])
-    final_plate_seconds = float(flat["actual_static_plate_render_seconds"])
+    original_plate_seconds = float(flat["actual_static_plate_render_seconds"])
+    final_plate_seconds = 0.0 if args.background_reused else original_plate_seconds
     preview = read_json(edit / "cutout_review_render_time.json")
+    preview_is_current = project_path.parent == edit
+    current_review_render_seconds = float(preview["review_render_seconds"]) if preview_is_current else 0.0
     report = {"schema_version": 1, "episode": "EP009_Wrong_Screen", "status": "passed" if not errors else "failed",
               "checked_utc": datetime.now(timezone.utc).isoformat(), "video": args.video,
               "video_sha256": video_hash, "editable_project": str(project["built_project"]).replace("\\", "/"),
+              "selected_project_report": relative(project_path), "selected_speech_cues": relative(cues_path),
               "media": video_checks, "full_video_and_audio_decode_passed": True,
               "full_decode_seconds": round(decode_seconds, 3), "audio": audio, "captions": captions,
+              "peter_voice_verification": voices,
               "puppet": {name: project[name] for name in puppet_required},
               "background_plate": flat["plate_png"], "gpu": delivery.get("gpu"), "render_backend": "Blender queue",
               "actual_render_times": {"animation_render_seconds": animation_seconds,
                   "final_static_flat_plate_render_seconds": final_plate_seconds,
+                  "static_background_reused": args.background_reused,
+                  "original_reused_plate_source_render_seconds": original_plate_seconds if args.background_reused else None,
                   "final_plate_plus_animation_render_seconds": animation_seconds + final_plate_seconds,
                   "encoding_seconds": float(delivery["encode_seconds"]),
-                  "representative_frame_render_seconds": preview["review_render_seconds"]},
-              "representative_render_timing_scope": {"frames": preview["frames"],
-                  "note": "Latest measured preview batch only; not a cumulative total of earlier preview work"},
+                  "representative_frame_render_seconds": current_review_render_seconds,
+                  "correction_review_render_seconds": current_review_render_seconds,
+                  "original_reference_preview_render_seconds": float(preview["review_render_seconds"])},
+              "representative_render_timing_scope": {"frames": preview["frames"] if preview_is_current else [],
+                  "original_reference_preview_frames": preview["frames"],
+                  "reference_metadata": relative(edit / "cutout_review_render_time.json"),
+                  "reference_preview_applies_to_selected_project": preview_is_current,
+                  "current_review_source": "Recorded preview batch" if preview_is_current else "Existing full-render/decoded final-video frames; no additional GPU preview render",
+                  "note": "Earlier source-project preview timings are reference evidence only, excluded from the correction's rendering elapsed" if not preview_is_current else "Latest measured preview batch only; not cumulative earlier preview work"},
               "unused_3d_background_work": unused_background_work(edit), "protected_sources": protected,
               "visual_review_performed": bool(args.visual_review_note), "visual_review_note": args.visual_review_note or None,
               "encoded_video_visual_review": {"performed": bool(args.encoded_review_frames and args.visual_review_note),
@@ -299,6 +459,8 @@ def main():
                       "frame_count": video_checks["frame_count"], "render_seconds": animation_seconds,
                       "encode_seconds": delivery["encode_seconds"], "approved_assets_unchanged": protected["approved_asset_count"],
                       "historical_projects_unchanged": protected["historical_episode_project_count"],
+                      "previously_committed_ep009_sources_unchanged": protected["previously_committed_ep009_source_count"],
+                      "peter_voice": voices["project_peter_voice"], "peter_voice_checks_passed": voices["all_voice_checks_passed"],
                       "errors": errors, "report": relative(output)}, indent=2))
     return 1 if errors else 0
 

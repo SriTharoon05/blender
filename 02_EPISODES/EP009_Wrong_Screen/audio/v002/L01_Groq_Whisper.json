@@ -1,0 +1,77 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "14006ccb953fb519726f5446bf0a9301b8b2dd6db37fb0109fdf3ce7fdba5093",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.643312512,
+    "text": " Okay, everyone. Let me share my screen.",
+    "words": [
+      {
+        "word": "Okay,",
+        "start": 0,
+        "end": 0.24
+      },
+      {
+        "word": "everyone.",
+        "start": 0.24,
+        "end": 0.78
+      },
+      {
+        "word": "Let",
+        "start": 0.78,
+        "end": 0.86
+      },
+      {
+        "word": "me",
+        "start": 0.86,
+        "end": 0.92
+      },
+      {
+        "word": "share",
+        "start": 0.92,
+        "end": 1.12
+      },
+      {
+        "word": "my",
+        "start": 1.12,
+        "end": 1.26
+      },
+      {
+        "word": "screen.",
+        "start": 1.26,
+        "end": 2.12
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.64,
+        "text": " Okay, everyone. Let me share my screen.",
+        "tokens": [
+          50365,
+          1033,
+          11,
+          1518,
+          13,
+          961,
+          385,
+          2073,
+          452,
+          2568,
+          13,
+          50447
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.15179667,
+        "compression_ratio": 0.8333333,
+        "no_speech_prob": 0.011001587
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4gjs91cespbn4fcgmat858y"
+    }
+  }
+}

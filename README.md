@@ -47,9 +47,11 @@ This older example demonstrates the preserved School Guy and caption helpers; it
 
 ## Speech and synchronized captions
 
+**Peter's permanent voice is male Gemini `Charon`.** Its locked identity and vocal profile are saved in `config/production_defaults.json` under `tts_character_voices.Peter`. Reuse it for all future Peter speech and retries. Key rotation must keep the voice unchanged; unavailable Charon stops speech generation instead of triggering another voice/provider. Only the user's explicit instruction can change it. Google lists Charon as male in its [official voice table](https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options).
+
 `tools/speech_api.py` calls Gemini and Groq server-side. Read comma-separated `GEMINI_API_KEYS` and `GROQ_API_KEYS` from the ignored `.env` or environment secrets. Never commit or print keys. The pool rotates normal requests, retries transient failures and honors provider-wide 429 cooldowns/`Retry-After`, without bypassing project/organization quotas.
 
-EP009 used Gemini `gemini-3.8-flash-tts` with Kore/Puck voices and Groq `whisper-large-v3` word timestamps. Model availability and documented free-tier eligibility must be checked for new generation. Each line is cached and aligned on its actual fitted audio. Caption wording must match the script; the cue sheet supplies word times and 24 fps mouth states. Current lip sync combines measured amplitude with word-based viseme estimates, not phoneme forced alignment. Do not imply a listening or rendered lip-sync review from API success alone.
+The original EP009 v001 used Gemini `gemini-3.8-flash-tts` with Kore/Puck voices and Groq `whisper-large-v3` word timestamps. Its metadata remains historical; corrected and future Peter speech uses locked Charon. Model availability and documented free-tier eligibility must be checked for new generation. Each line is cached with its voice ID and aligned on its actual fitted audio. Caption wording must match the script; the cue sheet supplies word times and 24 fps mouth states. Current lip sync combines measured amplitude with word-based viseme estimates, not phoneme forced alignment. Do not imply a listening or rendered lip-sync review from API success alone.
 
 ## Repository contents
 

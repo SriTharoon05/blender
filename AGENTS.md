@@ -33,9 +33,11 @@ Prepare each new episode's builder and add one item to `queue/pending.queue.json
 
 ## Speech services and secrets
 
+**Peter's permanent voice is male Gemini `Charon`.** Read `tts_character_voices.Peter` from `config/production_defaults.json` for every Peter line, including narration, thoughts, dialogue and retries. Keep the same voice ID and vocal profile across future episodes; emotion and pace may change. Never substitute a female voice, rotate voice IDs with API keys, or fall back to another voice/provider. If Charon is unavailable, leave the speech stage incomplete and report the failure. Only an explicit human instruction can change this locked voice identity. Google lists Charon as male in its [official Gemini-TTS voice table](https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options).
+
 Use `tools/speech_api.py` for direct server-side provider calls. Read comma-separated pools from `GEMINI_API_KEYS` and `GROQ_API_KEYS` in the ignored local `.env` or environment secret settings. Never print, store in source metadata or commit credential values; never put provider keys in URLs or client-side code.
 
-EP009 used the available, documented free-tier **Gemini `gemini-3.8-flash-tts`**, with Kore/Puck, and **Groq `whisper-large-v3`** with `verbose_json` word timestamps. Recheck official model availability and free-tier eligibility before new generation. Cache generated lines and their real transcripts. Rotate normal requests' starting keys, retry transient failures and temporarily skip failed keys. Honor `Retry-After` and provider-wide cooldowns on 429 responses; key rotation must not bypass project/organization or daily quotas.
+The original EP009 v001 used the available, documented free-tier **Gemini `gemini-3.8-flash-tts`**, with Kore/Puck, and **Groq `whisper-large-v3`** with `verbose_json` word timestamps. Preserve that historical metadata; corrected/new Peter speech uses locked Charon. Recheck official model availability and free-tier eligibility before new generation. Cache generated lines and their real transcripts, including the voice ID in cache identity. Rotate normal requests' starting keys, retry transient failures and temporarily skip failed keys. Honor `Retry-After` and provider-wide cooldowns on 429 responses; key rotation must not bypass project/organization or daily quotas.
 
 ## Checks
 

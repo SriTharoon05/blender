@@ -1,0 +1,52 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "e2e20d075ed6c02b9ec2aa8453e492a2c6943b065b741328ffa9daf7f5151b41",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.280437504,
+    "text": " I'm changing careers.",
+    "words": [
+      {
+        "word": "I'm",
+        "start": 0,
+        "end": 0.1
+      },
+      {
+        "word": "changing",
+        "start": 0.1,
+        "end": 0.46
+      },
+      {
+        "word": "careers.",
+        "start": 0.46,
+        "end": 1.02
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.28,
+        "text": " I'm changing careers.",
+        "tokens": [
+          50365,
+          286,
+          478,
+          4473,
+          16409,
+          13,
+          50429
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.20240049,
+        "compression_ratio": 0.73333335,
+        "no_speech_prob": 0.03765869
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4gjt36ke8z8gepbfp44dgmv"
+    }
+  }
+}

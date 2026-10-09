@@ -1,0 +1,52 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "6717cbdc1bbc18205b3ea430cc1f454f902be78f02d0d6fe56d5c434618d6467",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.895937408,
+    "text": " Perfect. Very professional.",
+    "words": [
+      {
+        "word": "Perfect.",
+        "start": 0.02,
+        "end": 1.08
+      },
+      {
+        "word": "Very",
+        "start": 1.08,
+        "end": 1.38
+      },
+      {
+        "word": "professional.",
+        "start": 1.38,
+        "end": 2.22
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.74,
+        "text": " Perfect. Very professional.",
+        "tokens": [
+          50365,
+          10246,
+          13,
+          4372,
+          4843,
+          13,
+          50452
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.39189288,
+        "compression_ratio": 0.7777778,
+        "no_speech_prob": 5.9604645e-08
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4gjshhneabtvx6ywdnvdgam"
+    }
+  }
+}

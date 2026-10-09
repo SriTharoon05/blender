@@ -51,6 +51,10 @@ def validate():
                     'upper_arm.R','lower_arm.R','hand.R','upper_leg.L',
                     'lower_leg.L','upper_leg.R','lower_leg.R'}
     assert required_parts.issubset(policy['character_parts']), 'Missing modular skeletal body parts'
+    peter_voice=policy['tts_character_voices']['Peter']
+    assert peter_voice['provider']=='Gemini' and peter_voice['voice']=='Charon', 'Peter uses his fixed Charon voice'
+    assert peter_voice['gender']=='male' and peter_voice['locked'] is True, 'Peter voice must remain male and locked'
+    assert peter_voice['allow_voice_fallback'] is False, 'Do not switch Peter voices automatically'
     if policy.get('caption_mode')=='Audio-aligned one word at a time with brief scale-in pop':
         assert policy['caption_dialogue_bounds_px']==[130,1340,870,1470]
         assert (ROOT/policy['caption_font_file']).is_file()

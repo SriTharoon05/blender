@@ -51,6 +51,16 @@
   "lip_sync_required_for_dialogue": true,
   "tts_provider": "Gemini",
   "tts_model": "gemini-3.8-flash-tts",
+  "tts_character_voices": {
+    "Peter": {
+      "provider": "Gemini",
+      "voice": "Charon",
+      "gender": "male",
+      "locked": true,
+      "profile": "Same young-adult male Peter; natural conversational English, clear medium-low register, consistent accent and timbre; emotions may vary without changing identity",
+      "allow_voice_fallback": false
+    }
+  },
   "stt_provider": "Groq",
   "stt_model": "whisper-large-v3",
   "api_keys_source": "Ignored local .env or environment comma-separated GEMINI_API_KEYS/GROQ_API_KEYS; never commit values",

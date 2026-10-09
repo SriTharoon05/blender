@@ -1,0 +1,197 @@
+{
+  "tts_model": "gemini-3.8-flash-tts",
+  "stt_model": "whisper-large-v3",
+  "lines": [
+    {
+      "id": "L01",
+      "speaker": "employee",
+      "voice": "Charon",
+      "trim_start_seconds": 0.25112,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 1.643292
+    },
+    {
+      "id": "L02",
+      "speaker": "host",
+      "voice": "Puck",
+      "trim_start_seconds": 0.36962,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 0.968542
+    },
+    {
+      "id": "L03",
+      "speaker": "employee",
+      "voice": "Charon",
+      "trim_start_seconds": 0.29696,
+      "speed_factor": 1.40787,
+      "fitted_duration_seconds": 1.895917
+    },
+    {
+      "id": "L04",
+      "speaker": "employee",
+      "voice": "Charon",
+      "trim_start_seconds": 0.22971,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 1.648
+    },
+    {
+      "id": "L05",
+      "speaker": "host",
+      "voice": "Puck",
+      "trim_start_seconds": 0.24892,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 1.387458
+    },
+    {
+      "id": "L06",
+      "speaker": "employee",
+      "voice": "Charon",
+      "trim_start_seconds": 0.27879,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 2.142375
+    },
+    {
+      "id": "L07",
+      "speaker": "employee",
+      "voice": "Charon",
+      "trim_start_seconds": 0.27879,
+      "speed_factor": 1.0,
+      "fitted_duration_seconds": 1.280417
+    }
+  ],
+  "sample_rate": 48000,
+  "channels": 2,
+  "duration_seconds": 18,
+  "mix_peak_dbfs": -3.048,
+  "mix_gain": 1,
+  "elapsed_seconds": 35.672,
+  "final_half_second_silent": true,
+  "audio_version": "v002",
+  "character_voices": {
+    "Peter": {
+      "provider": "Gemini",
+      "voice": "Charon",
+      "gender": "male",
+      "locked": true,
+      "profile": "Same young-adult male Peter; natural conversational English, clear medium-low register, consistent accent and timbre; emotions may vary without changing identity",
+      "allow_voice_fallback": false
+    }
+  },
+  "voice_catalog_evidence": {
+    "voice": "Charon",
+    "catalog_id": "charon",
+    "display_name": "Charon",
+    "gender": "male",
+    "type": "prebuilt",
+    "language_code": "en-US",
+    "pitch": "low",
+    "verified_live_catalog": true,
+    "source": "https://ai.google.dev/api/voices",
+    "voice_gender_documentation": "https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options",
+    "credentials_stored": false
+  },
+  "docs": {
+    "gemini_tts": "https://ai.google.dev/gemini-api/docs/speech-generation",
+    "gemini_free_tier": "https://ai.google.dev/gemini-api/docs/pricing",
+    "groq_whisper": "https://console.groq.com/docs/speech-to-text",
+    "groq_rate_limits": "https://console.groq.com/docs/rate-limits",
+    "gemini_voice_catalog": "https://ai.google.dev/api/voices",
+    "gemini_voice_gender": "https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options"
+  },
+  "listening_review_performed": false,
+  "speech_audio_evidence": [
+    {
+      "id": "L01",
+      "speaker": "employee",
+      "voice": "Charon",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "ddede5a1e15c0e2ff8f369e1e7a9343bd497e8505efddc36dc76aa84ed407d95",
+      "raw_audio_sha256": "f63872b18861d54605c14a66d38c7b549988ad0bd071dec37453efc2c2269777",
+      "fitted_audio_sha256": "14006ccb953fb519726f5446bf0a9301b8b2dd6db37fb0109fdf3ce7fdba5093",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L01_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L01_Dialogue.wav",
+      "reused_from_audio_version": null
+    },
+    {
+      "id": "L02",
+      "speaker": "host",
+      "voice": "Puck",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "64bd2f11c158d5c928715792443fc60c84a0406c12521cff77b9ea82b294b62c",
+      "raw_audio_sha256": "59e1c276bc225c9e0b13ce42080ea7114d5c122e69a6096b8a07eb65f92c5e2c",
+      "fitted_audio_sha256": "eb7f61bfb5d3aad5e8791e1e896cf26f2d0e9ab9aab2ae9cb3ee0b655c7f0554",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L02_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L02_Dialogue.wav",
+      "reused_from_audio_version": "v001"
+    },
+    {
+      "id": "L03",
+      "speaker": "employee",
+      "voice": "Charon",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "cc721f6790e46f60e05f1b3d74d3c208f72988f1236314fd33b6005eac8494b8",
+      "raw_audio_sha256": "af39fe0c6d4c219610d00c5617b184c883dd9575582cef09fe3755764adaa744",
+      "fitted_audio_sha256": "6717cbdc1bbc18205b3ea430cc1f454f902be78f02d0d6fe56d5c434618d6467",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L03_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L03_Dialogue.wav",
+      "reused_from_audio_version": null
+    },
+    {
+      "id": "L04",
+      "speaker": "employee",
+      "voice": "Charon",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "739d304c3667b8c07b1fc529c3d6bdb1a57d07f051703a82d90c60093f4b8e83",
+      "raw_audio_sha256": "889a0b80e1efc19efdbe085464b4063da8c1470e8a358e75116809a58308efd9",
+      "fitted_audio_sha256": "f7f41afb0cdef277f84dbdad7e036df6e5be9a9e912c8226d25ea8a30f01a079",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L04_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L04_Dialogue.wav",
+      "reused_from_audio_version": null
+    },
+    {
+      "id": "L05",
+      "speaker": "host",
+      "voice": "Puck",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "888e94b1a799790e3bfc375af99bf07ebcec29869d3d844c2cc9e984c99f7432",
+      "raw_audio_sha256": "ad2dbec5117fcc908e831b1d144a853f08774a88a94316b253f2b190409bff08",
+      "fitted_audio_sha256": "73a49ff84e1e2c2ad01bcee7e544ce3177c2a1ff66582b309057eb5db93cfb53",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L05_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L05_Dialogue.wav",
+      "reused_from_audio_version": "v001"
+    },
+    {
+      "id": "L06",
+      "speaker": "employee",
+      "voice": "Charon",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "48e2af478604bcdc6ddb89c3017ad75338382158638f5dc8ebe49267edd947a2",
+      "raw_audio_sha256": "10268deffa7715f1654162e1776603c7fcdfe6209347d1fa5306e41f298bae0d",
+      "fitted_audio_sha256": "be7a7e41144bbd1c054e1456f0e49349bd88749839c4c636f55820840028ad20",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L06_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L06_Dialogue.wav",
+      "reused_from_audio_version": null
+    },
+    {
+      "id": "L07",
+      "speaker": "employee",
+      "voice": "Charon",
+      "tts_model": "gemini-3.8-flash-tts",
+      "cache_signature": "48ef86f3b7b395595c5ac839159c923999a27047b757a8062a1bcb45e25c4513",
+      "raw_audio_sha256": "bad8db2dd94555dac5657e66b61922bfa2e475f8851baf55d04490233c69abd9",
+      "fitted_audio_sha256": "e2e20d075ed6c02b9ec2aa8453e492a2c6943b065b741328ffa9daf7f5151b41",
+      "raw_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L07_Gemini_Raw.wav",
+      "fitted_audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L07_Dialogue.wav",
+      "reused_from_audio_version": null
+    }
+  ],
+  "peter_voice": {
+    "provider": "Gemini",
+    "voice": "Charon",
+    "gender": "male",
+    "locked": true,
+    "profile": "Same young-adult male Peter; natural conversational English, clear medium-low register, consistent accent and timbre; emotions may vary without changing identity",
+    "allow_voice_fallback": false,
+    "catalog_gender_verified": true
+  }
+}

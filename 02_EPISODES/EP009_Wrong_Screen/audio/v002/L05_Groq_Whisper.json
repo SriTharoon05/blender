@@ -1,0 +1,51 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "73a49ff84e1e2c2ad01bcee7e544ce3177c2a1ff66582b309057eb5db93cfb53",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.38743744,
+    "text": " Interesting search history.",
+    "words": [
+      {
+        "word": "Interesting",
+        "start": 0,
+        "end": 0.38
+      },
+      {
+        "word": "search",
+        "start": 0.38,
+        "end": 0.82
+      },
+      {
+        "word": "history.",
+        "start": 0.82,
+        "end": 1.2
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.22,
+        "text": " Interesting search history.",
+        "tokens": [
+          50365,
+          14711,
+          3164,
+          2503,
+          13,
+          50426
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.20806201,
+        "compression_ratio": 0.7777778,
+        "no_speech_prob": 0.029708862
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4ggb1jxeqrs8gzazqr6msxx"
+    }
+  }
+}

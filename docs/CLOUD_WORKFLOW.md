@@ -55,6 +55,11 @@ Dialogue needs lip sync: measured word timings plus amplitude-driven reusable
 visemes. Distinguish that from phoneme forced alignment. If authorized secrets
 are available, use tools/speech_api.py for server-side Gemini TTS and Groq STT;
 never expose keys or bypass quota cooldowns. Cache generated lines/transcripts.
+Peter must use the locked male Gemini Charon voice from
+config/production_defaults.json:tts_character_voices.Peter for every line and
+retry. Keep the same voice ID and vocal profile; never fall back to a female
+voice or a different voice/provider. Only explicit human instruction can change
+Peter's permanent voice. Include voice identity in audio cache validation.
 Add this episode to queue/pending.queue.json, using the reference queue schema.
 Support BLENDER_QUEUE_BUILD_ONLY=1; do not start a final render in this task.
 
@@ -88,7 +93,9 @@ Historical scripts are preserved as episode references and may need path/font/ru
 
 Read comma-separated `GEMINI_API_KEYS` and `GROQ_API_KEYS` through `tools/speech_api.py`. Local values live in ignored `.env`; a cloud task needs its own authorized environment secrets because the local `.env` is deliberately absent from Git. Never print values, embed them in a URL/client bundle or copy them into source/audio metadata. A cloud authoring task without those secrets can prepare dialogue/audio scripts, but must report that actual provider generation/alignment was unavailable.
 
-The current implemented Gemini TTS interface uses REST server-side calls. EP009 successfully used **`gemini-3.8-flash-tts`**, employee voice **Kore** and meeting-host voice **Puck**. Its official pricing documents a free tier; availability, quota and account eligibility still need to be checked before future generation. [Gemini TTS documentation](https://ai.google.dev/gemini-api/docs/speech-generation), [Gemini pricing](https://ai.google.dev/gemini-api/docs/pricing).
+**Peter's permanent voice is male Gemini `Charon`.** Read `config/production_defaults.json:tts_character_voices.Peter` before generating narration, thoughts or dialogue. The voice ID and young-adult male vocal profile stay fixed across episodes and retries. Emotion and pacing may vary. Never switch voices/providers or use a female fallback when handling key failures; if Charon is unavailable, report the incomplete speech stage. Only an explicit instruction from the human user may change the lock. Cache identity must include the configured voice so old Kore clips cannot silently satisfy a Charon job. Google explicitly lists Charon as male and Kore as female in its [official Gemini-TTS voice table](https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options).
+
+The current implemented Gemini TTS interface uses REST server-side calls. The original EP009 v001 successfully used **`gemini-3.8-flash-tts`**, employee voice **Kore** and meeting-host voice **Puck**; retain that historical metadata. Corrected and future Peter clips use locked Charon. Its official pricing documents a free tier; availability, quota and account eligibility still need to be checked before future generation. [Gemini TTS documentation](https://ai.google.dev/gemini-api/docs/speech-generation), [Gemini pricing](https://ai.google.dev/gemini-api/docs/pricing).
 
 Generate dialogue lines separately, retain original audio, and fit only as needed with pitch-preserving timing. Transcribe the actual fitted clean speech through **Groq `whisper-large-v3`**, `response_format=verbose_json` and word timestamp granularity. Validate exact scripted words, preserve measured word times and clamp any ASR boundary padding to the real audio boundary with a recorded flag. Use the same cue sheet for word-caption onsets and mouth animation. [Groq STT documentation](https://console.groq.com/docs/speech-to-text).
 

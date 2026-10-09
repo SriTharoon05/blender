@@ -11,40 +11,109 @@ import json
 import math
 from pathlib import Path
 import re
+import shutil
 import subprocess
 import sys
 import time
 import wave
 
 from production_paths import RuntimePaths
-from speech_api import KeyPool, SpeechAPIError, gemini_models, gemini_tts, groq_transcribe, load_key_pools
+from speech_api import KeyPool, SpeechAPIError, gemini_models, gemini_tts, groq_transcribe, load_key_pools, request_json
 
 ROOT = Path(__file__).resolve().parents[1]
 EPISODE = ROOT / "02_EPISODES/EP009_Wrong_Screen"
 FPS, SR, DURATION = 24, 48000, 18
 LINES = [
-    {"id": "L01", "speaker": "employee", "voice": "Kore", "start": 0, "end": 2,
+    {"id": "L01", "speaker": "employee", "start": 0, "end": 2,
      "text": "Okay, everyone. Let me share my screen.",
-     "style": "Conversational, upbeat young adult office worker, confident smile. Crisp, brisk delivery. Complete the sentence in under two seconds."},
+     "style": "Conversational and upbeat, confident smile. Crisp, brisk delivery. Complete the sentence in under two seconds."},
     {"id": "L02", "speaker": "host", "voice": "Puck", "start": 2, "end": 4,
      "text": "Yep, we can see it!", "style": "Friendly professional meeting host, bright and completely unaware. Crisp delivery, under two seconds."},
-    {"id": "L03", "speaker": "employee", "voice": "Kore", "start": 4, "end": 6,
+    {"id": "L03", "speaker": "employee", "start": 4, "end": 6,
      "text": "Perfect. Very professional.", "style": "Confident conversational office worker, smug little smile, a tiny pause after Perfect. Under two seconds."},
-    {"id": "L04", "speaker": "employee", "voice": "Kore", "start": 6, "end": 8,
-     "text": "Wait. That's not the presentation.", "style": "Same young adult office worker, sudden worried realization. Tiny pause after Wait. Crisp and quickly panicked, under two seconds."},
+    {"id": "L04", "speaker": "employee", "start": 6, "end": 8,
+     "text": "Wait. That's not the presentation.", "style": "Sudden worried realization. Tiny pause after Wait. Crisp and quickly panicked, under two seconds."},
     {"id": "L05", "speaker": "host", "voice": "Puck", "start": 8, "end": 10,
      "text": "Interesting search history.", "style": "Friendly professional host, innocently curious and deadpan, a tiny pause after Interesting. Under two seconds."},
-    {"id": "L06", "speaker": "employee", "voice": "Kore", "start": 10, "end": 13,
-     "text": "WHY IS THE WHOLE DESKTOP SHARING?!", "style": "Same young adult office worker, comically panicked emphatic shout, crisp intelligible words, incredulous stress on whole desktop. Complete in under three seconds."},
-    {"id": "L07", "speaker": "employee", "voice": "Kore", "start": 13, "end": 15,
-     "text": "I'm changing careers.", "style": "Same office worker, defeated and embarrassed whisper, dry comic resignation. Intelligible quiet voice. Under two seconds."},
+    {"id": "L06", "speaker": "employee", "start": 10, "end": 13,
+     "text": "WHY IS THE WHOLE DESKTOP SHARING?!", "style": "Comically panicked emphatic shout, crisp intelligible words, incredulous stress on whole desktop. Complete in under three seconds."},
+    {"id": "L07", "speaker": "employee", "start": 13, "end": 15,
+     "text": "I'm changing careers.", "style": "Defeated and embarrassed whisper, dry comic resignation. Intelligible quiet voice. Under two seconds."},
 ]
 DOCS = {
     "gemini_tts": "https://ai.google.dev/gemini-api/docs/speech-generation",
     "gemini_free_tier": "https://ai.google.dev/gemini-api/docs/pricing",
     "groq_whisper": "https://console.groq.com/docs/speech-to-text",
     "groq_rate_limits": "https://console.groq.com/docs/rate-limits",
+    "gemini_voice_catalog": "https://ai.google.dev/api/voices",
+    "gemini_voice_gender": "https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options",
 }
+
+
+def configured_lines(defaults):
+    """Peter's fixed voice is production configuration, never an episode guess."""
+    identity = defaults.get("tts_character_voices", {}).get("Peter")
+    if not isinstance(identity, dict) or not identity.get("voice"):
+        raise SpeechAPIError("Configure the permanent Peter voice in tts_character_voices.Peter")
+    if identity.get("gender", "").lower() != "male" or identity.get("locked") is not True:
+        raise SpeechAPIError("Peter must have an explicitly locked male voice identity")
+    if identity.get("provider") != "Gemini" or identity.get("allow_voice_fallback") is not False:
+        raise SpeechAPIError("Peter's permanent identity requires Gemini and no voice fallback")
+    result = []
+    for original in LINES:
+        spec = dict(original)
+        if spec["speaker"] == "employee":
+            spec["voice"] = identity["voice"]
+            spec["character"] = "Peter"
+        result.append(spec)
+    return result, identity
+
+
+def speech_signature(spec, model):
+    identity = {name: spec[name] for name in ("voice", "style", "text")}
+    identity["model"] = model
+    return hashlib.sha256(json.dumps(identity, sort_keys=True).encode()).hexdigest()
+
+
+def reuse_host_cache(audio_dir, spec, model):
+    """Copy only a verified unchanged Puck line into the new version directory."""
+    if spec["speaker"] != "host":
+        return False
+    old_cues = json.loads((EPISODE / "edit/speech_cues_v001.json").read_text())
+    old = next((line for line in old_cues["lines"] if line["id"] == spec["id"]), None)
+    if not old or old_cues.get("tts_model") != model \
+            or any(old.get(name) != spec.get(name) for name in ("voice", "style", "text")):
+        return False
+    source = EPISODE / "audio"
+    old_meta = json.loads((source / f'{spec["id"]}_generation.json').read_text())
+    raw = source / f'{spec["id"]}_Gemini_Raw.wav'
+    if old_meta.get("raw_sha256") != file_hash(raw):
+        return False
+    for suffix in ("_Gemini_Raw.wav", "_Dialogue.wav", "_Groq_Whisper.json"):
+        shutil.copyfile(source / (spec["id"] + suffix), audio_dir / (spec["id"] + suffix))
+    new_meta = {**old_meta, "signature": speech_signature(spec, model), "reused_from_audio_version": "v001"}
+    (audio_dir / f'{spec["id"]}_generation.json').write_text(json.dumps(new_meta, indent=2) + "\n")
+    return True
+
+
+def catalog_gender_evidence(pool, identity):
+    voice = identity["voice"]
+    # The configured catalogue ID contains no secret; provider key stays in a header.
+    if not re.fullmatch(r"[A-Za-z0-9_-]+", voice):
+        raise SpeechAPIError("Configured voice ID is invalid")
+    response = pool.call(lambda key: request_json(
+        f"https://generativelanguage.googleapis.com/v1beta/voices?search={voice}&gender=male&language_code=en-US&page_size=1000",
+        headers={"x-goog-api-key": key}))
+    candidates = [item for item in response.get("voices", [])
+                  if item.get("id", item.get("name", "").removeprefix("voices/")).casefold() == voice.casefold()]
+    if not candidates or not any(item.get("gender", "").lower() == "male" for item in candidates):
+        raise SpeechAPIError("Configured Peter voice not verified as male by the live Gemini catalog")
+    entry = next(item for item in candidates if item.get("gender", "").lower() == "male")
+    return {"voice": voice, "catalog_id": entry.get("id"), "display_name": entry.get("display_name"),
+            "gender": "male", "type": entry.get("type"),
+            "language_code": entry.get("language_code"), "pitch": entry.get("pitch"),
+            "verified_live_catalog": True, "source": DOCS["gemini_voice_catalog"],
+            "voice_gender_documentation": DOCS["gemini_voice_gender"], "credentials_stored": False}
 
 
 def read_wav(path):
@@ -228,16 +297,26 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--env-file", type=Path, default=ROOT / ".env")
     parser.add_argument("--model", default=None)
+    parser.add_argument("--version", default="v002", help="New audio version directory, v002 or later; delivered outputs are protected")
     parser.add_argument("--offline", action="store_true", help="Use cached speech and transcripts only")
     args = parser.parse_args()
-    audio_dir, edit_dir = EPISODE / "audio", EPISODE / "edit"
+    if not re.fullmatch(r"v\d{3}", args.version) or int(args.version[1:]) < 2:
+        raise ValueError("Use a new version v002 or later; original delivered v001 is preserved")
+    audio_dir, edit_dir = EPISODE / "audio" / args.version, EPISODE / "edit" / args.version
+    dialogue_file = audio_dir / f"EP009_Dialogue_18s_{args.version}.wav"
+    mix_file = audio_dir / f"EP009_Final_Mix_18s_{args.version}.wav"
+    cues_file = edit_dir / f"speech_cues_{args.version}.json"
+    if mix_file.exists() or cues_file.exists():
+        raise FileExistsError(f"Delivered {args.version} audio/cues are protected; choose a new --version")
+    defaults = json.loads((ROOT / "config/production_defaults.json").read_text())
+    lines, peter_identity = configured_lines(defaults)
     audio_dir.mkdir(parents=True, exist_ok=True)
     edit_dir.mkdir(parents=True, exist_ok=True)
     started = time.monotonic()
-    metadata_path = audio_dir / "speech_generation_v001.json"
+    metadata_path = audio_dir / f"speech_generation_{args.version}.json"
     previous = json.loads(metadata_path.read_text()) if metadata_path.exists() else {}
     if args.offline:
-        model = args.model or previous.get("tts_model")
+        model = args.model or previous.get("tts_model") or defaults.get("tts_model")
         if not model:
             raise SpeechAPIError("No cached speech metadata for offline generation")
         gemini_pool = groq_pool = None
@@ -251,13 +330,27 @@ def main():
         if not model:
             raise SpeechAPIError("No documented free-tier Gemini TTS model is available to these keys")
         print("Selected documented free-tier TTS model:", model, flush=True)
+    evidence_path = edit_dir / f"peter_voice_catalog_{args.version}.json"
+    if args.offline:
+        if not evidence_path.is_file():
+            raise SpeechAPIError("Offline generation requires previously verified male Peter catalog evidence")
+        voice_evidence = json.loads(evidence_path.read_text())
+        if voice_evidence.get("voice") != peter_identity["voice"] or voice_evidence.get("gender") != "male":
+            raise SpeechAPIError("Cached male voice identity differs from configured Peter voice")
+    else:
+        voice_evidence = catalog_gender_evidence(gemini_pool, peter_identity)
+        evidence_path.write_text(json.dumps(voice_evidence, indent=2) + "\n")
+    print("Permanent Peter voice verified:", peter_identity["voice"], "male", flush=True)
     dialogue = np.zeros(DURATION * SR)
     completed, generation = [], []
-    for spec in LINES:
+    for spec in lines:
         raw, fitted = audio_dir / f'{spec["id"]}_Gemini_Raw.wav', audio_dir / f'{spec["id"]}_Dialogue.wav'
         line_meta = audio_dir / f'{spec["id"]}_generation.json'
-        signature = hashlib.sha256(json.dumps({"spec": spec, "model": model}, sort_keys=True).encode()).hexdigest()
+        signature = speech_signature(spec, model)
         cached = json.loads(line_meta.read_text()) if line_meta.exists() else {}
+        if not raw.exists() and reuse_host_cache(audio_dir, spec, model):
+            cached = json.loads(line_meta.read_text())
+            print("Reusing unchanged", spec["id"], "Puck host audio and real transcript", flush=True)
         if not (raw.exists() and cached.get("signature") == signature and cached.get("raw_sha256") == file_hash(raw)):
             if args.offline:
                 raise SpeechAPIError(f'{spec["id"]}: missing or changed cached Gemini audio')
@@ -282,7 +375,12 @@ def main():
         completed.append(line)
         start = int(spec["start"] * SR)
         dialogue[start:start + len(data)] += data
-        generation.append({"id": spec["id"], "speaker": spec["speaker"], "voice": spec["voice"], **fit})
+        generation.append({"id": spec["id"], "speaker": spec["speaker"], "voice": spec["voice"],
+                           "tts_model": model, "cache_signature": signature,
+                           "raw_audio_sha256": file_hash(raw), "fitted_audio_sha256": file_hash(fitted),
+                           "raw_audio": raw.relative_to(ROOT).as_posix(),
+                           "fitted_audio": fitted.relative_to(ROOT).as_posix(),
+                           "reused_from_audio_version": cached.get("reused_from_audio_version"), **fit})
         print(spec["id"], "ready", len(words), "timed words; speed", fit["speed_factor"], flush=True)
     music, sfx, sfx_cues = original_music_sfx()
     # Voice-aware ducking and conservative mix headroom; no hard clip distortions.
@@ -295,17 +393,19 @@ def main():
     mix_gain = min(1, .89 / max(.001, peak))
     mix *= mix_gain
     mix[int(17.5 * SR):] = 0
-    dialogue_file = audio_dir / "EP009_Dialogue_18s_v001.wav"
-    mix_file = audio_dir / "EP009_Final_Mix_18s_v001.wav"
     write_wav(dialogue_file, np.repeat(dialogue[:, None], 2, axis=1))
     write_wav(mix_file, mix)
-    write_wav(audio_dir / "EP009_Original_Music_SFX_18s_v001.wav", music + sfx)
+    write_wav(audio_dir / f"EP009_Original_Music_SFX_18s_{args.version}.wav", music + sfx)
     mouths = make_mouth_frames(dialogue, completed)
     for line in completed:
         line["mouth_frames"] = [row for row in mouths if line["start"] <= row["time"] < line["end"]]
     cues = {"schema_version": 1, "episode": "EP009_Wrong_Screen", "duration_seconds": DURATION,
             "fps": FPS, "frame_start": 1, "frame_end": 432, "sample_rate": SR, "channels": 2,
             "tts_provider": "Gemini", "tts_model": model, "stt_provider": "Groq", "stt_model": "whisper-large-v3",
+            "audio_version": args.version, "character_voices": {"Peter": peter_identity},
+            "peter_voice": {**peter_identity, "catalog_gender_verified": True},
+            "peter_voice_catalog_evidence": voice_evidence,
+            "speech_audio_evidence": generation,
             "timing_source": "Groq Whisper word timestamps on actual fitted speech audio",
             "lip_sync_method": "Measured 24fps RMS envelope plus word-based heuristic vowel/consonant visemes; not phoneme forced alignment",
             "viseme_shapes": ["rest", "A", "E", "O", "MBP", "FV"], "lines": completed,
@@ -313,12 +413,14 @@ def main():
             "mouth_frames": mouths, "sfx": sfx_cues,
             "dialogue_file": str(dialogue_file.relative_to(ROOT)).replace("\\", "/"),
             "mix_file": str(mix_file.relative_to(ROOT)).replace("\\", "/"), "documentation": DOCS}
-    (edit_dir / "speech_cues_v001.json").write_text(json.dumps(cues, indent=2) + "\n")
+    cues_file.write_text(json.dumps(cues, indent=2) + "\n")
     metadata = {"tts_model": model, "stt_model": "whisper-large-v3", "lines": generation,
                 "sample_rate": SR, "channels": 2, "duration_seconds": DURATION,
                 "mix_peak_dbfs": round(20 * math.log10(float(np.max(np.abs(mix)))), 3),
                 "mix_gain": mix_gain, "elapsed_seconds": round(time.monotonic() - started, 3),
                 "final_half_second_silent": bool(np.max(np.abs(mix[int(17.5 * SR):])) == 0),
+                "audio_version": args.version, "character_voices": {"Peter": peter_identity},
+                "voice_catalog_evidence": voice_evidence,
                 "docs": DOCS, "listening_review_performed": False}
     metadata_path.write_text(json.dumps(metadata, indent=2) + "\n")
     print("Complete:", mix_file.relative_to(ROOT), "18s / 432 frames / 48kHz stereo", flush=True)
@@ -327,6 +429,6 @@ def main():
 if __name__ == "__main__":
     try:
         main()
-    except SpeechAPIError as error:
+    except (SpeechAPIError, FileExistsError, ValueError) as error:
         print(str(error), file=sys.stderr)
         raise SystemExit(1)

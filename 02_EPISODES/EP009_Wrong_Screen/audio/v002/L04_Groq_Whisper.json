@@ -1,0 +1,65 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "f7f41afb0cdef277f84dbdad7e036df6e5be9a9e912c8226d25ea8a30f01a079",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.6480000000000001,
+    "text": " Wait, that's not the presentation.",
+    "words": [
+      {
+        "word": "Wait,",
+        "start": 0,
+        "end": 0.12
+      },
+      {
+        "word": "that's",
+        "start": 0.12,
+        "end": 0.86
+      },
+      {
+        "word": "not",
+        "start": 0.86,
+        "end": 0.94
+      },
+      {
+        "word": "the",
+        "start": 0.94,
+        "end": 1.06
+      },
+      {
+        "word": "presentation.",
+        "start": 1.06,
+        "end": 1.64
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.66,
+        "text": " Wait, that's not the presentation.",
+        "tokens": [
+          50365,
+          3802,
+          11,
+          300,
+          311,
+          406,
+          264,
+          5860,
+          13,
+          50448
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.25907403,
+        "compression_ratio": 0.85365856,
+        "no_speech_prob": 0
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4gjsrgke3cr1d14edcn8cbw"
+    }
+  }
+}
