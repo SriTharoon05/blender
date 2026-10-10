@@ -1,0 +1,6 @@
+{
+  "signature": "f8568ea451b2d5917e36230184d1ad425c853896087e0bde2c5633c6ce99ec53",
+  "raw_sha256": "c3718e967e20543a8bc615544446bea44fc881b5bc3ca1baadf4c06d23abd36c",
+  "voice": "Charon",
+  "tts_model": "gemini-3.8-flash-tts"
+}

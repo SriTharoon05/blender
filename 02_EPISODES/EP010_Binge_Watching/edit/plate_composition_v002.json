@@ -1,0 +1,335 @@
+{
+  "episode": "EP010_Binge_Watching",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "native_source": "02_EPISODES/EP010_Binge_Watching/plates/EP010_Living_Room_Plates_4_2_v002.blend",
+  "native_source_blender_version": "4.2.0",
+  "camera_continuity": "Identical linked orthographic camera, wall, sofa and table in both plates",
+  "camera": {
+    "location": [
+      0.0,
+      -10.0,
+      5.599999904632568
+    ],
+    "rotation_euler": [
+      1.4317004680633545,
+      -0.0,
+      0.0
+    ],
+    "ortho_scale": 9,
+    "dof_fstop": 8
+  },
+  "tv_screen_quad_px_clockwise_from_top_left": [
+    [
+      650.933,
+      680.102
+    ],
+    [
+      970.933,
+      680.102
+    ],
+    [
+      970.933,
+      904.051
+    ],
+    [
+      650.933,
+      904.051
+    ]
+  ],
+  "window_quad_px_clockwise_from_top_left": [
+    [
+      61.067,
+      556.659
+    ],
+    [
+      289.333,
+      556.659
+    ],
+    [
+      289.333,
+      1034.136
+    ],
+    [
+      61.067,
+      1034.136
+    ]
+  ],
+  "character_face_target_px": [
+    520,
+    980
+  ],
+  "character_seated_body_target_px": [
+    520,
+    1300
+  ],
+  "character_feet_target_y_px": 1700,
+  "composition_landmarks_px": {
+    "sofa_back_top": [
+      540.0,
+      1118.159
+    ],
+    "sofa_seat_front": [
+      540.0,
+      1568.551
+    ],
+    "sofa_arm_left": [
+      87.733,
+      1321.277
+    ],
+    "coffee_table_back": [
+      540.0,
+      1732.456
+    ],
+    "coffee_table_front": [
+      540.0,
+      1773.274
+    ]
+  },
+  "title_safe_bounds_px": [
+    108,
+    300,
+    918,
+    480
+  ],
+  "dialogue_safe_bounds_px": [
+    130,
+    1340,
+    870,
+    1470
+  ],
+  "plates": [
+    "02_EPISODES/EP010_Binge_Watching/plates/Plate_A_Cozy_Night_1080p_v002.png",
+    "02_EPISODES/EP010_Binge_Watching/plates/Plate_B_Sunrise_Regret_1080p_v002.png"
+  ],
+  "plate_roles": {
+    "night": "02_EPISODES/EP010_Binge_Watching/plates/Plate_A_Cozy_Night_1080p_v002.png",
+    "dawn": "02_EPISODES/EP010_Binge_Watching/plates/Plate_B_Sunrise_Regret_1080p_v002.png"
+  },
+  "tv_screen_quad_px": [
+    [
+      650.933,
+      680.102
+    ],
+    [
+      970.933,
+      680.102
+    ],
+    [
+      970.933,
+      904.051
+    ],
+    [
+      650.933,
+      904.051
+    ]
+  ],
+  "window_quad_px": [
+    [
+      61.067,
+      556.659
+    ],
+    [
+      289.333,
+      556.659
+    ],
+    [
+      289.333,
+      1034.136
+    ],
+    [
+      61.067,
+      1034.136
+    ]
+  ],
+  "window_glass_strips_px": [
+    [
+      [
+        61.067,
+        970.754
+      ],
+      [
+        289.333,
+        970.754
+      ],
+      [
+        289.333,
+        993.571
+      ],
+      [
+        61.067,
+        993.571
+      ]
+    ],
+    [
+      [
+        61.067,
+        930.19
+      ],
+      [
+        289.333,
+        930.19
+      ],
+      [
+        289.333,
+        953.007
+      ],
+      [
+        61.067,
+        953.007
+      ]
+    ],
+    [
+      [
+        61.067,
+        889.625
+      ],
+      [
+        289.333,
+        889.625
+      ],
+      [
+        289.333,
+        912.443
+      ],
+      [
+        61.067,
+        912.443
+      ]
+    ],
+    [
+      [
+        61.067,
+        849.061
+      ],
+      [
+        289.333,
+        849.061
+      ],
+      [
+        289.333,
+        871.878
+      ],
+      [
+        61.067,
+        871.878
+      ]
+    ],
+    [
+      [
+        61.067,
+        808.496
+      ],
+      [
+        289.333,
+        808.496
+      ],
+      [
+        289.333,
+        831.314
+      ],
+      [
+        61.067,
+        831.314
+      ]
+    ],
+    [
+      [
+        61.067,
+        767.932
+      ],
+      [
+        289.333,
+        767.932
+      ],
+      [
+        289.333,
+        790.749
+      ],
+      [
+        61.067,
+        790.749
+      ]
+    ],
+    [
+      [
+        61.067,
+        727.368
+      ],
+      [
+        289.333,
+        727.368
+      ],
+      [
+        289.333,
+        750.185
+      ],
+      [
+        61.067,
+        750.185
+      ]
+    ],
+    [
+      [
+        61.067,
+        686.803
+      ],
+      [
+        289.333,
+        686.803
+      ],
+      [
+        289.333,
+        709.621
+      ],
+      [
+        61.067,
+        709.621
+      ]
+    ],
+    [
+      [
+        61.067,
+        646.239
+      ],
+      [
+        289.333,
+        646.239
+      ],
+      [
+        289.333,
+        669.056
+      ],
+      [
+        61.067,
+        669.056
+      ]
+    ],
+    [
+      [
+        61.067,
+        605.674
+      ],
+      [
+        289.333,
+        605.674
+      ],
+      [
+        289.333,
+        628.492
+      ],
+      [
+        61.067,
+        628.492
+      ]
+    ]
+  ],
+  "samples": 48,
+  "procedural_original_assets_only": true,
+  "render_in_build": false,
+  "background_style_override": "Two realistic still plates explicitly requested in EP010 brief",
+  "color_management": "AgX Medium High Contrast baked into display-referred sRGB PNG plates",
+  "composition_color_management": "Load baked PNG as sRGB, emission/Alpha Over in Standard; keep Peter flat and unshaded"
+}

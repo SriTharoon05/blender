@@ -1,0 +1,58 @@
+{
+  "freeze_frames": [
+    517,
+    528
+  ],
+  "all_12_rendered_frames_have_identical_pixels": true,
+  "checks": [
+    {
+      "frame": 517,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 518,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 519,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 520,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 521,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 522,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 523,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 524,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 525,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 526,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 527,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    },
+    {
+      "frame": 528,
+      "pixel_sha256": "adc58c100a9e2578cdf33ea1b4237b79bb36d4741db86bcaf64592b42ec5a460"
+    }
+  ],
+  "scope": "Actual final composed PNG pixels, excluding file metadata"
+}

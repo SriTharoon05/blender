@@ -1,0 +1,69 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "4e7d5b23c3ffe45532c9e6274817137b7ef0d8223730e5b4b7b004ece8b82e8f",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.86456256,
+    "text": " You have work in four hours.",
+    "words": [
+      {
+        "word": "You",
+        "start": 0,
+        "end": 0.14
+      },
+      {
+        "word": "have",
+        "start": 0.14,
+        "end": 0.28
+      },
+      {
+        "word": "work",
+        "start": 0.28,
+        "end": 0.6
+      },
+      {
+        "word": "in",
+        "start": 0.6,
+        "end": 0.76
+      },
+      {
+        "word": "four",
+        "start": 0.76,
+        "end": 1.14
+      },
+      {
+        "word": "hours.",
+        "start": 1.14,
+        "end": 1.54
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.68,
+        "text": " You have work in four hours.",
+        "tokens": [
+          50365,
+          509,
+          362,
+          589,
+          294,
+          1451,
+          2496,
+          13,
+          50449
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.15491045,
+        "compression_ratio": 0.82857144,
+        "no_speech_prob": 0.012878418
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4hzkgdrexdakchxr8t5jvrx"
+    }
+  }
+}

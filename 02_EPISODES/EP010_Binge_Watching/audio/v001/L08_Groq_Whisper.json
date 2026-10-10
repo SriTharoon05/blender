@@ -1,0 +1,70 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "75b06863b819967573c13f6799e04e901ebca1dcceabecd35a5941784d0ff586",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 2.531062528,
+    "text": " Wait\u2026 why are the birds singing?",
+    "words": [
+      {
+        "word": "Wait\u2026",
+        "start": 0,
+        "end": 0.82
+      },
+      {
+        "word": "why",
+        "start": 0.82,
+        "end": 1.4
+      },
+      {
+        "word": "are",
+        "start": 1.4,
+        "end": 1.5
+      },
+      {
+        "word": "the",
+        "start": 1.5,
+        "end": 1.64
+      },
+      {
+        "word": "birds",
+        "start": 1.64,
+        "end": 1.98
+      },
+      {
+        "word": "singing?",
+        "start": 1.98,
+        "end": 2.44
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 2.54,
+        "text": " Wait\u2026 why are the birds singing?",
+        "tokens": [
+          50365,
+          3802,
+          1260,
+          983,
+          366,
+          264,
+          9009,
+          6726,
+          30,
+          50492
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.20751272,
+        "compression_ratio": 0.85365856,
+        "no_speech_prob": 0.005279541
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4hzkyzne9w8233crrehnx4t"
+    }
+  }
+}

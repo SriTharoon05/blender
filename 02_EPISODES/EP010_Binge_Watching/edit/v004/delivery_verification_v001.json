@@ -1,0 +1,1790 @@
+{
+  "schema_version": 1,
+  "episode": "EP010_Binge_Watching",
+  "status": "passed",
+  "checked_utc": "2026-10-10T04:32:02.584105+00:00",
+  "video": "03_FINAL_OUTPUT/YouTube/EP010_Binge_Watching_Peter_1080p24_v004.mp4",
+  "video_sha256": "b32047f73e47f5fdaae73f71ad00628667a2200d9a7a134420f07c81ffafcd9f",
+  "editable_project": "02_EPISODES/EP010_Binge_Watching/blend/EP010_Binge_Watching_v004.blend",
+  "editable_project_sha256": "00276ac9e8f8b08712cb48ea36084d4ca52d48589fc5d63ca6f810acd0046331",
+  "selected_project_report": "02_EPISODES/EP010_Binge_Watching/edit/v004/project_verification_v004.json",
+  "selected_speech_cues": "02_EPISODES/EP010_Binge_Watching/edit/v001/speech_cues_v001.json",
+  "media": {
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 24.0,
+    "frame_count": 528,
+    "video_seconds": 22.0,
+    "container_seconds": 22.0,
+    "codec": "h264",
+    "pixel_format": "yuv420p",
+    "audio_codec": "aac",
+    "audio_sample_rate": 48000,
+    "audio_channels": 2,
+    "audio_seconds": 22.0,
+    "video_start_seconds": 0.0,
+    "audio_start_seconds": 0.0
+  },
+  "audio": {
+    "source_mix": "02_EPISODES/EP010_Binge_Watching/audio/v001/EP010_Final_Mix_22s_v001.wav",
+    "source_mix_sha256": "e767cbdf40e37e67d61419eb8dbfa09ff9cbe83257138d88c6845f58c0e3e2cd",
+    "decoded_samples_per_channel": 1056768,
+    "decoded_peak_dbfs": -2.3561795981160536,
+    "decoded_pcm_clipping_abs_ge_1": false,
+    "final_half_second_peak": 0.0,
+    "final_half_second_rms": 0.0,
+    "final_half_second_effectively_silent": true,
+    "decoded_aac_zero_delay_source_correlation": 0.9999124845014307,
+    "decoded_aac_vs_source_snr_db": 37.519690003429275,
+    "correct_source_mix_and_zero_delay_verified": true,
+    "listening_review_performed": false
+  },
+  "full_video_and_audio_decode_passed": true,
+  "full_decode_seconds": 0.859,
+  "media_verification_seconds": 3.688,
+  "captions": {
+    "word_count": 51,
+    "caption_count": 51,
+    "safe_band_px": [
+      130,
+      1340,
+      870,
+      1470
+    ],
+    "geometry_tolerance_px": 0.02,
+    "max_pop_bounds_within_safe_band": true,
+    "caption_onsets_match_measured_frames": true,
+    "caption_end_adjustment_frames": [
+      -1,
+      0
+    ],
+    "maximum_simultaneously_active_spoken_words": 1,
+    "overlap_frames": [],
+    "title_records": [
+      {
+        "text": "BINGE WATCHING\nEXPECTATION vs REALITY",
+        "interval": [
+          1,
+          516
+        ],
+        "bounds_px": [
+          217.85371631383896,
+          299.99997943639755,
+          808.1463065743446,
+          433.6445823311806
+        ],
+        "within_top_safe_band": true,
+        "valid_interval": true
+      },
+      {
+        "text": "POV: ONE EPISODE TURNED\nINTO THE WHOLE SEASON.",
+        "interval": [
+          517,
+          528
+        ],
+        "bounds_px": [
+          206.7368397116661,
+          299.99997943639755,
+          819.263154566288,
+          433.29170376062393
+        ],
+        "within_top_safe_band": true,
+        "valid_interval": true
+      }
+    ],
+    "speech_timing_source": "Actual fitted speech transcribed by Groq Whisper with word timestamps",
+    "source_of_geometry_bounds": "Actual Blender build report; encoded pixel review has separately recorded scope",
+    "errors": []
+  },
+  "peter_voice_verification": {
+    "configured_identity": {
+      "provider": "Gemini",
+      "voice": "Charon",
+      "gender": "male",
+      "locked": true,
+      "profile": "Same young-adult male Peter; natural conversational English, clear medium-low register, consistent accent and timbre; emotions may vary without changing identity",
+      "allow_voice_fallback": false
+    },
+    "cue_identity": {
+      "provider": "Gemini",
+      "voice": "Charon",
+      "gender": "male",
+      "locked": true,
+      "profile": "Same young-adult male Peter; natural conversational English, clear medium-low register, consistent accent and timbre; emotions may vary without changing identity",
+      "allow_voice_fallback": false
+    },
+    "project_peter_voice": "Charon",
+    "peter_line_count": 9,
+    "inner_line_count": 2,
+    "peter_lines": [
+      {
+        "line_id": "L01",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L02",
+        "speaker": "inner",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L03",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L05",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L06",
+        "speaker": "inner",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L07",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L08",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L09",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      },
+      {
+        "line_id": "L10",
+        "speaker": "peter",
+        "voice": "Charon",
+        "matches_permanent_identity": true
+      }
+    ],
+    "live_catalog_matches_locked_male_voice": true,
+    "male_voice_catalog_evidence": {
+      "voice": "Charon",
+      "catalog_id": "charon",
+      "display_name": "Charon",
+      "gender": "male",
+      "type": "prebuilt",
+      "language_code": "en-US",
+      "pitch": "low",
+      "verified_live_catalog": true,
+      "source": "https://ai.google.dev/api/voices",
+      "voice_gender_documentation": "https://docs.cloud.google.com/text-to-speech/docs/gemini-tts#voice_options",
+      "credentials_stored": false
+    },
+    "actual_generation_lines": [
+      {
+        "line_id": "L01",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L01_Gemini_Raw.wav",
+            "sha256": "b8939bcdc48595ee381d67b5fee597410b504523b757506ce77e470419153ee3",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L01_Dialogue.wav",
+            "sha256": "17bbb967705edba0647664613c6a08117fd3ce6fa387973b2b6656b29fa2428a",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L02",
+        "speaker": "inner",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L02_Gemini_Raw.wav",
+            "sha256": "c3718e967e20543a8bc615544446bea44fc881b5bc3ca1baadf4c06d23abd36c",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L02_Dialogue.wav",
+            "sha256": "a2a6da08ab09de5ed3a23dde26c498cee6c88ac95de3bfe5f774864732d31d33",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L03",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L03_Gemini_Raw.wav",
+            "sha256": "e429575439dcb4da4def0f69faec995388cf9ba7b9631c75fd29d9a4080fba54",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L03_Dialogue.wav",
+            "sha256": "5304ea6e46613d5b4ea0049fa5d91b9d12d3bdb69c3858db2c6ea6f1f56164be",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L04",
+        "speaker": "announcer",
+        "voice": "Puck",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L04_Gemini_Raw.wav",
+            "sha256": "052289d85a950799ffaf3c7e94450a90411a93dea13e2181ccfb1877f5b5d6e8",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L04_Dialogue.wav",
+            "sha256": "e71be204dbb7ae58cbdfa643ca0a126488b27a543140020039b1ee79c02ba871",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L05",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L05_Gemini_Raw.wav",
+            "sha256": "444ad71d60b1dbd893475947f98b62e73ad6fbf05fc842eea5e74961755e1635",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L05_Dialogue.wav",
+            "sha256": "64182f71ec65583d63848a67837b81a0c1b0eab6a9d4342d9fa5ef15aeb003b6",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L06",
+        "speaker": "inner",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L06_Gemini_Raw.wav",
+            "sha256": "2e9ad174f7f308a19880344d1149d68ee490890791e9a285376101fdfdd06bc8",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L06_Dialogue.wav",
+            "sha256": "4e7d5b23c3ffe45532c9e6274817137b7ef0d8223730e5b4b7b004ece8b82e8f",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L07",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L07_Gemini_Raw.wav",
+            "sha256": "cf8e1720933492b5202bc4d6f464be8d1c7617308f9286289c35642742e3cba4",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L07_Dialogue.wav",
+            "sha256": "d98243b02c3cb25fdaafbda9b715f983517943508d136482e772061669fa430f",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L08",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L08_Gemini_Raw.wav",
+            "sha256": "224dec8ac4b07c67fc6d4031dc7c33f5b06722f8e14c9c2b03547004dfb1e5ee",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L08_Dialogue.wav",
+            "sha256": "75b06863b819967573c13f6799e04e901ebca1dcceabecd35a5941784d0ff586",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L09",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L09_Gemini_Raw.wav",
+            "sha256": "10c5cf4429ddf6a5cf602ca89613eb2e44c5ab52426a559913241cdca017c221",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L09_Dialogue.wav",
+            "sha256": "15b66f29accec9d5fb30895b5909e643889a89f3d017924deeabf212f3493c80",
+            "actual_hash_matches": true
+          }
+        }
+      },
+      {
+        "line_id": "L10",
+        "speaker": "peter",
+        "voice": "Charon",
+        "metadata_matches": true,
+        "audio_provenance": {
+          "raw": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L10_Gemini_Raw.wav",
+            "sha256": "030c881b30668b896383e2a4c525192ca6a81f1ee3b00f7c75c35ff64fcd31de",
+            "actual_hash_matches": true
+          },
+          "fitted": {
+            "source": "02_EPISODES/EP010_Binge_Watching/audio/v001/L10_Dialogue.wav",
+            "sha256": "7e450e08f92c9f3286a955469e1d4f020e716fdfa429aa23aee126d74ec191cf",
+            "actual_hash_matches": true
+          }
+        }
+      }
+    ],
+    "evidence_scope": "Voice ID, live gender catalogue, actual metadata and hashes; acoustic listening is separate",
+    "all_voice_checks_passed": true,
+    "errors": []
+  },
+  "audio_generation_source": "02_EPISODES/EP010_Binge_Watching/audio/v001/speech_generation_v001.json",
+  "puppet": {
+    "frames": 528,
+    "video_seconds": 22,
+    "resolution": [
+      1080,
+      1920
+    ],
+    "fps": 24,
+    "engine": "BLENDER_EEVEE",
+    "character_geometry_redraws_per_frame": 0,
+    "character_mesh_animation": false,
+    "background_count": 2,
+    "caption_font": "LuckiestGuy-Regular.ttf",
+    "packed_audio": true,
+    "caption_shake_fixed": true,
+    "compositor_device": "GPU"
+  },
+  "static_character_parts": 70,
+  "skeletal_bones": 34,
+  "static_plate_verification": {
+    "plates": [
+      {
+        "scene": "Plate_A_Cozy_Night",
+        "file": "02_EPISODES/EP010_Binge_Watching/plates/Plate_A_Cozy_Night_1080p_v002.png",
+        "render_seconds": 10.740973,
+        "bytes": 1811601,
+        "sha256": "d3e6bb2625d1f6143429c2dc0181030444ad681aec0fee497a0af835ee556285"
+      },
+      {
+        "scene": "Plate_B_Sunrise_Regret",
+        "file": "02_EPISODES/EP010_Binge_Watching/plates/Plate_B_Sunrise_Regret_1080p_v002.png",
+        "render_seconds": 10.754531,
+        "bytes": 1808689,
+        "sha256": "42d987ff1d409ede04084fa0867b7e9b310a67c4f50332776c428c9e0300c651"
+      }
+    ],
+    "gpu": [
+      {
+        "name": "NVIDIA GeForce GTX 1650 Ti",
+        "type": "OPTIX"
+      }
+    ],
+    "cpu_render_enabled": false,
+    "static_plate_render_seconds": 21.495504,
+    "engine": "Cycles",
+    "backend": "OptiX",
+    "blender_version": "4.2.0",
+    "errors": []
+  },
+  "selected_plates_report": "02_EPISODES/EP010_Binge_Watching/edit/plate_render_time_v002.json",
+  "transparent_foreground": {
+    "folder": "02_EPISODES/EP010_Binge_Watching/renders/EP010_Binge_Watching_v004_Transparent",
+    "png_count": 528,
+    "frame_range": [
+      1,
+      528
+    ],
+    "resolution": [
+      1080,
+      1920
+    ],
+    "color_mode": "RGBA",
+    "png_headers_and_crcs_checked": true,
+    "alpha_samples": [
+      {
+        "frame": 1,
+        "transparent_and_opaque_pixels": true
+      },
+      {
+        "frame": 361,
+        "transparent_and_opaque_pixels": true
+      },
+      {
+        "frame": 528,
+        "transparent_and_opaque_pixels": true
+      }
+    ],
+    "errors": []
+  },
+  "gpu": "NVIDIA GeForce GTX 1650 Ti/PCIe/SSE2",
+  "render_backend": "Blender sequential queue",
+  "actual_render_times": {
+    "static_plate_render_seconds": 21.495504,
+    "animation_render_seconds": 719.1416055,
+    "final_plate_plus_animation_render_seconds": 740.6371095,
+    "encoding_seconds": 7.331170700000257,
+    "timing_scope": "Selected final two-plate version and final animation only; development/preview attempts excluded"
+  },
+  "protected_sources": {
+    "baseline_git_revision": "bae2e37b94d22ff2c9825804f510b1b37b89e627",
+    "approved_asset_count": 48,
+    "approved_assets": [
+      {
+        "path": "00_LIBRARY/asset_manifest.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/blender_assets.cats.txt",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Cameras/BRIX_VerticalCamera.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/Instagram_Header_Reference.jpg",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/Shorts_Reels_Upper_Safe_Area_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/Template_Placement_Verification_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/Template_Placement_Verification_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/YouTube_Header_Reference.jpg",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/BRIX/BRIX_Master.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/School_Guy_2D/Approved_Character_Reference.png",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/School_Guy_2D/character_manifest.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/School_Guy_2D/School_Guy_2D_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Environments/BRIX_Lab_Master.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Environments/BRIX_TestStage.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Lighting/BRIX_StudioLighting.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Materials/BRIX_EEVEE_Clarity_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Materials/BRIX_Materials.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Props/BRIX_ExperimentStation.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/UI/BRIX_UI.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/BRIX_Shorts_Master.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/BRIX_Shorts_Master_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v005.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/GreasePencil_Shorts_720p24_Master_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/Versions/BRIX_Foundation_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/Versions/BRIX_Foundation_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/Versions/BRIX_Foundation_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/Versions/BRIX_Foundation_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/Versions/BRIX_Foundation_v005.blend",
+        "unchanged": true
+      },
+      {
+        "path": "01_TEMPLATES/Versions/BRIX_Foundation_v006.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Caption_Layouts/Peter_Dynamic_Captions_v003.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Approved_Peter_Reference.png",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_Paths_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.svg",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Paths_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Preview_v001.png",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Rest_v001.svg",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/Peter_2D_v001.svg",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/README.md",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/build_peter_flat_puppet.py",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Characters/Peter_2D/build_peter_vector.py",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Fonts/Luckiest_Guy/LICENSE.txt",
+        "unchanged": true
+      },
+      {
+        "path": "00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf",
+        "unchanged": true
+      }
+    ],
+    "historical_episode_project_count": 72,
+    "historical_episode_source_count": 270,
+    "historical_episode_sources": [
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v005.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v006.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v007.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v008.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/blend/EP001_v009.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/REVIEW_NOTES.md",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/cache_portability_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/cloth_refinement_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/deform_bake_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/fluid_bake_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/master_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/movie_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/preview_render_progress.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/preview_render_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/review_shots.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/review_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/still_checks.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/storyboard.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP001_Material_Test/edit/water_bake_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/audio/EP002_Original_Material_SoundDesign_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/audio/EP002_Original_Material_SoundDesign_v002.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v005.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v006.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v007.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v008.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v009.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v010.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v011.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v012.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v012_review.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v012b.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v013.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v014.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v015.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v015a.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v015b.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v015c.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v016.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v018.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v019.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v020.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v021.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v022.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v025.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/blend/EP002_v026.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/4k_benchmark64.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/4k_render_benchmark.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/EP002_Resume_State.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/EP002_Review_Report.md",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/audio_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/audio_report_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/deferred_protection_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/eevee_fast_benchmark.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/fast_master_verification_v026.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/final_1080p60_delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/final_polish_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/fine_sand_contacts_v026.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/fine_sand_progress.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/fine_sand_report_v023.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/lava_recontain_report_v022.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/lava_volume_audit_partial.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/lava_volume_audit_v022.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_honey_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_lava_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_liquid_plan_v010.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_sand_report_v012.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_sand_report_v015b.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_sand_report_v018.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_solid_report_v011.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/physical_water_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/render_request_state.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/scene_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/simulation_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/slime_refinement_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/slime_refinement_report_v015a.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/slime_volume_report_v020.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/storyboard.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/edit/water_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_animate.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_bake_water.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_clean_stage.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_contact.ps1",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_init.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_movie.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_polish.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_preview.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_simulate.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_stage.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_verify_delivery.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP002_Impossible_Blankets/scripts/ep002_verify_scene.py",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/audio/EP003_Original_Laptop_SoundDesign_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/blend/EP003_Gaming_Laptop_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/blend/EP003_Gaming_Laptop_GP_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/blend/EP003_Gaming_Laptop_GP_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/blend/EP003_Gaming_Laptop_GP_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/blend/EP003_Gaming_Laptop_GP_v005.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/blend/EP003_Gaming_Laptop_GP_v006.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/edit/audio_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/edit/build_report.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP003_Gaming_Laptop_GP/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/audio/EP004_Original_Keyboard_Impacts_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/blend/EP004_Dad_Keyboard_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/blend/EP004_Dad_Keyboard_GP_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/blend/EP004_Dad_Keyboard_GP_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/blend/EP004_Dad_Keyboard_GP_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/edit/audio_timing.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/edit/polish_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP004_Dad_Mechanical_Keyboard/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/audio/EP005_Checkout_Original_Sound_48k.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/blend/EP005_Checkout_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/blend/EP005_Checkout_GP_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/blend/EP005_Checkout_GP_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/edit/audio_cue_sheet.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP005_Lost_Mom_Checkout/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/audio/EP006_Original_Call_Text_48k.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/blend/EP006_Call_Text_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/blend/EP006_Call_Text_GP_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/blend/EP006_Call_Text_GP_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/edit/audio_cue_sheet.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP006_Call_Vs_Text/edit/render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/audio/EP007_Original_Alarm_Expectation_Reality_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/audio/audio_cue_sheet.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/blend/EP007_Alarm_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/blend/EP007_Alarm_GP_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/blend/EP007_Alarm_GP_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP007_Alarm_Expectation_Reality/edit/render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/EP008_Production_Notes.txt",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/audio/EP008_Original_Research_48k.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/audio/audio_cue_sheet.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/blend/EP008_Background_Plates_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/blend/EP008_Research_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/blend/EP008_Research_GP_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/blend/EP008_Research_GP_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/blend/EP008_Research_GP_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/edit/plate_composition.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/edit/plate_render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/edit/protected_hashes.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/edit/render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/plates/EP008_Background_Plates_Polished_5_2_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/plates/Plate_A_Library_1080p.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP008_Research_Then_Now/plates/Plate_B_Workstation_1080p.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/README.md",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/EP009_Dialogue_18s_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/EP009_Final_Mix_18s_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/EP009_Original_Music_SFX_18s_v001.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L01_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L01_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L01_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L01_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L02_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L02_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L02_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L02_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L03_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L03_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L03_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L03_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L04_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L04_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L04_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L04_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L05_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L05_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L05_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L05_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L06_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L06_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L06_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L06_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L07_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L07_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L07_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/L07_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/speech_generation_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/EP009_Dialogue_18s_v002.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/EP009_Final_Mix_18s_v002.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/EP009_Original_Music_SFX_18s_v002.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L01_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L01_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L01_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L01_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L02_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L02_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L02_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L02_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L03_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L03_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L03_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L03_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L04_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L04_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L04_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L04_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L05_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L05_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L05_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L05_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L06_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L06_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L06_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L06_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L07_Dialogue.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L07_Gemini_Raw.wav",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L07_Groq_Whisper.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/L07_generation.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/audio/v002/speech_generation_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v004.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_GP_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/audio_validation_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/cutout_review_render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/episode_brief.txt",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/flat_plate_composition.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/flat_plate_qa.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/flat_plate_render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/flat_plate_render_time_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/plate_composition.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/plate_qa.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/plate_render_time.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/plate_render_time_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/plate_render_time_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/project_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/speech_cues_v001.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/v002/audio_validation_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/v002/delivery_verification.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/v002/peter_voice_catalog_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/v002/project_verification_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/edit/v002/speech_cues_v002.json",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/EP009_Office_Plates_4_2_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/EP009_Office_Plates_4_2_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/EP009_Office_Plates_4_2_v003.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v001.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v001.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v001.svg",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.blend",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.svg",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_A_Warm_Office_1080p_v001.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_A_Warm_Office_1080p_v002.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_A_Warm_Office_1080p_v003.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_B_Cold_Panic_1080p_v001.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_B_Cold_Panic_1080p_v002.png",
+        "unchanged": true
+      },
+      {
+        "path": "02_EPISODES/EP009_Wrong_Screen/plates/Plate_B_Cold_Panic_1080p_v003.png",
+        "unchanged": true
+      }
+    ],
+    "comparison_policy": "Exact binary bytes; text content permits CRLF/LF normalization only",
+    "authorized_source_update_exceptions": [],
+    "inventory_refreshed": false,
+    "all_unchanged": true,
+    "errors": []
+  },
+  "visual_review_performed": true,
+  "visual_review_note": "Actual decoded MP4 representatives inspected at 270px phone scale with simulated status, header, channel, subscribe and side-button overlays; frames 302 and 528 also inspected at full resolution. Titles and spoken captions are clear of these representative overlays; Peter face remains clear, background change and final freeze checked. No complete motion or phoneme accuracy review claimed.",
+  "encoded_video_visual_review": {
+    "performed": true,
+    "frames": [
+      25,
+      65,
+      201,
+      302,
+      391,
+      453,
+      461,
+      496,
+      517,
+      528
+    ],
+    "phone_preview_width_px": 270,
+    "artifact": "02_EPISODES/EP010_Binge_Watching/previews/encoded_v004/EP010_Encoded_Phone_Contact_270.png",
+    "scope": "Representative decoded MP4 frames; no complete motion or phoneme-sync review claimed"
+  },
+  "lip_sync_method": "Measured 24fps RMS and word-based heuristic vowel/consonant visemes; not phoneme forced alignment",
+  "audio_choices": {
+    "music": "Original sparse warm two-note motif, then restrained accelerating ostinato; cut at dawn 15s",
+    "foley": "Small remote/chime/countdown/clock accents; original morning bird chirps",
+    "punchline": "Dry dialogue against silence; no busy sting or loud scratch obscuring the acting",
+    "prompt_audio_treated_as_reference": true,
+    "external_audio_assets": [],
+    "original_sfx_seed": 101010,
+    "last_half_second": "Digital silence"
+  },
+  "limitations": [
+    "Word/amplitude visemes estimate mouth timing; not phoneme forced alignment",
+    "Caption geometry comes from evaluated native build metadata; encoded frame review scope is recorded separately",
+    "No subjective audio listening review performed"
+  ],
+  "verification_elapsed_seconds": 22.75,
+  "errors": []
+}

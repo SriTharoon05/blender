@@ -1,0 +1,9 @@
+# Keep unfinished/template copies and development previews on this machine.
+# The final editable project is v004; canonical assets remain versioned upstream.
+/blend/EP010_Binge_Watching_v001.blend
+/blend/EP010_Binge_Watching_v002.blend
+/blend/EP010_Binge_Watching_v003.blend
+/plates/EP010_Living_Room_Plates_4_2_v001.blend
+/edit/plate_composition_v001.json
+/edit/v002/
+/edit/v003/

@@ -1,0 +1,32 @@
+{
+  "episode": "EP010_Binge_Watching",
+  "plate_version": "v002",
+  "review_method": "Both actual rendered full-resolution PNG plates inspected through view_image",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "reviewed_files": [
+    {
+      "file": "02_EPISODES/EP010_Binge_Watching/plates/Plate_A_Cozy_Night_1080p_v002.png",
+      "sha256": "d3e6bb2625d1f6143429c2dc0181030444ad681aec0fee497a0af835ee556285"
+    },
+    {
+      "file": "02_EPISODES/EP010_Binge_Watching/plates/Plate_B_Sunrise_Regret_1080p_v002.png",
+      "sha256": "42d987ff1d409ede04084fa0867b7e9b310a67c4f50332776c428c9e0300c651"
+    }
+  ],
+  "findings": [
+    "Warm lamp and cool television contrast visible in night plate",
+    "Dawn window and cold fill clearly distinguish sunrise with identical camera and furniture",
+    "Top title band is plain wall",
+    "Television screen remains visible to right of Peter staging",
+    "Coffee table is below dialogue-caption safe band",
+    "Empty bowl, wrappers, fallen blanket and floor pillow are visible only in dawn still"
+  ],
+  "limitations": [
+    "Actual composited character, captions, motion and audio require separate episode review",
+    "Depth of field intentionally softens rear room details"
+  ],
+  "animation_render_performed": false
+}

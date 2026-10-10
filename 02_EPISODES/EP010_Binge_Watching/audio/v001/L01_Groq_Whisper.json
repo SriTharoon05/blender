@@ -1,0 +1,63 @@
+{
+  "model": "whisper-large-v3",
+  "input_sha256": "17bbb967705edba0647664613c6a08117fd3ce6fa387973b2b6656b29fa2428a",
+  "response": {
+    "task": "transcribe",
+    "language": "English",
+    "duration": 1.7473125120000002,
+    "text": " Just one episode before bed.",
+    "words": [
+      {
+        "word": "Just",
+        "start": 0.02,
+        "end": 0.22
+      },
+      {
+        "word": "one",
+        "start": 0.22,
+        "end": 0.8
+      },
+      {
+        "word": "episode",
+        "start": 0.8,
+        "end": 1.16
+      },
+      {
+        "word": "before",
+        "start": 1.16,
+        "end": 1.42
+      },
+      {
+        "word": "bed.",
+        "start": 1.42,
+        "end": 1.68
+      }
+    ],
+    "segments": [
+      {
+        "id": 0,
+        "seek": 0,
+        "start": 0,
+        "end": 1.66,
+        "text": " Just one episode before bed.",
+        "tokens": [
+          50365,
+          1449,
+          472,
+          3500,
+          949,
+          2901,
+          13,
+          50448
+        ],
+        "temperature": 0,
+        "avg_logprob": -0.064079866,
+        "compression_ratio": 0.85294116,
+        "no_speech_prob": 0.03387451
+      }
+    ],
+    "x_groq": {
+      "id": "req_01m4hzjhyked2tk4sta9mvcedq"
+    }
+  }
+}

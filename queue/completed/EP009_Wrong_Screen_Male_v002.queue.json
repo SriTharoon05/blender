@@ -1,0 +1,45 @@
+{
+  "version": 1,
+  "episodes": [
+    {
+      "id": "EP009_Wrong_Screen_Male_v002",
+      "build_steps": [
+        {
+          "runner": "blender",
+          "script": "tools/ep009_wrong_screen_cutout.py",
+          "args": [
+            "--output", "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v004.blend",
+            "--cues", "02_EPISODES/EP009_Wrong_Screen/edit/v002/speech_cues_v002.json",
+            "--report", "02_EPISODES/EP009_Wrong_Screen/edit/v002/project_verification_v002.json"
+          ],
+          "inputs": [
+            "01_TEMPLATES/GreasePencil_Shorts_1080p24_Master_v005.blend",
+            "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_Paths_v002.json",
+            "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend",
+            "00_LIBRARY/Fonts/Luckiest_Guy/LuckiestGuy-Regular.ttf",
+            "00_LIBRARY/Caption_Layouts/Peter_Dynamic_Captions_v003.json",
+            "02_EPISODES/EP009_Wrong_Screen/plates/Flat_Office_v002.png",
+            "02_EPISODES/EP009_Wrong_Screen/edit/flat_plate_composition.json",
+            "02_EPISODES/EP009_Wrong_Screen/edit/v002/speech_cues_v002.json",
+            "02_EPISODES/EP009_Wrong_Screen/audio/v002/EP009_Final_Mix_18s_v002.wav",
+            "tools/cutout_puppet_toolkit.py",
+            "tools/ep009_wrong_screen_gp.py",
+            "tools/ep009_flat_office.py"
+          ],
+          "outputs": [
+            "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v004.blend",
+            "02_EPISODES/EP009_Wrong_Screen/edit/v002/project_verification_v002.json"
+          ]
+        }
+      ],
+      "blend": "02_EPISODES/EP009_Wrong_Screen/blend/EP009_Wrong_Screen_Cutout_v004.blend",
+      "scene": "EP009_Wrong_Screen_Cutout",
+      "duration_seconds": 18,
+      "frame_start": 1,
+      "frames_dir": "02_EPISODES/EP009_Wrong_Screen/renders/EP009_Wrong_Screen_Cutout_v004",
+      "frame_prefix": "EP009",
+      "video": "03_FINAL_OUTPUT/YouTube/EP009_Wrong_Screen_Peter_1080p24_v002.mp4",
+      "audio": "02_EPISODES/EP009_Wrong_Screen/audio/v002/EP009_Final_Mix_18s_v002.wav"
+    }
+  ]
+}

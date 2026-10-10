@@ -1,0 +1,717 @@
+{
+  "schema_version": 1,
+  "scene": "EP010_Binge_Watching",
+  "built_project": "02_EPISODES/EP010_Binge_Watching/blend/EP010_Binge_Watching_v004.blend",
+  "frames": 528,
+  "video_seconds": 22,
+  "resolution": [
+    1080,
+    1920
+  ],
+  "fps": 24,
+  "engine": "BLENDER_EEVEE",
+  "character_library": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend",
+  "static_character_parts": 70,
+  "skeletal_bones": 34,
+  "character_geometry_redraws_per_frame": 0,
+  "character_mesh_animation": false,
+  "background_count": 2,
+  "background_plates": [
+    "02_EPISODES/EP010_Binge_Watching/plates/Plate_A_Cozy_Night_1080p_v002.png",
+    "02_EPISODES/EP010_Binge_Watching/plates/Plate_B_Sunrise_Regret_1080p_v002.png"
+  ],
+  "hybrid_authorization": "Current EP010 user brief: Cycles static night and dawn plates, Eevee transparent 2D foreground",
+  "compositor": "Packed static night/dawn images -> timed hard cut -> Alpha Over transparent Eevee foreground",
+  "compositor_device": "GPU",
+  "transparent_foreground_sequence": "02_EPISODES\\EP010_Binge_Watching\\renders\\EP010_Binge_Watching_v004_Transparent",
+  "color_management": "AgX baked into static Cycles PNG; Standard foreground/composition preserves solid SVG colors and baked plate appearance",
+  "caption_font": "LuckiestGuy-Regular.ttf",
+  "spoken_caption_records": [
+    {
+      "word": "Just",
+      "speaker": "peter",
+      "start_frame": 1,
+      "end_frame": 5,
+      "max_bounds_px": [
+        402.1329805254936,
+        1339.9999925494194,
+        597.8670206665993,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "one",
+      "speaker": "peter",
+      "start_frame": 6,
+      "end_frame": 19,
+      "max_bounds_px": [
+        416.79980009794235,
+        1339.9999925494194,
+        583.2002010941505,
+        1412.1484449505806
+      ]
+    },
+    {
+      "word": "episode",
+      "speaker": "peter",
+      "start_frame": 20,
+      "end_frame": 28,
+      "max_bounds_px": [
+        336.00950449705124,
+        1339.9999925494194,
+        663.9905002713203,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "before",
+      "speaker": "peter",
+      "start_frame": 29,
+      "end_frame": 34,
+      "max_bounds_px": [
+        350.06353586912155,
+        1339.9999925494194,
+        649.9364617466927,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "bed.",
+      "speaker": "peter",
+      "start_frame": 35,
+      "end_frame": 41,
+      "max_bounds_px": [
+        412.97990530729294,
+        1339.9999925494194,
+        587.0200994610786,
+        1412.066734135151
+      ]
+    },
+    {
+      "word": "You",
+      "speaker": "inner",
+      "start_frame": 49,
+      "end_frame": 53,
+      "max_bounds_px": [
+        417.0244976878166,
+        1339.9999925494194,
+        582.9754999279976,
+        1410.6777074933052
+      ]
+    },
+    {
+      "word": "said",
+      "speaker": "inner",
+      "start_frame": 54,
+      "end_frame": 59,
+      "max_bounds_px": [
+        409.8748943209648,
+        1339.9999925494194,
+        590.1250997185707,
+        1411.004493534565
+      ]
+    },
+    {
+      "word": "that",
+      "speaker": "inner",
+      "start_frame": 60,
+      "end_frame": 65,
+      "max_bounds_px": [
+        396.55621737241745,
+        1339.9999925494194,
+        603.4437802433968,
+        1410.0240781903267
+      ]
+    },
+    {
+      "word": "yesterday.",
+      "speaker": "inner",
+      "start_frame": 66,
+      "end_frame": 81,
+      "max_bounds_px": [
+        264.57493990659714,
+        1339.9999925494194,
+        735.4250648617744,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "Tonight,",
+      "speaker": "peter",
+      "start_frame": 100,
+      "end_frame": 105,
+      "max_bounds_px": [
+        321.23960226774216,
+        1339.9999925494194,
+        678.7604025006294,
+        1418.603484928608
+      ]
+    },
+    {
+      "word": "I'm",
+      "speaker": "peter",
+      "start_frame": 106,
+      "end_frame": 115,
+      "max_bounds_px": [
+        436.5326616168022,
+        1339.9999925494194,
+        563.46734136343,
+        1416.5608289837837
+      ]
+    },
+    {
+      "word": "being",
+      "speaker": "peter",
+      "start_frame": 116,
+      "end_frame": 118,
+      "max_bounds_px": [
+        381.0110065340996,
+        1339.9999925494194,
+        618.988998234272,
+        1412.1484449505806
+      ]
+    },
+    {
+      "word": "responsible.",
+      "speaker": "peter",
+      "start_frame": 119,
+      "end_frame": 134,
+      "max_bounds_px": [
+        233.11676234006882,
+        1339.9999925494194,
+        766.8832424283028,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "Next",
+      "speaker": "announcer",
+      "start_frame": 145,
+      "end_frame": 149,
+      "max_bounds_px": [
+        393.9619991183281,
+        1339.9999925494194,
+        606.0379984974861,
+        1412.066734135151
+      ]
+    },
+    {
+      "word": "episode",
+      "speaker": "announcer",
+      "start_frame": 150,
+      "end_frame": 157,
+      "max_bounds_px": [
+        336.00950449705124,
+        1339.9999925494194,
+        663.9905002713203,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "starts",
+      "speaker": "announcer",
+      "start_frame": 158,
+      "end_frame": 166,
+      "max_bounds_px": [
+        353.4545060992241,
+        1339.9999925494194,
+        646.5454986691475,
+        1411.9849947094917
+      ]
+    },
+    {
+      "word": "in",
+      "speaker": "announcer",
+      "start_frame": 167,
+      "end_frame": 169,
+      "max_bounds_px": [
+        456.3675829768181,
+        1339.9999925494194,
+        543.6324193328619,
+        1410.187385380268
+      ]
+    },
+    {
+      "word": "five",
+      "speaker": "announcer",
+      "start_frame": 170,
+      "end_frame": 177,
+      "max_bounds_px": [
+        412.85732477903366,
+        1339.9999925494194,
+        587.1426764130592,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "seconds.",
+      "speaker": "announcer",
+      "start_frame": 178,
+      "end_frame": 190,
+      "max_bounds_px": [
+        317.44099348783493,
+        1339.9999925494194,
+        682.5589969754219,
+        1412.2301557660103
+      ]
+    },
+    {
+      "word": "Okay,",
+      "speaker": "peter",
+      "start_frame": 197,
+      "end_frame": 198,
+      "max_bounds_px": [
+        382.27669447660446,
+        1339.9999925494194,
+        617.7233031392097,
+        1417.4596479535103
+      ]
+    },
+    {
+      "word": "this",
+      "speaker": "peter",
+      "start_frame": 199,
+      "end_frame": 208,
+      "max_bounds_px": [
+        411.12098425626755,
+        1339.9999925494194,
+        588.8790169358253,
+        1411.004493534565
+      ]
+    },
+    {
+      "word": "is",
+      "speaker": "peter",
+      "start_frame": 209,
+      "end_frame": 212,
+      "max_bounds_px": [
+        460.77998131513596,
+        1339.9999925494194,
+        539.2200212180614,
+        1411.004493534565
+      ]
+    },
+    {
+      "word": "the",
+      "speaker": "peter",
+      "start_frame": 213,
+      "end_frame": 214,
+      "max_bounds_px": [
+        421.5798184275627,
+        1339.9999925494194,
+        578.4201791882515,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "last",
+      "speaker": "peter",
+      "start_frame": 215,
+      "end_frame": 218,
+      "max_bounds_px": [
+        405.1561948657036,
+        1339.9999925494194,
+        594.8437991738319,
+        1411.249625980854
+      ]
+    },
+    {
+      "word": "one.",
+      "speaker": "peter",
+      "start_frame": 219,
+      "end_frame": 225,
+      "max_bounds_px": [
+        407.5666353106499,
+        1339.9999925494194,
+        592.4333587288857,
+        1412.1484449505806
+      ]
+    },
+    {
+      "word": "You",
+      "speaker": "inner",
+      "start_frame": 241,
+      "end_frame": 243,
+      "max_bounds_px": [
+        417.0244976878166,
+        1339.9999925494194,
+        582.9754999279976,
+        1410.6777074933052
+      ]
+    },
+    {
+      "word": "have",
+      "speaker": "inner",
+      "start_frame": 244,
+      "end_frame": 247,
+      "max_bounds_px": [
+        393.18577498197556,
+        1339.9999925494194,
+        606.8142226338387,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "work",
+      "speaker": "inner",
+      "start_frame": 248,
+      "end_frame": 254,
+      "max_bounds_px": [
+        378.15115660429,
+        1339.9999925494194,
+        621.8488410115242,
+        1411.5765264630318
+      ]
+    },
+    {
+      "word": "in",
+      "speaker": "inner",
+      "start_frame": 255,
+      "end_frame": 258,
+      "max_bounds_px": [
+        456.3675829768181,
+        1339.9999925494194,
+        543.6324193328619,
+        1410.187385380268
+      ]
+    },
+    {
+      "word": "four",
+      "speaker": "inner",
+      "start_frame": 259,
+      "end_frame": 267,
+      "max_bounds_px": [
+        397.4754783511162,
+        1339.9999925494194,
+        602.524519264698,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "hours.",
+      "speaker": "inner",
+      "start_frame": 268,
+      "end_frame": 277,
+      "max_bounds_px": [
+        360.1138374209404,
+        1339.9999925494194,
+        639.8861601948738,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "I",
+      "speaker": "peter",
+      "start_frame": 289,
+      "end_frame": 291,
+      "max_bounds_px": [
+        483.37262123823166,
+        1339.9999925494194,
+        516.6273799538612,
+        1408.0630472302437
+      ]
+    },
+    {
+      "word": "NEED",
+      "speaker": "peter",
+      "start_frame": 292,
+      "end_frame": 300,
+      "max_bounds_px": [
+        401.37709826231,
+        1339.9999925494194,
+        598.6228993535042,
+        1411.0862043499947
+      ]
+    },
+    {
+      "word": "TO",
+      "speaker": "peter",
+      "start_frame": 301,
+      "end_frame": 308,
+      "max_bounds_px": [
+        445.35727947950363,
+        1339.9999925494194,
+        554.6427190303802,
+        1408.9618375897408
+      ]
+    },
+    {
+      "word": "KNOW",
+      "speaker": "peter",
+      "start_frame": 309,
+      "end_frame": 311,
+      "max_bounds_px": [
+        375.41395872831345,
+        1339.9999925494194,
+        624.5860388875008,
+        1414.1094759106636
+      ]
+    },
+    {
+      "word": "WHAT",
+      "speaker": "peter",
+      "start_frame": 312,
+      "end_frame": 314,
+      "max_bounds_px": [
+        381.35827749967575,
+        1339.9999925494194,
+        618.6417201161385,
+        1411.2496545910835
+      ]
+    },
+    {
+      "word": "HAPPENS!",
+      "speaker": "peter",
+      "start_frame": 315,
+      "end_frame": 324,
+      "max_bounds_px": [
+        310.1484176516533,
+        1339.9999925494194,
+        689.8515871167183,
+        1415.6619241833687
+      ]
+    },
+    {
+      "word": "Wait\u2026",
+      "speaker": "peter",
+      "start_frame": 361,
+      "end_frame": 380,
+      "max_bounds_px": [
+        363.2391759753227,
+        1339.9999925494194,
+        636.7608216404915,
+        1410.432689487934
+      ]
+    },
+    {
+      "word": "why",
+      "speaker": "peter",
+      "start_frame": 381,
+      "end_frame": 394,
+      "max_bounds_px": [
+        403.9101192355156,
+        1339.9999925494194,
+        596.0898783802986,
+        1410.0240781903267
+      ]
+    },
+    {
+      "word": "are",
+      "speaker": "peter",
+      "start_frame": 395,
+      "end_frame": 396,
+      "max_bounds_px": [
+        418.20926159620285,
+        1339.9999925494194,
+        581.79073959589,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "the",
+      "speaker": "peter",
+      "start_frame": 397,
+      "end_frame": 399,
+      "max_bounds_px": [
+        421.5798184275627,
+        1339.9999925494194,
+        578.4201791882515,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "birds",
+      "speaker": "peter",
+      "start_frame": 400,
+      "end_frame": 408,
+      "max_bounds_px": [
+        386.40386313199997,
+        1339.9999925494194,
+        613.5961416363716,
+        1412.3936060070992
+      ]
+    },
+    {
+      "word": "singing?",
+      "speaker": "peter",
+      "start_frame": 409,
+      "end_frame": 419,
+      "max_bounds_px": [
+        318.5645028948784,
+        1339.9999925494194,
+        681.4355018734932,
+        1414.5996835827827
+      ]
+    },
+    {
+      "word": "I",
+      "speaker": "peter",
+      "start_frame": 433,
+      "end_frame": 434,
+      "max_bounds_px": [
+        483.37262123823166,
+        1339.9999925494194,
+        516.6273799538612,
+        1408.0630472302437
+      ]
+    },
+    {
+      "word": "have",
+      "speaker": "peter",
+      "start_frame": 435,
+      "end_frame": 438,
+      "max_bounds_px": [
+        393.18577498197556,
+        1339.9999925494194,
+        606.8142226338387,
+        1411.6582372784615
+      ]
+    },
+    {
+      "word": "work",
+      "speaker": "peter",
+      "start_frame": 439,
+      "end_frame": 447,
+      "max_bounds_px": [
+        378.15115660429,
+        1339.9999925494194,
+        621.8488410115242,
+        1411.5765264630318
+      ]
+    },
+    {
+      "word": "in",
+      "speaker": "peter",
+      "start_frame": 448,
+      "end_frame": 452,
+      "max_bounds_px": [
+        456.3675829768181,
+        1339.9999925494194,
+        543.6324193328619,
+        1410.187385380268
+      ]
+    },
+    {
+      "word": "thirty",
+      "speaker": "peter",
+      "start_frame": 453,
+      "end_frame": 462,
+      "max_bounds_px": [
+        358.7247106432915,
+        1339.9999925494194,
+        641.2752869725227,
+        1411.413076221943
+      ]
+    },
+    {
+      "word": "minutes.",
+      "speaker": "peter",
+      "start_frame": 463,
+      "end_frame": 478,
+      "max_bounds_px": [
+        313.7436792254448,
+        1339.9999925494194,
+        686.256311237812,
+        1412.1484449505806
+      ]
+    },
+    {
+      "word": "Worth",
+      "speaker": "peter",
+      "start_frame": 496,
+      "end_frame": 498,
+      "max_bounds_px": [
+        356.2530729174614,
+        1339.9999925494194,
+        643.7469246983528,
+        1411.8216875195503
+      ]
+    },
+    {
+      "word": "it.",
+      "speaker": "peter",
+      "start_frame": 499,
+      "end_frame": 505,
+      "max_bounds_px": [
+        451.0156390070915,
+        1339.9999925494194,
+        548.9843597263098,
+        1409.288595020771
+      ]
+    }
+  ],
+  "title_records": [
+    {
+      "text": "BINGE WATCHING\nEXPECTATION vs REALITY",
+      "interval": [
+        1,
+        516
+      ],
+      "bounds_px": [
+        217.85371631383896,
+        299.99997943639755,
+        808.1463065743446,
+        433.6445823311806
+      ]
+    },
+    {
+      "text": "POV: ONE EPISODE TURNED\nINTO THE WHOLE SEASON.",
+      "interval": [
+        517,
+        528
+      ],
+      "bounds_px": [
+        206.7368397116661,
+        299.99997943639755,
+        819.263154566288,
+        433.29170376062393
+      ]
+    }
+  ],
+  "final_title_bounds_px": [
+    206.7368397116661,
+    299.99997943639755,
+    819.263154566288,
+    433.29170376062393
+  ],
+  "caption_shake_fixed": true,
+  "shake_start_frame": 453,
+  "lip_sync_method": "Measured 24fps RMS and word-based heuristic vowel/consonant visemes; not phoneme forced alignment",
+  "peter_voice": "Charon",
+  "speech_cues": "02_EPISODES/EP010_Binge_Watching/edit/v001/speech_cues_v001.json",
+  "packed_audio": true,
+  "audio": "02_EPISODES/EP010_Binge_Watching/audio/v001/EP010_Final_Mix_22s_v001.wav",
+  "visual_reviewed": false,
+  "puppet_metadata": {
+    "character_library": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_v002.blend",
+    "approved_contours": "00_LIBRARY/Characters/Peter_2D/Peter_2D_Flat_Puppet_Paths_v002.json",
+    "costume_svg": "02_EPISODES/EP010_Binge_Watching/assets/Peter_Binge_Pajamas_v001.svg",
+    "main_static_parts": 41,
+    "inner_static_parts": 29,
+    "skeletal_bones_per_character": 17,
+    "character_geometry_redraws_per_frame": 0,
+    "character_mesh_animation": false,
+    "parts_rigidly_bound": true,
+    "main_speaker": "peter",
+    "inner_speaker": "inner",
+    "peter_voice": "Charon",
+    "inner_voice": "Charon",
+    "costume": "oversized pastel-blue pajamas, yellow slippers, cream blanket",
+    "lip_sync_method": "Measured 24fps RMS and word-based heuristic vowel/consonant visemes; not phoneme forced alignment",
+    "main_head_pixel_reference": [
+      470,
+      960
+    ],
+    "main_head_reference_scale": 0.54,
+    "main_instance_translation_px": [
+      0,
+      90
+    ],
+    "main_rest_face_bounds_approx_px": [
+      269,
+      738,
+      631,
+      1152
+    ]
+  }
+}

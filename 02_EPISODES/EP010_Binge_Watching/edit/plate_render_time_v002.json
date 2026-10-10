@@ -1,0 +1,38 @@
+{
+  "episode": "EP010_Binge_Watching",
+  "engine": "Cycles",
+  "backend": "OptiX",
+  "gpu": [
+    {
+      "name": "NVIDIA GeForce GTX 1650 Ti",
+      "type": "OPTIX"
+    }
+  ],
+  "cpu_render_enabled": false,
+  "blender_version": "4.2.0",
+  "resolution": [
+    1080,
+    1920
+  ],
+  "samples": 48,
+  "denoiser": "OptiX GPU",
+  "plates": [
+    {
+      "scene": "Plate_A_Cozy_Night",
+      "file": "02_EPISODES/EP010_Binge_Watching/plates/Plate_A_Cozy_Night_1080p_v002.png",
+      "render_seconds": 10.740973,
+      "bytes": 1811601,
+      "sha256": "d3e6bb2625d1f6143429c2dc0181030444ad681aec0fee497a0af835ee556285"
+    },
+    {
+      "scene": "Plate_B_Sunrise_Regret",
+      "file": "02_EPISODES/EP010_Binge_Watching/plates/Plate_B_Sunrise_Regret_1080p_v002.png",
+      "render_seconds": 10.754531,
+      "bytes": 1808689,
+      "sha256": "42d987ff1d409ede04084fa0867b7e9b310a67c4f50332776c428c9e0300c651"
+    }
+  ],
+  "static_plate_render_seconds": 21.495504,
+  "finished_utc": "2026-10-10T04:03:32.198055+00:00",
+  "validation": "Actual two static GPU renders; animation, audio and phone-overlay review are separate"
+}

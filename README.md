@@ -63,9 +63,19 @@ The original EP009 v001 used Gemini `gemini-3.8-flash-tts` with Kore/Puck voices
 | `tools/` | Existing production scripts plus portable paths/toolkit and batch runner |
 | `examples/` | Minimal build-only example for future portable episodes |
 | `config/` | Committed production defaults and an empty local configuration example |
-| `queue/` | Empty pending batch and a reference manifest |
+| `queue/` | Pending sequential batch, reference manifest and completed episode plans |
 | `docs/` | Cloud authoring, local validation and render workflow |
 
 Generated movie files, render frame sequences, simulation caches, runtime bundles and machine-specific configuration are kept locally rather than in source control. Historical scripts preserve their original behavior and may contain Windows-specific assumptions; use the portable helpers for new work.
 
 Every final delivery records **video duration, actual render elapsed time and encoding time separately**. Hybrid episodes also record the static-plate render time. Cloud syntax/queue checks are useful preparation; final visual and audio review still happens on rendered output.
+
+## EP010 production example
+
+[Binge Watching — Expectation vs Reality](02_EPISODES/EP010_Binge_Watching/README.md)
+uses Peter's approved flat skeletal puppet and locked Charon voice for both the
+main character and his small inner voice. Its current brief explicitly requests
+two matching realistic night/dawn room plates; this episode-specific hybrid
+exception does not change the ordinary flat-background default. Its portable
+builders, original audio/cue generator, phone-preview helper and read-only delivery
+verifier are under `tools/ep010_*.py`. Preparation builders never render.
